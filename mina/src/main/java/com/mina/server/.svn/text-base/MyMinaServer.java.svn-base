@@ -1,0 +1,39 @@
+package com.project.utils.mina.server;
+
+import java.net.InetSocketAddress;
+
+import org.apache.log4j.Logger;
+import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
+import org.apache.mina.filter.codec.ProtocolCodecFilter;
+import org.apache.mina.filter.codec.textline.TextLineCodecFactory;
+import org.apache.mina.transport.socket.SocketAcceptor;
+import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
+
+public class MyMinaServer {
+
+	 private static Logger logger = Logger.getLogger(MyMinaServer.class);
+	
+	public void init(int port) throws Exception {
+		
+		SocketAcceptor acceptor = new NioSocketAcceptor(Runtime.getRuntime().availableProcessors() + 1);
+		
+		// 设置解析器
+		
+		DefaultIoFilterChainBuilder chain = acceptor.getFilterChain();
+		
+		chain.addLast("codec", new ProtocolCodecFilter(new TextLineCodecFactory()));
+
+		acceptor.setHandler(new BexnHandler());
+		
+		acceptor.bind(new InetSocketAddress(port));
+
+	}
+
+	public MyMinaServer(int port){
+		try {
+			init(port);
+		} catch (Exception e) {
+			logger.error("MyMinaServer:服务端口："+port+"启动异常!!请从新启动。。。");
+		}
+	}
+}

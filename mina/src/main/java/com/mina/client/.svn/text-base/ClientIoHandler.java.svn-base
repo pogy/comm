@@ -1,0 +1,62 @@
+package com.project.utils.mina.client;
+
+import org.apache.mina.core.RuntimeIoException;
+import org.apache.mina.core.service.IoHandlerAdapter;
+import org.apache.mina.core.session.IdleStatus;
+import org.apache.mina.core.session.IoSession;
+
+import com.project.service.socket.cache.InitializationClient00;
+
+public class ClientIoHandler extends IoHandlerAdapter {  
+  
+    private void releaseSession(IoSession session) throws Exception {  
+        System.out.println("releaseSession");  
+        if (session.isConnected()) {  
+            session.close(true);  
+        }  
+    }  
+  
+    @Override  
+    public void sessionOpened(IoSession session) throws Exception {  
+        System.out.println("sessionOpened");  
+    }  
+  
+    @Override  
+    public void sessionClosed(IoSession session) throws Exception {
+        System.out.println("sessionClosed"); 
+    }  
+  
+    @Override  
+    public void sessionIdle(IoSession session, IdleStatus status) throws Exception {
+    	//每次session 关闭都清空缓存
+    	InitializationClient00.getInstance().getMsgMap().clear();
+        System.out.println("sessionIdle");  
+        try {  
+            releaseSession(session);  
+        } catch (RuntimeIoException e) {  
+        }  
+    }  
+  
+    @Override  
+    public void messageReceived(IoSession session, Object message) throws Exception {  
+        System.out.println("Receive Server message " + message);
+        super.messageReceived(session, message); 
+        InitializationClient00.getInstance().getMsgMap().put(session.getId(),message);
+        System.out.println("SESSION:ID="+session.getId());
+        releaseSession(session);  
+    }  
+  
+    @Override  
+    public void exceptionCaught(IoSession session, Throwable cause) throws Exception {  
+        System.out.println("exceptionCaught");  
+        cause.printStackTrace();  
+        releaseSession(session);  
+    }  
+  
+    @Override  
+    public void messageSent(IoSession session, Object message) throws Exception {  
+        System.out.println("messageSent");  
+        super.messageSent(session, message);  
+    }  
+  
+}

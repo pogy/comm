@@ -1,0 +1,27 @@
+#Wed Jun 24 12:58:07 CST 2015
+eclipse.preferences.version=1
+encoding//src/axis/client/org/apache/ofbiz/service/ColCollection.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/MapEntry.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/MapKey.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/MapValue.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/ProductInfo.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/ProductInfoLocator.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/ProductInfoPortType.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/ProductInfoSoapBindingStub.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/SqlDate.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/SqlTime.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/SqlTimestamp.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdBigDecimal.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdBoolean.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdDouble.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdFloat.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdInteger.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdLocale.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdLong.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/StdString.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/_null.java=UTF-8
+encoding//src/axis/client/org/apache/ofbiz/service/holders/MapMapHolder.java=UTF-8
+encoding//src/axis/client/server/AddService.java=UTF-8
+encoding//src/axis/client/server/AddServiceService.java=UTF-8
+encoding//src/axis/client/server/AddServiceServiceLocator.java=UTF-8
+encoding//src/axis/client/server/AddServiceSoapBindingStub.java=UTF-8

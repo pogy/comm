@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dubbo.web</groupId>
+  <artifactId>webclient</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>dubboclient</name>
+  <url>http://maven.apache.org</url>
+  
+  <build>
+    <finalName>webclient</finalName>
+  </build>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>3.8.1</junit.version>
+    <slf4j.version>1.6.6</slf4j.version>
+  </properties>
+  
+  <dependencies>	
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+	<!-- log -->
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.16</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	
+	<!-- Dubbo -->
+	<dependency>
+	  <groupId>com.alibaba</groupId>
+	  <artifactId>dubbo</artifactId>
+	  <version>2.5.3</version>
+	</dependency>
+	
+	<!-- Redis -->
+	<dependency>
+		<groupId>redis.clients</groupId>
+		<artifactId>jedis</artifactId>
+		<version>2.1.0</version>
+	</dependency>
+	
+	<!-- zkClient  -->
+	<dependency>
+	  <groupId>com.github.sgroschupf</groupId>
+	  <artifactId>zkclient</artifactId>
+	  <version>0.1</version>
+	</dependency>
+	<!--  zooKeeper -->
+	<dependency>
+	  <groupId>org.apache.zookeeper</groupId>
+	  <artifactId>zookeeper</artifactId>
+	  <version>3.3.6</version>
+	</dependency>
+  </dependencies>
+</project>

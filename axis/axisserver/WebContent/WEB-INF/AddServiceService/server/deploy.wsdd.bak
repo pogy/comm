@@ -1,0 +1,34 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from AddServiceService WSDL service -->
+
+  <service name="AddService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://server"/>
+      <parameter name="wsdlServiceElement" value="AddServiceService"/>
+      <parameter name="schemaQualified" value="http://xml.apache.org/xml-soap,http://server"/>
+      <parameter name="wsdlServicePort" value="AddService"/>
+      <parameter name="className" value="server.AddServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="AddService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getMaps" qname="operNS:getMaps" xmlns:operNS="http://server" returnQName="retNS:getMapsReturn" xmlns:retNS="http://server" returnType="rtns:Map" xmlns:rtns="http://xml.apache.org/xml-soap" soapAction="" >
+        <parameter qname="pns:json" xmlns:pns="http://server" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:map" xmlns:pns="http://server" type="tns:Map" xmlns:tns="http://xml.apache.org/xml-soap"/>
+      </operation>
+      <operation name="add" qname="operNS:add" xmlns:operNS="http://server" returnQName="retNS:addReturn" xmlns:retNS="http://server" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://server" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://server" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getMaps add"/>
+
+  </service>
+</deployment>

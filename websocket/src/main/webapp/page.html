@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Testing websockets</title>
+</head>
+<body>
+	<div>
+		<input type="text" id="texts"/>
+		<input type="submit" value="Start" onclick="start()" />
+	</div>
+	<div id="messages"></div>
+	<script type="text/javascript">
+		// 新增一个websocket对象
+		var webSocket = new WebSocket('ws://'+ window.location.host+'/websocket/websocket');
+		
+		// 定义websocket错误事件
+		webSocket.onerror = function(event) {
+			onError(event)
+		}; 
+		function onError(event) {
+			alert(event.data);
+		}
+		
+		// 定义websocket打开事件
+		webSocket.onopen = function(event) {
+			document.getElementById('messages').innerHTML = '已经连接好，你可以正常与服务器对话';
+		};
+		
+		// 定义websocket消息接收处理
+		webSocket.onmessage = function(event) {
+			document.getElementById('messages').innerHTML += '<br />' + event.data;
+		};
+		
+		//调用
+		function start() {
+			webSocket.send(document.getElementById('texts').value);
+			return false;
+		}
+	</script>
+</body>
+</html>

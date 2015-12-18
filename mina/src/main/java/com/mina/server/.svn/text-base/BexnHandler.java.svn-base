@@ -1,0 +1,59 @@
+package com.project.utils.mina.server;
+
+import org.apache.log4j.Logger;
+import org.apache.mina.core.service.IoHandlerAdapter;
+import org.apache.mina.core.session.IdleStatus;
+import org.apache.mina.core.session.IoSession;
+
+import com.project.service.socket.SaveHeandThread;
+
+public class BexnHandler extends IoHandlerAdapter {
+	
+	 private static Logger logger = Logger.getLogger(BexnHandler.class);
+	
+	@Override
+	public void messageReceived(IoSession session, Object message)
+			throws Exception {
+		session.write("messageReceived " + message);
+		session.close(true);
+		logger.info("被【爱心管家】~服务器端~接收到的数据：" + message);
+		if(message != null){
+			new Thread(new SaveHeandThread((String)message,1)).start();
+		}
+	}
+
+	@Override
+	public void exceptionCaught(IoSession session, Throwable cause)
+			throws Exception {
+		if (session.isConnected()) {
+			session.close(true);
+		}
+	}
+
+	@Override
+	public void messageSent(IoSession session, Object message) throws Exception {
+		session.close(true);
+	}
+
+	@Override
+	public void sessionClosed(IoSession session) throws Exception {
+		super.sessionClosed(session);
+		logger.info("sessionClosed");
+	}
+
+	//30秒未有活动服务器端自动断开连接
+	@Override
+	public void sessionCreated(IoSession session) throws Exception {
+		session.getConfig().setIdleTime(IdleStatus.BOTH_IDLE, 30000);
+	}
+
+	@Override
+	public void sessionIdle(IoSession session, IdleStatus status)throws Exception {
+		session.close(true);
+	}
+
+	@Override
+	public void sessionOpened(IoSession session) throws Exception {
+		super.sessionOpened(session);
+	}
+}
