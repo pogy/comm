@@ -50,7 +50,7 @@ $(function(){
 	.message{border: 1px solid; width: 500px; height: 400px; overflow: auto; margin-bottom:20px;padding:10px;}
 </style>
 <body>
-    <div id="showMsg" class="message"></div>
+    <div id="showMsg" class="message"></div> 
     <div>
         <input type="text" id="msg"/> 
         <input type="button" id="sendButton" value="发送" />
