@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	>
+	<!-- layout:decorator="/parent/layout" -->
+<head>
+<title>学生水平测试结果</title>
+<link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" />
+</head>
+<body>
+<!-- 	<section class="pMain" layout:fragment="content">
+		<div class="pArea" th:object="${studentExam}" >
+			<div class="studentexamresult_embed_content">
+				<h2 class="title">测试结果</h2>
+				<div class="studentexamresult_detailinfo">
+				<p>您的测试结果：<span th:text="${studentExam.formatLevelContent()}" >未知结果</span> </p>
+				<p>您的水平： <span th:text="${studentExam.examComment}"> 未知水平</span> </p>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	
+	<!-- http://resource.vipkid.com.cn/e_learning/images/student_exam_result_bk.png -->
+	<div style="margin: 0px auto; text-align:center; padding-top: 100px;height: 600px; background: url('http://resource.vipkid.com.cn/e_learning/images/resultv2/background.png') no-repeat; background-size:cover;" >
+		<!-- 显示学生测试结果 data-ng-controller="StudentExamResultController" -->
+		<section class="studentexamresult" >
+			<div style="margin: 20px auto; text-align:center" th:if="error!=true">
+				<img src = "http://resource.vipkid.com.cn/e_learning/images/resultv2/monster.png" class="monster"  style="width: 368px; height: 124px; left: 568px; position: relative; z-index: 10;"/>
+				<div style="position: relative;right: -25%;"> <!-- top: 250px; -->
+					<img id="id_result_resource" th:src="@{${imgurl}}" src="http://resource.vipkid.com.cn/e_learning/images/Level_2_Unit_1.png"  style="width: 840px; height: 440px; position: relative; top: -41px;"/>
+				</div>
+				
+			</div>
+			
+			<div style="margin: 20px auto; text-align:center" th:if="error==true">
+				<div style="position: relative;    font-size: 3em;  color: whitesmoke;"> <!-- top: 250px; -->
+					<p>请完成测试再提交您的结果。</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/parent/layout">
+<head>
+    <title>预约课程 - VIPKID美国小学在家上</title>     
+</head>
+<body>
+	<section layout:fragment="contentjs">
+		<script th:src="@{/static/parent/js/preschedule.js}"></script>
+	</section>
+	<section class="pMain" layout:fragment="content">
+		<div class="pCon yuekeHandle">
+			<div class="scheduleBg">
+				<p class="scheduleTab">
+					<span><a th:href="@{/parent/home}">我的课表</a></span>
+					<span class="cur"><a th:href="@{/parent/preschedule}">预约课程</a></span>
+				</p>
+				<span class="scheduleMore">约课规则：每周一中午12点，开放预约下周课程</span>
+			</div>
+			<div class="teacherTab" th:if="${noResultText1 !='没有购买课程的小朋友'}">
+				<div class="teacherTabCon">
+					<div class="teacherFilterDiv searchFilter clear">
+						<div class="classTypeFilter">
+							<span class="fl">视图模式：</span>
+							<p class="classViewModel fl" id="teacherYuekeList">
+								<span th:class="${mode==1}?'cur'" th:onclick="'javascript:queryByParams(1,'+${seaType}+','+${teacherId}+','+${week}+',\''+'日期不限'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\','+${currNum}+',-1,0)'">教师模式</span>
+								<span th:class="${mode==2}?'cur'" th:onclick="'javascript:queryByParams(2,'+${seaType}+','+${teacherId}+','+${week}+',\''+'日期不限'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\','+${currNum}+',-1,0)'">日历模式</span>
+							</p>
+						</div>	
+					</div>
+					<div class="teacherFilterDiv yuekeFilter clear">
+						<span class="fl">为您生成了：</span>
+						<div th:class="${seaType==1 or seaType==-1}?'searchTeacherName tabShow':'searchTeacherName tabHide'">								
+							<a href="javascript:;" class="searchTeacherDel"><span id="teacherName_" th:text="${teacherName}"></span><i></i></a>
+						</div>
+						
+						<div th:class="${seaType!=1 and seaType!=-1}?'parentFilter tabShow':'parentFilter tabHide'" id="classViewTeacher">
+							<strong th:text="${seaTypeName}">收藏老师</strong>
+							<ul>
+								<li rel="all" th:onclick="'javascript:queryByParams('+${mode}+',2,-1,'+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\',1,1,0,\'\')'">
+									<a href="javascript:;">收藏老师</a>
+								</li>
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+',3,-1,'+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\',1,1,0,\'\')'">
+									<a href="javascript:;">所有老师</a>
+								</li>
+							</ul>
+							<input name="" type="hidden" value="" id="classTeacherValue"/>
+						</div>
+
+						<div class="parentFilter" id="classViewWeek">
+							<strong th:text="${weekName}"></strong>
+							<ul>
+								<li rel="all" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+',1,\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\',1,1,0)'">
+									<a href="javascript:;">本周</a>
+								</li>
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+',2,\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\',1,1,0)'">
+									<a href="javascript:;">下周</a>
+								</li>
+							</ul>
+							<input name="" type="hidden" value="" id="classWeekValue"/>
+						</div>
+
+						<div class="parentFilter tabHide" id="classViewCourse">
+							<strong th:text="${courseName}"></strong>
+							<ul>									
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+'MAJOR'+'\',1,1,0)'">
+									<a href="javascript:;">VIPKID 美国小学课程</a>
+								</li>
+							</ul>
+							<input name="" type="hidden" value="" id="classTypeValue"/>
+						</div>							
+						<span class="fl">&nbsp;&nbsp;&nbsp;&nbsp;的可约时间表。</span>
+						<div class="classSearch">								
+							<input class="classSeachInput" value="按姓名查找老师" id="teacherModelSeach" />
+							<button class="classSearchBtn" id="classTeacherSearch">搜索老师</button>
+							<div class="classSearchSuggest" id="class_search_suggest">  
+				                <ul>  
+				                </ul>  
+				            </div>
+						</div>
+					</div>
+					<div th:class="${mode==1}?'teacherFilterDiv ytimeFilter clear tabShow':'teacherFilterDiv ytimeFilter clear tabHide'">
+						<span class="fl">筛选时段：</span>	
+
+						<div class="parentFilter" id="classTimeOne">
+							<strong id="day" th:text="${day}">日期不限</strong>
+							<ul>
+								<li rel="all" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'日期不限'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">日期不限</a></li>
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周一'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周一</a></li>
+								<li rel="all" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周二'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周二</a></li>
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周三'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周三</a></li>
+								<li rel="all" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周四'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周四</a></li>
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周五'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周五</a></li>
+								<li rel="all" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周六'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周六</a></li>
+								<li rel="vp1" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+'周日'+'\',\''+'起始时间'+'\',\''+'截止时间'+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;">周日</a></li>
+							</ul>
+							<input name="" type="hidden" value="" id="classTimeOneValue"/>
+						</div>
+
+						<div class="parentFilter" id="classTimeTwo" th:if="${day!='日期不限'}">
+							<strong id="timeStart" th:text="${timeStart}">起始时间</strong>
+							<ul>									
+								<li rel="all" th:each="timearr:${timeArrStart}" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timearr}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;" th:text="${timearr}"></a></li>
+							</ul>
+							<input name="" type="hidden" value="" id="classTimeTwoValue"/>
+						</div>
+						<div class="parentFilter none" th:if="${day=='日期不限'}">
+							<strong>起始时间</strong>
+						</div>
+						<span class="classTimeLine"  th:if="${day!='日期不限'}"></span>
+						<span class="classTimeLine none"  th:if="${day=='日期不限'}"></span>
+						<div class="parentFilter" id="classTimeThr" th:if="${day!='日期不限' and timeStart !='起始时间'}">
+							<strong id="timeEnd" th:text="${timeEnd}">截止时间</strong>
+							<ul>									
+								<li rel="all" th:each="timearr:${timeArrEnd}" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timearr}+'\',\''+${courseType}+'\',1,1,0)'"><a href="javascript:;" th:text="${timearr}"></a></li>
+							</ul>
+							<input name="" type="hidden" value="" id="classTimeThrValue"/>
+						</div>
+						<div class="parentFilter none" th:if="${day=='日期不限' or timeStart =='起始时间'}">
+							<strong>截止时间</strong>
+						</div>
+					</div>			
+				</div>
+			</div>				
+		</div>
+		<div class="yuekeWaper">
+			<div th:class="${mode==1 and noResult=='NO'}?'yuekeCon tabShow':'yuekeCon tabHide'">	
+				<div class="yuekeTeacherCon">
+					<div class="yuekeTeacherArea">
+						<ul class="yuekeTeacherList">
+							<li th:class="${teachersView.teacherId}==${teacherId}?cur" th:each="teachersView,iterStat : ${teachersViews}">
+								<p class="ykTlavatar">
+									<img th:src="@{'http://resource.vipkid.com.cn/'+${teachersView.avatar}}" />
+									<a class="ykTlAmore" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" target="_blank">详情</a>
+									<span class="ykTlAbg"></span>
+								</p>
+								<div class="ykTlInfo" >
+									<p class="ykTlIname">
+									<span th:text="${teachersView.name}" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teachersView.teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum}+',-1,'+${iterStat.index}+')'"></span>
+									<span class="ykTlLike"  th:id="''+${teachersView.teacherId}+''"  th:if="${teachersView.studentId!=studentId}">加收藏</span>
+									<span class="ykTlLike haslike" th:id="''+${teachersView.teacherId}+''"  th:if="${teachersView.studentId==studentId}">已收藏</span></p>
+									<p class="ykTlIdesc" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+','+${teachersView.teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum}+',-1,'+${iterStat.index}+')'">
+										<span th:each="tg : ${teachersView.tag}" th:if="${tg!=''}" th:text="${tg}"></span>
+									</p>
+								</div>
+								<i class="ykTlPointer"></i>							
+							</li>
+						</ul>
+						<div th:class="${totalRecords>5}?'ykTlHandle tabShow':'ykTlHandle tabHide'">
+							<p class="ykTlNumber">共<span th:text="${totalRecords}"></span>位符合条件的老师</p>
+							<p class="ykTlPage">
+								<a href="javascript:;" class="ykTlPagePrev" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+',-1,'+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum-1}+',1,0)'">上一页</a>
+									<span th:text="|${currNum}/${totalPage}|"></span>
+								<a href="javascript:;" class="ykTlPageNext" th:onclick="'javascript:queryByParams('+${mode}+','+${seaType}+',-1,'+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum+1}+',1,0)'">下一页</a>
+							</p>
+						</div>
+					</div>
+				</div>				
+				<div class="ykTlTable">
+					<table  border="0" cellspacing="0" cellpadding="0" class="ylTlTableHead">
+						<tr class="yltrWeek">
+							<th class="yltl1"></th>
+							<th>周一</th>
+							<th>周二</th>
+							<th>周三</th>
+							<th>周四</th>
+							<th>周五</th>
+							<th>周六</th>
+							<th>周日</th>
+							<th class="yltl9"></th>
+						</tr>
+						<tr class="yltrDate">
+							<th class="yltl1"></th>
+							<th th:each="dayStr:${dayArr}" th:text="${dayStr}"></th>
+							<th class="yltl9"></th>
+						</tr>
+					</table>
+					<table  border="0" cellspacing="0" cellpadding="0" class="ylTlTableBody" >
+						<tr th:class="${iterSt.index==0}?'stfirst'"  th:each="onlineClassY,iterSt: ${onlineClassViewsArr}">
+							<th class="yltl1" th:if="${iterStat.index==0}" th:each="onlineClassX,iterStat : ${onlineClassY}" th:text="${onlineClassX.y}">
+							</th>
+							<td th:if="${iterStat.index!=0}" th:each="onlineClassX,iterStat : ${onlineClassY}" th:class="${iterStat.index==7}?'yltd7'"> 
+								<!-- <a th:if="${onlineClassX.status!='BOOKED' and onlineClassX.type!=1 and onlineClassX.status!='AVAILABLE'}"
+								class="keyue" ></a> -->
+								<a th:if="${(onlineClassX.status=='BOOKED' or onlineClassX.status=='OPEN') and onlineClassX.type==1}"
+								th:onclick="'javascript:doCancel(\''+${onlineClassX.scheduledDateTime==null?null:#dates.format({onlineClassX.scheduledDateTime}, 'yyyy-MM-dd HH:mm')}+'\','+${onlineClassX.teacherId}+','+${onlineClassX.oteacherId}+','+${onlineClassX.id}+','+${onlineClassX.oid}+',\''+${onlineClassX.teacherName}+'\',\''+${onlineClassX.oteacherName}+'\','+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum}+',-1,'+${idx}+')'"
+								class="hasyue" 
+								th:text="已预约" href="javascript:;"></a>
+								<a 
+								th:if="${onlineClassX.status=='AVAILABLE'}"
+								th:onclick="'javascript:book(\''+${onlineClassX.scheduledDateTime==null?null:#dates.format({onlineClassX.scheduledDateTime}, 'yyyy-MM-dd HH:mm')}+'\','+${onlineClassX.teacherId}+','+${onlineClassX.oteacherId}+','+${onlineClassX.id}+','+${onlineClassX.oid}+',\''+${onlineClassX.teacherName}+'\',\''+${onlineClassX.oteacherName}+'\','+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum}+',-1,'+${idx}+')'" 
+								th:class="${onlineClassX.status=='AVAILABLE'}?''" 
+								th:text="可预约" href="javascript:;"></a>
+							</td>
+							<td class="yltd8"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div th:class="${mode==2 and noResult=='NO'}?'yuekeCon tabShow':'yuekeCon tabHide'">
+					<div class="yuekeSchedule">
+						<table  border="0" cellspacing="0" cellpadding="0" class="ylTlTableHead">
+							<tr class="yltrWeek">
+								<th class="yltl1"></th>
+								<th>周一</th>
+								<th>周二</th>
+								<th>周三</th>
+								<th>周四</th>
+								<th>周五</th>
+								<th>周六</th>
+								<th>周日</th>
+								<th class="yltl9"></th>
+							</tr>
+							<tr class="yltrDate">
+								<th class="yltl1"></th>
+								<th th:each="dayStr:${dayArr}" th:text="${dayStr}"></th>
+								<th class="yltl9"></th>
+							</tr>
+						</table>
+						<table  border="0" cellspacing="0" cellpadding="0" class="ylTlTableBody" >
+							<tr th:class="${iterSt.index==0}?'stfirst'"  th:each="onlineClassY,iterSt: ${onlineClassViewsArr}">
+								<th class="yltl1" th:text="${onlineClassX.y}" th:if="${iterStat.index==0}" th:each="onlineClassX,iterStat : ${onlineClassY}">
+								</th>
+								<td th:if="${iterStat.index!=0}" th:each="onlineClassX,iterStat : ${onlineClassY}" th:class="${iterStat.index==7}?'yltd7'"> 
+									<a th:if="${onlineClassX.CalendarType==1}"
+									class="" href="javascript:;"
+									th:onclick="'javascript:bookForCal('+${onlineClassX.size}+','+${onlineClassX.CalendarType}+',\''+${onlineClassX.scheduledDateTime==null?null:#dates.format({onlineClassX.scheduledDateTime}, 'yyyy-MM-dd HH:mm')}+'\','+${onlineClassX.teacherId}+','+${onlineClassX.oteacherId}+','+${onlineClassX.id}+','+${onlineClassX.oid}+',\''+${onlineClassX.teacherName}+'\',\''+${onlineClassX.oteacherName}+'\','+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum}+',-1,'+${idx}+')'"
+									th:text="可预约"></a>
+									<a th:if="${onlineClassX.CalendarType==2}"
+									class="hasyue" 
+									th:onclick="'javascript:doCancel(\''+${onlineClassX.scheduledDateTime==null?null:#dates.format({onlineClassX.scheduledDateTime}, 'yyyy-MM-dd HH:mm')}+'\','+${onlineClassX.teacherId}+','+${onlineClassX.oteacherId}+','+${onlineClassX.id}+','+${onlineClassX.oid}+',\''+${onlineClassX.teacherName}+'\',\''+${onlineClassX.oteacherName}+'\','+${mode}+','+${seaType}+','+${teacherId}+','+${week}+',\''+${day}+'\',\''+${timeStart}+'\',\''+${timeEnd}+'\',\''+${courseType}+'\','+${currNum}+',-1,'+${idx}+')'"
+									th:text="已预约" href="javascript:;"></a>
+									<!-- <a th:if="${onlineClassX.CalendarType==0}" class="keyue"></a>
+									<span ></span> -->
+								</td>
+								<td class="yltd8"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			<div hidden="true">
+						<input type="hidden" id="totalPage" th:value="${totalPage}"/>
+						<input type="hidden" id="mode" th:value="${mode}"/>
+						<input type="hidden" id="seaType" th:value="${seaType}"/>
+						<input type="hidden" id="courseType" th:value="${courseType}"/>
+						<input type="hidden" id="currNum" th:value="${currNum}"/>
+						<input type="hidden" id="idx" th:value="${idx}"/>
+						<input type="hidden" id="teacherId" th:value="${teacherId}"/>
+						<input type="hidden" id="week" th:value="${week}"/>
+						<input type="hidden" id="isPageDo" th:value="${isPageDo}"/>
+						<input type="hidden" id="teacherName" th:value="${teacherName}"/>
+						<a id="links" th:href="@{/parent/preschedule}"></a>
+			</div>
+			<div hidden="true">
+				<input type="hidden" id="tabScheduledDateTime"/>
+				<input type="hidden" id="tabSeaType"/>
+				<input type="hidden" id="tabTeacherId"/>
+				<input type="hidden" id="tabCourseType"/>
+				<input type="hidden" id="tabCurrNum"/>
+				<input type="hidden" id="tabTotalPage"/>
+				<input type="hidden" id="tabOnlineClassId"/>
+				<input type="hidden" id="tabTeacherName"/>
+			</div>
+			<div th:class="${noResult=='YES'}?'noClassTips tabShow':'noClassTips tabHide'">
+				<div class="noClassCon">
+					<span th:text="${noResultText1}"></span>
+						<br/>
+					<a th:href="@{/parent/preschedule}"><span th:text="${noResultText2}" th:if="${noResultText2=='换个条件试试？'}"></span></a>
+					<span th:text="${noResultText2}" th:if="${noResultText2!='换个条件试试？'}"></span>
+				</div>
+			</div>
+			
+		</div>	
+	</section>
+</body>
+</html>

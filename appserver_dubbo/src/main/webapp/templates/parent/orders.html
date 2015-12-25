@@ -1,0 +1,89 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/common/baseLayout">
+<head>
+    <title>订单中心 - VIPKID美国小学在家上</title> 
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/order.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/kkpager/kkpager_blue.css}" />
+</head>
+<body>
+	<section layout:fragment="content">
+		<!-- Header -->
+		<div th:replace="common/header::header-logined"></div>
+		<div class="orderMain">
+			<p class="downTitle">订单中心</p>
+			<div class="marea">
+				<table id="orderTable" class="orderTable">
+					<thead>
+						<tr>
+							<th>日期</th>
+							<th>课程商品</th>
+							<th>课程单价</th>
+							<th>价格</th>
+							<th>学生</th>
+							<th>订单状态</th>
+							<th>订单操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="order:${orders}">
+							<td align="center">
+								<p
+									th:text="${#dates.format(order.createDateTime, 'yyyy-MM-dd HH:mm:ss')}"></p>
+							</td>
+							<td align="center">
+								<p th:each="orderItem : ${order.orderItems}">
+									<span
+										th:text="|${orderItem.product.name} , ${orderItem.classHour} 课时|"></span>
+								</p>
+							</td>
+							<td align="center">
+								<p th:each="orderItem : ${order.orderItems}">
+									<span th:text="${orderItem.classHourPrice}"></span>
+								</p>
+							</td>
+							<td align="center">
+								<p th:text="${order.totalPrice}"
+									th:if="${order.totalPrice} != null"
+									style="text-decoration: line-through; color: #999;"></p>
+								<p th:text="${order.totalDealPrice}"
+									th:if="${order.totalDealPrice} != null"></p>
+							</td>
+							<td align="center">
+								<p th:text="${order.student.englishName}"></p>
+								<p th:text="${order.student.name}"></p>
+							</td>
+							<td align="center"
+								th:class="${order.status}=='等待支付' ? 'color_red' : ''">
+								<p th:text="${order.status}"></p>
+							</td>
+							<td align="center">
+								<p th:if="${order.status}=='等待支付'">
+									<a class="paymentButton"
+										th:href="@{/parent/payment(orderId=${order.id})}">支付</a>
+								</p> <a th:if="${order.status}=='等待支付'" class="cancelButton">取消订单</a>
+								<input type="hidden" id="oid" th:value="${order.id}" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="kkpager" style="width: 99%"></div>
+			</div>
+			<div hidden="true">
+				<input type="hidden" id="totalRecords" th:value="${totalRecords}" /> 
+				<input type="hidden" id="currNum" th:value="${currNum}" />
+			</div>
+		</div>
+	</section>
+
+	<section layout:fragment="contentjs">
+		<script th:src="@{/static/parent/js/orders.js}"></script>
+		<script th:src="@{/static/parent/js/order.js}"></script>
+	</section>
+</body>
+</html>

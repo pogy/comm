@@ -1,0 +1,31 @@
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}
+body,button,input,select,textarea {font:14px/1.75 \5FAE\8F6F\96C5\9ED1,\5b8b\4f53,sans-serif,tahoma,arial,'Hiragino Sans GB'; color: #555;background:#fff;}
+h1,h2,h3,h4,h5,h6 {font-size:100%}
+address,cite,dfn,em,var {font-style:normal}
+code,kbd,pre,samp {font-family:courier new,courier,monospace}
+ol,ul{list-style:none}
+img{display: block;border: 0 none;}
+input:focus,select:focus{outline: 0 none;}
+a {color:#333;text-decoration:none;outline: 0 none;}
+a:hover{color:#e65;text-decoration: none;}
+.clear:after{content:'\20';display:block;height:0;clear:both}
+.clear{*zoom:1}
+
+.helpArea{width:940px;margin:40px auto 50px;background:#f9f9f9;border:#ebebeb 1px solid;}
+.helpLeft{background:#efefef;width:237px; float:left; position:relative; z-index:1;}
+.helpLeft h3{font-size:18px;padding:15px 0;text-align:center;}
+.askList{margin-right:-1px;width:238px;}
+.askList.fixed{position:fixed;top:0;}
+.helpLeft ul{border-bottom:#e5e5e5 1px solid;}
+.helpLeft li{line-height:20px;border-top:#e5e5e5 1px solid;font-size:12px;}
+.helpLeft li a{color:#f5521f;padding:20px 20px 20px 18px; display:block;}
+.helpLeft li.on a{ border-left:#f5521f 3px solid;padding-left:15px;background:#fff url(http://resource.vipkid.com.cn/parent_home/static/home/image/play_icon.png) no-repeat 220px center;color:#333;}
+.helpRight{border-left:#ebebeb 1px solid;float:right;padding:20px 20px 20px 19px;width:663px; min-height:200px; position:relative;}
+.answerItem{margin-bottom:50px;}
+.answerItem img{ display:inline; max-width:650px;}
+.answerItem a{text-decoration:underline;}
+.answerItem h4{color:#f5521f;font-size:18px;margin-bottom:10px;}
+.answerItem .strong{font-weight:bold;}
+.tools li{float:left;margin-right:65px;}
+.tools li img{width:140px;height:140px;display:block;border:#ededed 5px solid;}
+.tools li span{display:block;text-align:center;color:#777;margin-top:8px;}

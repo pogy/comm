@@ -1,0 +1,81 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="utf-8" />
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta name="viewport" content="width=device-width,maxinum-scale=1.0 initial-scale=1.0, user-scalable=0"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<link rel="stylesheet" th:href="@{/static/mobile/css/m.openclass.css}"/>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?694a54b48b04b7310c37b61185eb88fe";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+<title>公开课</title>
+</head>
+<body>
+<header>
+	<a href="http://m.vipkid.com.cn/" class="home"></a>
+	<h1>VIPKID公开课</h1>
+	<a href="javascript:;" class="filterType">筛选</a>	
+</header>
+<div class="downMenu" id="downMenu">
+	<ul>
+		<li><a href="javascript:;" th:href="@{/public/mobile/openclass(ageRange=-1)}">不限</a></li>
+		<li><a href="javascript:;" th:href="@{/public/mobile/openclass(ageRange=1)}">4-8岁</a></li>
+		<li><a href="javascript:;" th:href="@{/public/mobile/openclass(ageRange=2)}">9-12岁</a></li>
+	</ul>
+	<p class="downMenubg" id="downMenubg"></p>
+</div>
+<div class="banner">
+	<img src="http://resource.vipkid.com.cn/parent_home/static/parent/image/banner.jpg" />
+</div>
+<ul class="classList">
+	<li th:each="opView : ${openClassList}">
+		<em th:if="${opView.type.toString()=='KKSFZZQ'}"><img th:src="${opView.imgSrc}"  alt=""  /><i class="status3"></i><p class="classTitle"><span th:text="${opView.lessonTopic}">绘本阅读-Mom loves me</span></p></em>
+		<em th:if="${opView.type.toString()=='KKSFZZN'}"><img th:src="${opView.imgSrc}"  alt=""  /><i class="status2"></i><p class="classTitle"><span th:text="${opView.lessonTopic}">绘本阅读-Mom loves me</span></p></em>
+		<em th:if="${opView.type.toString()=='YKK'}"><img th:src="${opView.imgSrc}"  alt="" /><i class="status1"></i><p class="classTitle"><span th:text="${opView.lessonTopic}">绘本阅读-Mom loves me</span></p></em>
+		<em th:if="${opView.type.toString()=='YJS'}"><img th:src="${opView.imgSrc}"  alt="" /><i class="status4"></i><p class="classTitle"><span th:text="${opView.lessonTopic}">绘本阅读-Mom loves me</span></p></em>
+
+		<p class="ttg clear">
+			<span class="time" th:text="${opView.timeVew}">2015-06-14 周日  19:00</span>
+			<span class="teacher"  th:text="${opView.teacherName+' 老师'}">Madli老师</span>
+			<span class="age" th:text="${opView.ageRange}">4-8岁</span>
+		</p>
+		<p class="gray" th:utext="${opView.introduce}">每一个孩子心中的妈妈都是最好的：我妈妈是一个棒极了的厨师；她是一个伟大的化妆师；她是全世界最强壮的女人；她还是一个奇异的园艺师，可以让任何植物生长；她是一个仙女……</p>
+		<div class="handle">
+			<p class="fl">
+				<span th:if="${opView.type.toString()!='YJS'}">已有</span>
+				<span th:text="${opView.studentCount}" class="count"></span>
+				<span th:if="${opView.type.toString()=='KKSFZZQ'}">人已参加</span>
+				<span th:if="${opView.type.toString()=='KKSFZZN' or opView.type.toString()=='YKK'}">人进入教室</span>
+				<span th:if="${opView.type.toString()=='YJS'}">人参加了本节课程</span>
+			</p>
+			<a href="javascript:;"  class="ocIntoClass" th:if="${opView.type.toString()=='KKSFZZQ'}">我要占座</a>
+			<a href="javascript:;" class="ocIntoClass" th:if="${opView.type.toString()=='KKSFZZN'}">进入教室</a>
+			<a href="javascript:;" class="ocIntoClass" th:if="${opView.type.toString()=='YKK'}">进入教室</a>
+			<a href="javascript:;" class="ocPlayBack" th:if="${opView.type.toString()=='YJS'}">课程回放</a>
+		</div>
+	</li>
+</ul>
+
+
+
+
+<div class="classpop" id="classpop">
+	<img src="http://resource.vipkid.com.cn/parent_home/static/parent/image/tips.png" />
+	<a href="javascript:;" class="classpopClose"></a>
+</div>
+<script th:src="@{/static/mobile/js/zepto.js}"></script>
+<script th:src="@{/static/mobile/js/fastclick.js}"></script>
+<script th:src="@{/static/mobile/js/m.openclass.js}"></script>
+</body>
+</html>

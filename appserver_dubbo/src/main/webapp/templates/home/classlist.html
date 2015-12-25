@@ -1,0 +1,92 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/home/layout">
+<head>
+    <title>公开课 - VIPKID美国小学在家上</title>
+    <link rel="stylesheet" th:href="@{/static/parent/css/openclass.css}" type="text/css" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/kkpager/kkpager_blue.css}" />
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?694a54b48b04b7310c37b61185eb88fe";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+<section layout:fragment="content">
+	<div class="focusArea">
+		<div class="focusWaper">
+			<img src="http://resource.vipkid.com.cn/parent_home/static/parent/image/openclass.jpg" />
+		</div>
+	</div>
+	<div class="w940">
+		<div class="topTab clear">
+			<p class="fl" id="privileged">
+				<a href="javascript:;" th:href="@{/classlist(ageRange=${ageRange},sign=1,type='ALL')}"  th:class="${type=='ALL'}?'cur'">全部公开课</a>
+				<a href="javascript:;" th:href="@{/classlist(ageRange=${ageRange},sign=1,type='DEDICATED')}" th:class="${type=='DEDICATED'}?'cur'">精品公开课<span class="privilegedPop">面向VIPKID付费用户开放，高端课程体验。</span></a>
+				<a href="javascript:;" th:href="@{/classlist(ageRange=${ageRange},sign=1,type='NORMAL')}" th:class="${type=='NORMAL'}?'cur'">免费公开课<span class="privilegedPop free">面向VIPKID所有注册用户开放</span></a><!-- 面向VIPKID所有注册用户开放 -->
+			</p>
+			<p class="fr">
+				<a href="javascript:;" th:href="@{/classlist(ageRange=-1,sign=1,type=${type})}" th:class="${ageRange==-1?'cur':''}">不限</a>
+				<a href="javascript:;" th:href="@{/classlist(ageRange=1,sign=1,type=${type})}" th:class="${ageRange==1?'cur':''}">4-8岁</a>
+				<a href="javascript:;" th:href="@{/classlist(ageRange=2,sign=1,type=${type})}" th:class="${ageRange==2?'cur':''}">9-12岁</a>
+			</p>
+		</div>
+		<div class="ocItem" th:each="opView : ${openClassList}">
+			<img th:src="${opView.imgSrc}"  class="ocImg"/>
+			<div class="ocWords">
+				<h3 th:text="${opView.lessonTopic}"></h3>
+				<p class="ocInfo">
+					<span class="ocTime" th:text="${opView.timeVew}"></span>
+					<span class="ocTeacher" th:text="${opView.teacherName+' 老师'}"></span>
+					<span class="ocChild" th:text="${opView.ageRange}"></span>
+				</p>
+				<p class="ocDesc" th:text="${opView.introduce}"></p>
+				<p class="ocHandle">
+					<span class="ocNumber">
+						<span th:if="${opView.type.toString()!='YJS'}">已有</span>
+						<em th:text="${opView.studentCount}"></em>
+						<span th:if="${opView.type.toString()=='KKSFZZQ'}">人已参加</span>
+						<span th:if="${opView.type.toString()=='KKSFZZN' or opView.type.toString()=='YKK'}">人进入教室</span>
+						<span th:if="${opView.type.toString()=='YJS'}">人参加了本节课程</span>
+					</span>
+					<a href="javascript:;" class="ocIntoClass" th:if="${opView.type.toString()=='KKSFZZQ'}">我要占座</a>
+					<a href="javascript:;" class="ocIntoClass" th:if="${opView.type.toString()=='YKK' or opView.type.toString()=='KKSFZZN'}">进入教室</a>
+					<a href="javascript:;" class="ocPlayBack" th:if="${opView.type.toString()=='YJS'}">课程回放</a>
+					<input id="openid" type="hidden" th:value="${opView.id}"/>
+					<input id="channelId" type="hidden" th:value="${opView.channelId}"/>
+				</p>
+			</div>
+			<span class="ocStatus ocStatus-3" th:if="${opView.type.toString()=='KKSFZZQ'}">未开始</span>
+			<span class="ocStatus ocStatus-2" th:if="${opView.type.toString()=='KKSFZZN'}">即将上课</span>
+			<span class="ocStatus ocStatus-1" th:if="${opView.type.toString()=='YKK'}">上课中</span>
+			<span class="ocStatus ocStatus-4" th:if="${opView.type.toString()=='YJS'}">已结束</span>
+			<span th:if="${opView.opType.toString()=='DEDICATED'}" class="ocItemMedal privileged"></span>
+			<span th:if="${opView.opType.toString()=='NORMAL'}" class="ocItemMedal free"></span>
+		</div>
+		<div id="kkpager"  th:if="${totalRecords!=0}">
+		</div>
+		<div hidden="true">
+			<input type="hidden" id="totalRecords" th:value="${totalRecords}"/>
+			<input type="hidden" id="currNum" th:value="${currNum}"/>
+			<input type="hidden" id="rowNum" th:value="${rowNum}"/>
+			<input type="hidden" id="ageRange" th:value="${ageRange}"/>
+			<input type="hidden" id="sign" th:value="${sign}"/>
+			<input type="hidden" id="type" th:value="${type}"/>
+		</div>
+	</div>
+	
+</section>
+<section layout:fragment="contentjs">
+	<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script>
+	<script th:src="@{/static/home/js/classlist.js}"></script>
+	<script th:src="@{/static/parent/js/kkpager/kkpager.min.js}"></script>
+</section>
+</body>
+</html>

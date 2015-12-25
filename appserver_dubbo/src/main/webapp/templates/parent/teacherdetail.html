@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/parent/layout">
+<head>
+    <title>教师详情 - VIPKID美国小学在家上</title> 
+</head>
+<body>
+	<section class="pMain" layout:fragment="content">
+		<div class="pArea">
+			<p class="pAreaTitle">教师详情</p>
+			<div class="pCon teacherCon clear">
+				<p class="mcTeacherPhoto fl">
+					<img th:src="@{'http://resource.vipkid.com.cn/'+${teacherDetail.avatar}}" alt="jane"/>
+					<!-- <span class="mcPlayIcon" th:if="${teacherDetail.shortVideo!=null and teacherDetail.shortVideo!=''}" th:id="${teacherDetail.shortVideo}"></span> -->
+				</p>
+				<div class="teacherConInfo">
+					<p class="teacherConName" th:text="${teacherDetail.name}"></p>
+					<dl th:if="${teacherDetail.graduatedFrom} != null and ${teacherDetail.graduatedFrom} != ''"><dt>毕业学校：</dt><dd  th:text="${teacherDetail.graduatedFrom}"></dd></dl>
+					<dl><dt>教师简介：</dt><dd th:text="${teacherDetail.introduction}"></dd></dl>
+					<a th:href="@{/parent/preschedule(teacherId=${teacherDetail.teacherId},seaType=1,teacherName=${teacherDetail.name},week=${teacherDetail.hasAvailableWeek})}" class="teacherYkBtn" th:if="${teacherDetail.hasAvailable==false}">立即约课</a>
+					<span class="teacherYkFull" th:if="${teacherDetail.hasAvailable}">课满</span>
+					<a class="ykTlLike"  th:id="''+${teacherDetail.teacherId}+''"  th:if="${teacherDetail.studentId==-1}">加收藏</a>
+					<a class="ykTlLike haslike" th:id="''+${teacherDetail.teacherId}+''"  th:if="${teacherDetail.studentId!=-1}">已收藏</a>
+				</div>
+			</div>
+		</div>
+		<div class="pArea" th:if="${(teacherDetail.tag!=null and teacherDetail.tag.length > 0) or (teacherDetail.vipkidRemarks !=null and teacherDetail.vipkidRemarks !='') } ">
+			<p class="pAreaTitle">教师上课特色</p>
+			<div class="pCon teacherCon">
+				<p style="margin-bottom: 10px;"  th:if="${flag}">推荐等级：</p>
+				<p class="teacherTd">
+					<span th:each="tg : ${teacherDetail.tag}" th:if="${tg!='' and tg!=null}"><i th:text="${tg}"></i></span>
+				</p>
+				<dl class="teacherPingyu" th:if="${teacherDetail.vipkidRemarks} != null">
+					<dt>VIPKID评语：</dt>
+					<dd th:text="${teacherDetail.vipkidRemarks}"></dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+	<div th:replace="common/footer::footer-normal"></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 查找最新的schemaLocation 访问 http://www.springframework.org/schema/ -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amq="http://activemq.apache.org/schema/core"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd   
+        http://www.springframework.org/schema/context   
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/jms
+        http://www.springframework.org/schema/jms/spring-jms-4.0.xsd
+        http://activemq.apache.org/schema/core
+        http://activemq.apache.org/schema/core/activemq-core-5.8.0.xsd">
+
+    <amq:connectionFactory id="amqConnectionFactory"
+                           brokerURL="${activemq.url}" userName="${activemq.username}" password="${activemq.password}"/>
+
+    <bean id="connectionFactory"
+          class="org.springframework.jms.connection.CachingConnectionFactory">
+        <constructor-arg ref="amqConnectionFactory"/>
+        <property name="sessionCacheSize" value="100"/>
+    </bean>
+    
+    <!-- 定义消息队列（Queue） -->
+    <bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <!-- 设置消息队列的名字 -->
+        <constructor-arg>
+            <value>${activemq.queue_leads}</value>
+        </constructor-arg>
+    </bean>
+    
+    <!-- 配置JMS模板（Queue），Spring提供的JMS工具类，它发送、接收消息。 -->
+    <bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="defaultDestination" ref="queueDestination" />
+        <property name="receiveTimeout" value="10000" />
+    </bean>
+
+    <!-- ====Producer side start====-->
+
+    <!-- 定义JmsTemplate的Queue类型 -->
+    <!-- <bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory"/>
+        <property name="pubSubDomain" value="false"/>
+    </bean> -->
+
+    <!-- 定义JmsTemplate的Topic类型 -->
+    <!-- <bean id="jmsTopicTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory"/>
+        <property name="explicitQosEnabled" value="true"/>
+    	<property name="deliveryMode" value="2" />
+    	<property name="timeToLive" value="8640000" />
+        <property name="pubSubDomain" value="true"/>
+    </bean> -->
+
+    <!-- ====Producer side end====-->
+
+</beans>

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+<title>课程体系</title>
+<meta name="viewport" content="target-densitydpi=get-target-densitydpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml;charset=utf-8" />
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache" />
+<meta name="viewport" content="width=device-width;initial-scale=1.0;maximum-scale=2.0;user-scalable=1" />
+<link rel="stylesheet" th:href="@{/static/mobile/css/main.css}"/>
+<script>
+if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+	var version = parseFloat(RegExp.$1);
+	if (version > 2.3) {
+		var phoneScale = parseInt(window.screen.width) / 640;
+		document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi" />');
+	} else {
+		document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi" />');
+	}
+} else {
+	document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi" />');
+}
+</script>
+</head>
+
+<body>
+<header>
+    <a href="javascript:;" class="mainMenu" title="菜单列表"><em>菜单列表</em></a>
+    <span class="login"><a href="/mobile/login">登录</a><a href="/mobile/signup">注册</a></span>
+</header>
+<section class="kidLogo">
+<img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo.png}" />
+</section>
+<a class="tel400" href="tel:4000056666" title=""><em></em><span>服务热线：400 - 005 - 6666</span></a>
+<nav>
+	<section class="navMain clearfix">
+        <span>课程体系</span>
+        <ul>
+            <li><a href="index" title="首页">首页</a></li>
+            <li><a href="teacher" title="外教团队">外教团队</a></li>
+            <li><a href="teachmethod" title="教学方法">教学方法</a></li>
+            <li><a href="curriculum" title="课程体系">课程体系</a></li>
+            <li><a href="process" title="上课流程">上课流程</a></li>
+            <li><a href="classDiary" title="课堂日志">课堂日志</a></li>
+        </ul>
+        <em></em>
+    </section>
+</nav>
+<!-- 焦点图 start -->
+<section class="swiper-container" id="m-focus">
+    <section class="swiper-wrapper">
+    	<section class="swiper-slide">
+        <div class="tmItem">
+	        <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/banner3.jpg}"/>
+	        <section class="mask"></section>
+			<section class="mask-tt">个性、沉浸、自由、趣味<br/>实现线上线下浸入式学习的终极体验</section>
+        </div>
+        </section>
+    </section>    
+</section>
+<!-- 焦点图 end -->
+    
+<section class="jxb">
+	<ul class="tabUp clearfix">
+    	<li class="one" dome-num="0"><span>Level.1</span></li>
+        <li class="two" dome-num="1">
+            <span class="one">Level.2-3</span>
+            <span>Kindergarten<br/>
+            －<br/>
+             Grade 1</span>
+        </li>
+        <li class="three" dome-num="2">
+        	 <span class="one">Level.4-5</span>
+            <span> Grade 2<br/>
+            －<br/>
+            Grade 3</span>
+
+        </li>
+        <li class="four" dome-num="3">
+        	 <span class="one">Level.6-7</span>
+             <span>Grade 4<br/>
+            －<br/>
+            Grade 5</span>
+        </li>
+    </ul>
+    <section class="tabDown">
+    	<p class="tabList one" style="display:block">1建立听说读写基础，听懂老师指令，掌握字母表每一个字母的发音规律</p>
+        <p class="tabList two">2建立听说读写基础，听懂老师指令，掌握字母表每一个字母的发音规律</p>
+        <p class="tabList three">3建立听说读写基础，听懂老师指令，掌握字母表每一个字母的发音规律</p>
+        <p class="tabList four">4建立听说读写基础，听懂老师指令，掌握字母表每一个字母的发音规律</p>
+    </section>
+</section>
+
+<section class="qwx">
+	<strong class="titleOne" style="text-align:left">趣味学</strong>
+    <p class="clearfix"><em class="gCircle"></em><span>5-12岁的孩童，内心的成长经历稚嫩、懵懂…学习中心针对每个年龄段孩子的心理，设定了一次又一次的未知世界的探索主题，仿佛哈利波特在魔法学院的每个年级都有一段冒险之旅~</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>结合每个learning cycle语言主题的课程浮岛设计，贴合课程内容，启发孩子对未知世界的无限想象…</span></p>
+	<ul class="clearfix">
+    	<li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_23.png}" alt="" /><span>拯救游乐园星系</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_24.png}" alt="" /><span>帮助美人鱼</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_25.png}" alt="" /><span>帮助太阳</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_26.png}" alt="" /><span>圣诞历险记</span></li>
+    </ul>
+</section>
+<section class="gxx">
+	<strong class="titleOne" style="text-align:right">个性学</strong>
+    <p class="clearfix"><em class="gCircle"></em><span>1对1教学顾问服务，随时根据孩子情况调整学习进度，与您一起关怀孩子的成长。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>课后教师反馈服务，帮助您了解孩子的课堂情况。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>个性化教学提醒服务，通过VIPKID建立的学生档案，老师将为您的孩子制定个性化的学习方案，打造独特的上课体验。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>单元测评报告服务，让您全面掌握孩子的学习情况。</span></p>
+	<ul class="clearfix">
+    	<li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_27.png}" alt="" /><span>教学顾问</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_28.png}" alt="" /><span>Feedback体系</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_29.png}" alt="" /><span>Unit Accessment</span></li>
+    </ul>
+</section>
+<section class="qwx cqx">
+	<strong class="titleOne" style="text-align:left">沉浸学</strong>
+    <p class="clearfix"><em class="gCircle"></em><span>Engage(激发兴趣)，Explore(探索)，Explain(拓展)，Elaborate(巩固)，Excute(执行)，Evaluation(评估)，独创6E闭环学习理念，步步深入，为孩子打下良好基础。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>小组选修课，扩展课外知识，让孩子与小伙伴一起愉快学习。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>线下家长课堂，为您带来前沿教育理念。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>亲子阅读群，与您分享优质绘本，共同创造温馨故事时光。</span></p>
+	<ul class="clearfix">
+    	<li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_30.png}" alt="" /><span>Learning Cycle</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_31.png}" alt="" /><span>Small Group</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_32.png}" alt="" /><span>家长课堂</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_33.png}" alt="" /><span>阅读群</span></li>
+    </ul>
+</section>
+<section class="gxx zyx">
+	<strong class="titleOne" style="text-align:right">自由学</strong>
+    <p class="clearfix"><em class="gCircle"></em><span>根据孩子认知水平、学习能力和性格特点，自由选择优质老师。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>打破定时上课限制，灵活选择学习时段，每节课仅为20分钟，保证课堂学习效率。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>免去线下机构学习的奔波之苦，自主选择上课地点，节约更多时间享受亲子时光。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>随时回放课堂视频，与孩子一起重温欢乐时光。</span></p>
+	<ul class="clearfix">
+    	<li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_34.png}" alt="" /><span>老师自由选</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_35.png}" alt="" /><span>时间地点自由选</span></li>
+        <li><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_36.png}" alt="" /><span>回放课堂视频</span></li>
+    </ul>
+</section>
+
+<section class="trust">
+	<strong class="titleOne">信任与期待</strong>
+    <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_09.png}" alt="信任与期待" />
+	<p class="clearfix"><em class="gCircle"></em><span>100%满意保证</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>30天无条件退款承诺</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>付费后，每位学员都会与VIPKID签订一份购买协议，我们向学员保障外教资质，和服务水平。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>如果您和小朋友对购买后的课程或服务感到不满意，可以在交费后的30天内向我们提出“无条件退款”申请。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>我们将以最快的速度将未消耗的课时，按照交款方式退还。</span></p>
+</section>
+
+
+
+
+<section class="enterprise">
+	<ul class="clearfix">
+    	<li><a href="http://www.forbeschina.com/review/201406/0033532.shtml"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_01.png}" alt="" /></a></li>
+        <li><a href="http://www.wtoutiao.com/a/242742.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_02.png}" alt="" /></a></li>
+        <li><a href="http://blog.sina.com.cn/s/blog_6dbc86af0101fqn2.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_03.png}" alt="" /></a></li>
+        <li><a href="http://www.jmdedu.com/viewpoint/detail/575"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_04.png}" alt="" /></a></li>
+        <li><a href="http://tech.163.com/14/0609/16/9UAHEAJH00094ODU.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_05.png}" alt="" /></a></li>
+        <li><a href="http://v.qq.com/boke/page/o/y/j/o0129h4kmyj.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_06.png}" alt="" /></a></li>
+        <li><a href="http://www.zuojing.com/201403/5045.shtml"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_07.png}" alt="" /></a></li>
+        <li><a href="http://fudaoquan.com/p/4864.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_08.png}" alt="" /></a></li>
+        <li><a href="http://power.internet2share.com/?p=754"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_09.png}" alt="" /></a></li>
+    </ul>
+</section>
+
+<section class="regEntrance">
+  <img class="kl" th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kl.png}" />
+  <p>注册获得免费体验课</p>
+  <a href="#" title=""><span>GO</span><em></em></a>
+  <span class="close"></span>
+</section>
+<footer>Copyright (C)2010-2014 Inc. All rights reserved. </footer>
+<section class="scrPop" id="listLeft" style="display:none">
+    <section class="scrMenu">
+        <section class="scrBack">
+        	<a class="scrTitle clearfix" href="http://parent.vipkid.com.cn/lessonManagement/dashboard"><em></em><span>个人中心</span></a>
+            <section class="scrRolling">
+                <section class="scrList">
+                	<ul>
+                    	<li><a href="http://parent.vipkid.com.cn/lessonManagement/dashboard" title="约课"><em class="one"></em><span>约课</span></a></li>
+                        <li class="active"><a href="http://parent.vipkid.com.cn/lessonManagement/dashboard" title="我的课表"><em class="two"></em><span>我的课表</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/learningOverview/takenClassList" title="已上课程"><em class="three"></em><span>已上课程</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/report/report" title="学习报告"><em class="four"></em><span>学习报告</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/services/orders" title="我的订单"><em class="five"></em><span>我的订单</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/services/parentProfile" title="个人资料"><em class="six"></em><span>个人资料</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="scrDown" id="canvas"></section>
+</section>
+
+
+<script th:src="@{/static/mobile/js/iZepto.js}"></script>
+<script th:src="@{/static/mobile/js/main.js}"></script>
+<script th:src="@{/static/mobile/js/swiper.min.js}"></script>
+<script type="text/javascript">	
+	var canvas = document.getElementById("canvas");
+	function touchStart(event) {closeLeft();}
+	canvas.addEventListener("touchstart", touchStart, false);
+</script>
+</body>
+</html>

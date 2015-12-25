@@ -1,0 +1,135 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/parent/layout">
+<head>
+    <title>我的老师 - VIPKID美国小学在家上</title>     
+</head>
+<body>
+	<section layout:fragment="contentjs">
+		<script th:src="@{/static/parent/js/teachers.js}"></script>
+	</section>
+	<section class="pMain" layout:fragment="content">
+		<div class="pCon" id="teachers">
+				<div class="scheduleBg">
+					<p class="scheduleTab" id="teacherInventList">
+						<a th:href="@{/parent/teachers(courseType='All',tabSign=-1,timeWeek=-1,teacherName='',seachSign=-1,rowNum=10,currNum=1)}"><span th:class="${tabSign==-1}?'cur'">全部老师</span></a>
+						<a th:href="@{/parent/teachers(courseType='All',tabSign=1,timeWeek=-1,teacherName='',seachSign=-1,rowNum=10,currNum=1)}"><span th:class="${tabSign==1}?'cur'">我收藏的老师</span></a>
+					</p>
+				</div>
+				<div class="teacherTab">
+					<div th:class="${tabSign==-1}?'teacherTabCon tabShow':'teacherTabCon tabHide'">
+						<div class="teacherFilterDiv clear">
+							<div class="fl pr tabHide">
+								<span class="fl">筛选课程：</span>
+								<div class="parentFilter" id="teacherListAll">
+									<strong th:text="${selectName}">不限</strong>
+									<ul>									
+										<li th:onclick="'javascript:queryByParams(\''+'All'+'\',-1,'+${timeWeek}+',0,10,1)'"><a href="javascript:;">不限</a></li>
+										<li th:onclick="'javascript:queryByParams(\''+'MAJOR'+'\',-1,'+${timeWeek}+',0,10,1)'"><a href="javascript:;">VIPKID 美国小学课程</a></li>
+									</ul>
+									<input name="" type="hidden" value="" id="teacherListAllValue"/>
+								</div>								
+							</div>
+
+							<p class="classViewModel fl">
+								<strong class="fl">可约时间：</strong>
+								<span th:class="${timeWeek==-1}?'cur'" th:onclick="'javascript:queryByParams(\''+${courseType}+'\',-1,-1,0,10,1)'">不限</span>
+								<span th:class="${timeWeek==1}?'cur'" th:onclick="'javascript:queryByParams(\''+${courseType}+'\',-1,1,0,10,1)'">本周</span>
+								<span th:class="${timeWeek==2}?'cur'" th:onclick="'javascript:queryByParams(\''+${courseType}+'\',-1,2,0,10,1)'">下周</span>
+							</p> 
+							<div class="classSearch">								
+								<input class="classSeachInput" value="按姓名查找老师" id="classSeachCon" />
+								<button class="classSearchBtn" th:onclick="'javascript:queryByParams(\''+'All'+'\',-1,-1,1,10,1)'" >搜索老师</button>
+							</div>
+						</div>
+						<ul class="myCollectTeacher">
+							<li th:each="teachersView : ${teachersViews1}">
+								<a class="mcTeacherPhoto" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" target="_blank">
+									<img th:src="@{'http://resource.vipkid.com.cn/'+${teachersView.avatar}}" alt="jane" />
+									<!-- <span class="mcPlayIcon" th:if="${teachersView.shortVideo}"></span> -->
+									<span class="teacheInventFull" th:if="${teachersView.hasAvailable}"></span>
+								</a>
+								<p class="mcTeacherName" th:text="${teachersView.name}"></p>
+								<a th:if="${teachersView.hasAvailable==false}" href="#" th:href="@{/parent/preschedule(teacherId=${teachersView.teacherId},isPageDo=-1,week=${teachersView.hasAvailableWeek},seaType=1,teacherName=${teachersView.name})}" class="mcBookBtn">立即约课</a>
+								<a th:if="${teachersView.hasAvailable}" href="#" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" target="_blank" class="mcBookBtn">详情</a>
+							</li>
+						</ul> 
+					</div>
+					<div th:class="${tabSign==1}?'teacherTabCon tabShow':'teacherTabCon tabHide'">						
+						<div class="teacherFilterDiv clear">
+							<div class="fl pr tabHide">
+								<span class="fl">筛选课程：</span>
+								<div class="parentFilter" id="teacherListMy">
+									<strong th:text="${selectName}">不限</strong>
+									<ul>									
+										<li th:onclick="'javascript:queryByParams(\''+'All'+'\',1,'+${timeWeek}+',0,10,1)'"><a href="javascript:;">不限</a></li>
+										<li th:onclick="'javascript:queryByParams(\''+'MAJOR'+'\',1,'+${timeWeek}+',0,10,1)'"><a href="javascript:;">Major Course 主修课</a></li>
+									</ul>
+									<input name="" type="hidden" value="" id="teacherListMyValue"/>
+								</div>								
+							</div>
+	
+							<p class="classViewModel fl">
+								<strong class="fl">可约时间：</strong>
+								<span th:class="${timeWeek==-1}?'cur'" th:onclick="'javascript:queryByParams(\''+${courseType}+'\',1,-1,0,10,1)'">不限</span>
+								<span th:class="${timeWeek==1}?'cur'" th:onclick="'javascript:queryByParams(\''+${courseType}+'\',1,1,0,10,1)'">本周</span>
+								<span th:class="${timeWeek==2}?'cur'" th:onclick="'javascript:queryByParams(\''+${courseType}+'\',1,2,0,10,1)'">下周</span>
+					
+							</p> 
+							<div class="classSearch">								
+								<input class="classSeachInput" value="按姓名查找老师" id="classSeachCon1" />
+								<button class="classSearchBtn" th:onclick="'javascript:queryByParams(\''+'All'+'\',1,-1,1,10,1)'" >搜索老师</button>
+								<div class="classSearchSuggest" id="class_search_suggest">  
+					                <ul>  
+					                </ul>  
+					            </div>
+							</div>
+						</div>
+						<!-- 无收藏老师显示 start-->
+						<div class="noCollectTips"  th:if="${totalRecords==0 and timeWeek==-1 and courseType=='All' and (teacherName==null or teacherName=='')}" >
+							<p class="noCollectTipTitle">你还没有收藏的老师，去所有老师列表，查看、收藏喜欢的老师吧！</p>
+							<p class="noCollectTipDesc">第1步：找到感兴趣的老师，点击查看详细资料</p>
+							<p class="noCollectTipImg"><img src="http://resource.vipkid.com.cn/parent_home/static/parent/image/all_teacher_guide.jpg" /></p>
+							<p class="noCollectTipDesc">第2步：喜欢老师就收藏吧！～方便进行下一次约课～</p>
+							<p class="noCollectTipImg"><img src="http://resource.vipkid.com.cn/parent_home/static/parent/image/teacher_detail_guide.jpg" /></p>
+						</div>
+						<!-- 无收藏老师显示 end-->
+						<ul class="myCollectTeacher"  th:if="${tabSign==1 and totalRecords!=0}">
+							<li th:each="teachersView : ${teachersViews2}">
+								<a class="mcTeacherPhoto" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" target="_blank">
+									<img th:src="@{'http://resource.vipkid.com.cn/'+${teachersView.avatar}}" alt="jane" />
+									<!-- <span class="mcPlayIcon" th:if="${teachersView.shortVideo}"></span> -->
+									<span class="teacheInventFull" th:if="${teachersView.hasAvailable}"></span>
+								</a>
+								<p class="mcTeacherName" th:text="${teachersView.name}"></p>
+								<a th:if="${teachersView.hasAvailable==false}" href="#" th:href="@{/parent/preschedule(teacherId=${teachersView.teacherId},isPageDo=-1,week=${teachersView.hasAvailableWeek},seaType=1,teacherName=${teachersView.name})}" class="mcBookBtn">立即约课</a>
+								<a th:if="${teachersView.hasAvailable}" href="#" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" target="_blank" class="mcBookBtn">详情</a>
+							</li>
+						</ul>	
+					</div>
+					<div class="noClassTips tabShow" th:if="${totalRecords==0 and (tabSign==-1 or (tabSign==1 and (courseType=='All' and ((teacherName!=null and teacherName!='') or timeWeek!=-1) ))) }">
+							<div class="noClassCon">
+								<span>没有符合条件的老师</span>
+									<br/>
+								<span>换个条件试试</span>
+							</div>
+					</div>
+					<div id="kkpager"  th:if="${totalRecords!=0}">
+					</div>				
+				</div>
+				<div hidden="true">
+						<input type="hidden" id="totalRecords" th:value="${totalRecords}"/>
+						<input type="hidden" id="currNum" th:value="${currNum}"/>
+						<input type="hidden" id="tabSign" th:value="${tabSign}"/>
+						<input type="hidden" id="timeWeek" th:value="${timeWeek}"/>
+						<input type="hidden" id="seachSign" th:value="${seachSign}"/>
+						<input type="hidden" id="teacherName" th:value="${teacherName}"/>
+						<input type="hidden" id="courseType" th:value="${courseType}"/>
+						<a id="links" th:href="@{/parent/teachers}"></a>
+				</div>
+			</div>
+	</section>
+</body>
+</html>

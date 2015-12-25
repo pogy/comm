@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+  	<link rel="stylesheet" th:href="@{/static/parent/css/header.css}" />
+  </head>
+  <body>
+    <!-- /* 页脚有两种: 1.正式版 2.简易版 */-->
+    <div class="footer" th:fragment="footer-normal">
+		<p class="footlink"><a href="/about"  target="_blank">关于我们</a><span class="ffline"></span><a href="/contact"  target="_blank">联系我们</a><span class="ffline"></span><a href="/media"  target="_blank">媒体报道</a><span class="ffline"></span><a href="/diary" title="VIPKID资讯">VIPKID资讯</a></p>
+		<p>公司名称：北京大米科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司地址：北京市海淀区中关村大街19号新中关大厦写字楼B座南翼5A-07、08&nbsp;&nbsp;&nbsp;&nbsp;联系电话：400-005-6666</p>
+		<p>Copyright &copy;2015 Inc. All rights reserved. 北京大米科技有限公司  版权所有 <span class="feline"></span> 京ICP备14002500号</p>
+    </div>
+    <div class="sFooter" th:fragment="footer-simple">
+    	<div class="sHdCon">
+			<p class="sCopyInfo">Copyright &copy; 2015 Inc. All rights reserved. 北京大米科技有限公司  版权所有 | 京ICP备14002500号</p>
+			<p class="sFooterLink"><a href="/about">关于我们</a><span class="sFline"></span><a href="/contact" >联系我们</a><span class="sFline"></span><a href="/media">媒体报道</a><span class="sFline"></span><a href="/diary" title="VIPKID资讯">VIPKID资讯</a></p>
+		</div>
+    </div>
+  </body>
+</html>

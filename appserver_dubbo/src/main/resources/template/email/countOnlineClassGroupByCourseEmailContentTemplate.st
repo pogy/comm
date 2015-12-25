@@ -1,0 +1,1 @@
+<p>Hi 亲，以下为按照course对今天预约课程的分组统计<strong>($contentText$)</strong></p>

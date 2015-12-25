@@ -1,0 +1,70 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8"/>		
+	<meta name="baidu-site-verification" content="8SALM4aETp" />
+	<meta name="msvalidate.01" content="C99CBBDA9CD136894A8971CE94EE9B92" />
+	<meta name="360-site-verification" content="1b8ba692dd60752b3a9245aebb986870" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="VIPKID是大米未来科技有限公司旗下的少儿国际教育品牌。致力于为‘有趣、独立和好奇’的‘新家长、大小孩’打造原汁原味的外教1对1在线美国小学课堂。我们的愿景是：‘科技，让教育更人性化’。"/>
+	<meta name="keywords" content="在线少儿英语领导品牌,一对一,外教,VIP个性化，学科英语，儿童，小学，英语，美国小学，教材，在线，翻转式课堂，浸入式英语学习"/>
+	<link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <title layout:title-pattern="$CONTENT_TITLE">VIPKID</title>
+</head>
+<body>
+	
+	<section layout:fragment="content">
+	
+	</section>
+	
+	<!-- 简单提示框 -->
+	<div id="alert_info" class="tipsPop">
+		<div class="tipsCon">
+			<p id="info_title" class="tipsTitle tWarning">确认</p>
+			<div class="tipsTextCon">
+				<p id="info_message" class="tipsDesc">上课时间到了，请进入教师！</p>
+			</div>
+			<p class="tipsHandle"><a id="info_ok" href="javascript:;" class="tipsIknow">知道了</a></p>
+		</div>
+		<p class="tipsBg"></p>
+	</div>
+	
+	<!-- 确认弹出框 -->
+	<div id="alert_confirm" class="tipsPop" th:fragment="alertConfirm">
+		<div class="tipsCon">
+			<p id="confirm_title" class="tipsTitle tSuccess">取消成功</p>
+			<div class="tipsTextCon">
+				<p id="confirm_message" class="tipsDesc">确定取消 Ben T  老师 5月25日 星期一 21:30 的课程吗?</p>
+			</div>
+			<p class="tipsHandle"><a id="confirm_cancel" href="javascript:;">取消</a><a id="confirm_ok" href="javascript:;">确认</a></p>
+		</div>
+		<p class="tipsBg"></p>
+	</div>
+	
+	<!-- 错误提示框 -->
+	<div id="alert_error" class="tipsPop">
+		<div class="tipsCon">
+			<p id="error_title" class="tipsTitle tFailure">哎呀，失败了</p>
+			<div class="tipsTextCon">
+				<p id="error_message" class="tipsDesc">服务器开小差了，请稍后再试！</p>
+			</div>
+			<p class="tipsHandle"><a id="error_ok" href="javascript:;" class="tipsIknow">知道了</a></p>
+		</div>
+		<p class="tipsBg"></p>
+	</div>
+	
+	<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script>
+	<script th:src="@{/static/lib/jquery/jquery.cookie.js}"></script>
+	<script th:src="@{/static/parent/js/jquery.bigautocomplete.js}"></script>
+	<script th:src="@{/static/parent/js/parenting.packed.js}"></script>
+	<script th:src="@{/static/parent/js/alert.js}"></script>
+	<script th:src="@{/static/parent/js/kkpager/kkpager.min.js}"></script>
+	<script th:src="@{/static/parent/js/layout.js}"></script>
+	<script th:src="@{/static/parent/js/vipkid.header.js}"></script>
+	<script th:src="@{/static/parent/js/modifyPassword.js}"></script>
+	<script th:src="@{/static/lib/globalFunction.js}"></script>
+	<section layout:fragment="contentjs">
+	</section>
+</body>
+</html>

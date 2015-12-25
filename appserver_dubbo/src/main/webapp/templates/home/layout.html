@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8"/>	
+	<meta name="baidu-site-verification" content="8SALM4aETp" />
+	<meta name="msvalidate.01" content="C99CBBDA9CD136894A8971CE94EE9B92" />
+	<meta name="360-site-verification" content="1b8ba692dd60752b3a9245aebb986870" />
+	<meta name="description" content="VIPKID是大米未来科技有限公司旗下的少儿国际教育品牌。致力于为‘有趣、独立和好奇’的‘新家长、大小孩’打造原汁原味的外教1对1在线美国小学课堂。我们的愿景是：‘科技，让教育更人性化’。"/>
+	<meta name="keywords" content="在线少儿英语领导品牌,一对一,外教,VIP个性化，学科英语，儿童，小学，英语，美国小学，教材，在线，翻转式课堂，浸入式英语学习"/>
+	<link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />	
+	<title layout:title-pattern="$CONTENT_TITLE">VIPKID</title>
+    <link rel="stylesheet" th:href="@{/static/home/css/index.css?v=2015824}" />
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?5e1b9d2c20eff9c9278a43f0870f4593";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+	<div class="vHeader">
+		<div class="w940 clear">
+			<ul class="vList fl">
+				<li><a href="http://weibo.com/p/1006065212940492" target="_blank" class="wb">微博</a></li>
+				<li>
+					<a href="javascript:;" class="wx">微信<i></i></a>
+					<div class="wxPop">
+						<div class="wxPopline">
+							<p class="f14">订阅号</p><img src="http://resource.vipkid.com.cn/newhome/wxma.jpg" /><p class="f14">家长活动、阅读群  </p>
+						</div>
+						<div class="wxPopline">
+							<p class="f14">服务号</p><img src="http://resource.vipkid.com.cn/newhome/rssnumber.jpg" /><p class="f14">学员约课、服务</p>					
+						</div>
+					</div>
+				</li>
+				<li><a href="javascript:;" onclick="window.open('http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&amp;admiuin=8868810&amp;ltype=0&amp;iscallback=1&amp;page_templete_id=86543&amp;is_message_sms=0&amp;is_send_mail=0&amp;action=acd&amp;acd=1&amp;type_code=1','','width=700,height=520');" class="ol">在线咨询</a></li>
+				<li><span class="tell">400-005-6666</span></li>					
+				<li><a href="http://teacher-recruitment.vipkid.com.cn/home">Hi Teacher</a></li>
+			</ul>
+			<ul id="nologin" class="vList fr">
+				<li><a href="/login">登录</a></li>
+				<li><a class="signupButton" href="/signup">注册</a></li>				
+			</ul>
+<!-- 			<p id="userinfo" data-ng-show="hasLogin()" class="userLoginInfo">您好, {{user_name}}<a href="javascript:;" data-ng-click="doExit()">退出</a></p> -->
+		</div>
+	</div>
+	<div class="topHd clear">
+		<h1 class="logo"><a href="/home"><img src="http://resource.vipkid.com.cn/newhome/logo.png" /></a></h1>
+		<ul class="vNav fr">
+			<li th:class="${path} == '/home/home' ? cur : ''"><a href="/home" title="首页">首页</a></li>
+			<li th:class="${path} == '/home/classlist' ? cur : ''"><a href="/classlist" title="公开课">公开课</a><i class="iconNew"></i></li>
+			<li th:class="${path} == '/home/teacherteam' ? cur : ''"><a href="/teacherteam" title="外教团队">外教团队</a></li>
+			<li th:class="${path} == '/home/teachmethod' ? cur : ''"><a href="/teachmethod" title="学习方法">教学方法</a></li>
+			<li th:class="${path} == '/home/curriculum' ? cur : ''"><a href="/curriculum" title="课程体系">课程体系</a></li>
+			<li th:class="${path} == '/home/process' ? cur : ''"><a href="/process" title="上课流程">上课流程</a></li>
+			<!--<li th:class="${path} == '/home/diary' ? cur : ''"><a href="/diary" title="课堂日志">课堂日志</a></li>-->
+		</ul>
+	</div>
+	<section layout:fragment="content"></section>
+	
+	<div th:replace="common/footer::footer-normal"></div>
+	<div class="botBlackBar">
+		<p class="w940 pr">
+			<span class="pet"></span>
+			<span class="f24 fl"><a href="/signup" class="botRegLink">现在注册</a>&nbsp;&nbsp;立即获取北美外教一对一免费体验课！</span><span class="botLoginText"><a href="/login">登录</a><span class="mlr15">或</span><a href="/signup" class="slideLink">立即注册</a></span>
+		</p>
+		<a href="javascript:;" class="botBlackClose"></a>	
+	</div>
+	<section layout:fragment="contentjs">
+	</section>
+	
+	<!-- 简单提示框 -->
+	<div id="alert_info" class="tipsPop">
+		<div class="tipsCon">
+			<p id="info_title" class="tipsTitle tWarning">确认</p>
+			<div class="tipsTextCon">
+				<p id="info_message" class="tipsDesc">上课时间到了，请进入教师！</p>
+			</div>
+			<p class="tipsHandle"><a id="info_ok" href="javascript:;" class="tipsIknow">知道了</a></p>
+		</div>
+		<p class="tipsBg"></p>
+	</div>
+	
+	<!-- 确认弹出框 -->
+	<div id="alert_confirm" class="tipsPop" th:fragment="alertConfirm">
+		<div class="tipsCon">
+			<p id="confirm_title" class="tipsTitle tSuccess">取消成功</p>
+			<div class="tipsTextCon">
+				<p id="confirm_message" class="tipsDesc">确定取消 Ben T  老师 5月25日 星期一 21:30 的课程吗?</p>
+			</div>
+			<p class="tipsHandle"><a id="confirm_cancel" href="javascript:;">取消</a><a id="confirm_ok" href="javascript:;">确认</a></p>
+		</div>
+		<p class="tipsBg"></p>
+	</div>
+	
+	<!-- 错误提示框 -->
+	<div id="alert_error" class="tipsPop">
+		<div class="tipsCon">
+			<p id="error_title" class="tipsTitle tFailure">哎呀，失败了</p>
+			<div class="tipsTextCon">
+				<p id="error_message" class="tipsDesc">服务器开小差了，请稍后再试！</p>
+			</div>
+			<p class="tipsHandle"><a id="error_ok" href="javascript:;" class="tipsIknow">知道了</a></p>
+		</div>
+		<p class="tipsBg"></p>
+	</div>
+	
+	<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script>
+	<script th:src="@{/static/home/js/jquery.superslide.2.1.1.js}"></script>	
+	<script th:src="@{/static/home/js/vipkid.index.packed.js}"></script>
+	<script th:src="@{/static/parent/js/alert.js}"></script>
+</body>
+
+</html>

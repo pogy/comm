@@ -1,0 +1,58 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>关于我们 - VIPKID美国小学在家上</title> 
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />  
+    <link rel="stylesheet" th:href="@{/static/home/css/login.signup.css}" /> 
+    <link rel="stylesheet" th:href="@{/static/home/css/index.css}" />  
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?5e1b9d2c20eff9c9278a43f0870f4593";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>    
+</head>
+<body>
+	<div class="sHd">
+		<div class="sHdCon">
+			<a href="/home" class="sHdLogo"><img src="http://resource.vipkid.com.cn/newhome/logo.png" /></a>
+			<span class="sHdTitle">关于我们</span>
+			<span class="sHdLink"><a href="/login">登录</a><span class="sHdLine"></span><a href="/signup">注册</a></span>
+		</div>
+	</div>
+	<div class="aboutBanner"></div>
+	<div class="w940 clear">
+		<ul class="bootlist">
+			<li class="cur"><a href="/about">关于我们</a></li>
+			<li><a href="/contact">联系我们</a></li>
+			<li><a href="/media">媒体报道</a></li>
+		</ul>
+		<div class="bootArea">
+			<div class="bootAreaTt">关于我们</div>
+			<div class="aboutWords">
+				<p>VIPKID是一家新兴的互联网教育科技公司，为中国孩子提供最好的美国小学线上课程。我们的愿景是让每一个孩子都能自由行走于这个星球！</p>
+				<p>这是一个300亿RMB的大市场，这是一个大平台上的“创业型团队”，是中国科技教育行业的Rock Star，曾在硅谷与美国团队同台竞技，获得国际顶级投资机构投资。</p>
+				<p>我们拥有国际化的团队，团队成员来自中国、中国台湾、美国、加拿大、澳大利亚、爱沙尼亚等，具有丰富的教育与互联网工作经验，并且多数毕业于知名院校或曾就职于国际化大公司……</p>
+				<p>我们相信宽松、有趣、融洽的工作环境可以激发团队的创造力，这样才能为我们的用户奉上最优秀的产品。午餐、零食、水果、咖啡是无限量提供的。同时，我们提供了具有竞争性的薪资、丰厚的福利、弹性工作制以及各种让你意想不到的party及节日活动。</p>
+				<p>如果你想找一个有成长潜力、有教育理想的团队，这是最好的机会，没有之一。我们期待一个有活力、爱学习、肯奉献、善合作的你联系我们！</p>
+			</div>
+			<div class="aboutPhoto">			
+				<img src="http://resource.vipkid.com.cn/newhome/aboutimg5.jpg" />
+				<img src="http://resource.vipkid.com.cn/newhome/aboutimg2.jpg" />
+				<img src="http://resource.vipkid.com.cn/newhome/aboutimg3.jpg" />
+				<img src="http://resource.vipkid.com.cn/newhome/aboutimg4.jpg" />
+			</div>
+		</div>
+	</div>
+	
+	<div th:replace="common/footer::footer-normal"></div>
+	
+	<script type="text/javascript" src="/static/lib/jquery/jquery.1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/home/js/auth/signup.js"></script>
+</body>
+</html>	

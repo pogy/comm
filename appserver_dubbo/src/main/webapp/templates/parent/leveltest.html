@@ -1,0 +1,65 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/parent/layout">
+<head>
+    <title>水平自测 - VIPKID美国小学在家上</title> 
+    <link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" />
+</head>
+<body>
+	<section class="pMain" layout:fragment="content">
+		<div class="selfTestTop" th:if="${testEnable} == true">
+			<p>为了给<span th:text="${studentName}">您的宝宝</span>提供个性化的课程，请帮助您的宝贝完成一个答题游戏。</p>
+			<p>这个游戏大约需要15分钟，请确保孩子在身旁。</p>
+			<p>如果您准备好了，请点击“开始测试”。</p>
+			<a href="/parent/startexam" target="_blank" class="selfTestBtn">开始测试</a>
+		</div>
+		<div class="pArea">
+			<p class="pAreaTitle">您的测试记录</p>
+			<div class="pCon">					
+				<table  border="0" cellspacing="0" cellpadding="0" class="testReportTable f14">
+					<tr>
+						<th class="trtTd1">孩子</th>
+						<th class="trtTd2">测试结果对标</th>
+						<th class="trtTd3">测试结果说明</th>
+						<th class="trtTd4">测试日期</th>
+					</tr>
+					<tr class="trtfirst" th:each="testData : ${testDatas}">
+						<td class="trtTd1" th:text="${testData.student.englishName}"></td>
+						<td class="trtTd2" >
+							<!-- <div style="word-wrap: break-word;"> <span th:text="${testData.examComment}"> comment </span> </div> -->
+							<p><span th:text="${testData.formatChineseLevel_Chinese()}"> 美国小学 </span> </p>
+							<p><span th:text="${testData.formatChineseLevel_English()}"> Grade 1 </span> </p>
+						</td>
+						<td class="trtTd3"><span th:text="${testData.formatLevelCommentDesc()}" >level</span></td>
+						<td class="trtTd4" style="width: 200px;"><span th:text="${#calendars.format(testData.createDatetime,'yyyy-MM-dd HH:mm:ss')}"  >测试时间</span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="pArea">
+			<p class="pAreaTitle">新手指导——英语零基础也能与外教有效交流</p>
+			<div class="newStudentVideo">
+				<video width="780" height="434"  id="newStudentVideoItem"> 
+					<source src="http://resource.vipkid.com.cn/video/level_test.webm" type="video/webm" /> 
+					<source src="http://resource.vipkid.com.cn/video/level_test.mp4" type="video/mp4" /> 
+					<object codebase=" http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
+					    width="780" height="434" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+					    <param name="quality" value="high" />
+					    <param name="allowFullScreen" value="true" />
+					    <param name="movie" value="http://resource.vipkid.com.cn/parent_portal/images/flvplayer.swf" />
+					    <param name="FlashVars" value="vcastr_file=http://resource.vipkid.com.cn/video/level_test.flv&amp;IsAutoPlay=0&amp;IsContinue=1" />
+					    <embed src="http://resource.vipkid.com.cn/parent_portal/images/flvplayer.swf" flashvars="vcastr_file=http://resource.vipkid.com.cn/video/level_test.flv&amp;IsAutoPlay=0&amp;IsContinue=1" width="780" height="434" pluginspage=" http://www.macromedia.com/go/getflashplayer" quality="high" allowfullscreen="true" type="application/x-shockwave-flash"></embed>
+					</object> 
+				</video> 
+				<div class="videoControlIcon">
+					<a href="javascript:void(0)"></a>
+					<span class="show"></span>
+				</div>
+			</div>
+		</div>
+			
+	</section>
+</body>
+</html>

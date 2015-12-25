@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/common/baseLayout">
+<head>
+    <title>支付结果 - VIPKID美国小学在家上</title> 
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/order.css}" />
+</head>
+<body>
+	<section layout:fragment="content">
+		<div th:replace="common/header::header-logined"></div>
+		<div class="marea">
+			<ul class="orderStep clear">
+				<li class="orderStepFir cur">
+					<span></span>
+					<strong>1核对订单</strong>
+				</li>
+				<li class="orderStepSec  cur">
+					<span></span>
+					<strong>2支持订单</strong>
+				</li>
+				<li class="orderStepThr cur">
+					<span></span>
+					<strong>3确认订单，成功！</strong>
+				</li>
+			</ul>
+			<div class="paymentResultSuccess">			
+				<div class="paymentSuccessTips">
+					<strong>支付成功</strong>	
+					<p class="paymentSuccessTipsBack"><a th:href="@{/parent/home}">返回个人主页</a><a th:href="@{/parent/orders}">去我的订单</a></p>		
+				</div>
+				<div class="qrcode">
+					<p>您可以使用微信家长端约课了！</p>
+					<strong>微信扫描二维码</strong>
+					<img src="http://resource.vipkid.com.cn/newhome/rssnumber.jpg"/>				
+				</div>
+			</div>
+		</div>	
+		<div th:replace="common/footer::footer-normal"></div>
+	</section>
+</body>
+</html>

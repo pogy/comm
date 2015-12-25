@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Yan Jie</Author>
+  <LastAuthor>hy c</LastAuthor>
+  <Created>2015-01-04T09:04:30Z</Created>
+  <LastSaved>2015-02-04T03:41:34Z</LastSaved>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10180</WindowHeight>
+  <WindowWidth>25360</WindowWidth>
+  <WindowTopX>240</WindowTopX>
+  <WindowTopY>240</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="工作表1">
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="49" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s26" ss:AutoFitWidth="0" ss:Span="2"/>
+   <Column ss:Index="4" ss:StyleID="s26" ss:AutoFitWidth="0" ss:Width="102"/>
+   <Column ss:StyleID="s26" ss:AutoFitWidth="0"/>
+   <Column ss:AutoFitWidth="0" ss:Width="142"/>
+   <Row>
+    <Cell><Data ss:Type="String">unit# </Data></Cell>
+    <Cell><Data ss:Type="String">LC # </Data></Cell>
+    <Cell><Data ss:Type="String">Lesson #</Data></Cell>
+    <Cell><Data ss:Type="String">SN</Data></Cell>
+    <Cell><Data ss:Type="String">Slide # (page)</Data></Cell>
+    <Cell><Data ss:Type="String">TD</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…9</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…11</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…12</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…13</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…14</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…15</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L1</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…16</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…21</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…22</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…23</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…24</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…25</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…26</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…27</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…28</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…29</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…31</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…32</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…33</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…34</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…35</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L2</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…36</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:MergeDown="15"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…41</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…42</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…43</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…44</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…45</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…46</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…47</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…48</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…49</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…50</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…51</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…52</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…53</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…54</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…55</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="4"><Data ss:Type="String">C10-U1-LC1-L3</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">This is a TD…56</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <TopRowVisible>14</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>45</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

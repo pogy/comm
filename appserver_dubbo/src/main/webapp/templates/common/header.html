@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	
+	<head>
+<!-- 		<link rel="stylesheet" th:href="@{/static/parent/css/header.css}" /> -->
+	</head>
+	
+<body>
+	<!-- /* 头部分为三种:1.已登录 2.未登录 3.简约版 */-->
+	
+	<!-- 已登录 -->
+	<div th:fragment="header-logined">
+		<div class="vipHeader">
+			<div class="vipHd">
+				<ul class="vipHdList fl">
+					<li><a href="http://weibo.com/p/1006065212940492" target="_blank" class="wb">微博</a></li>
+					<li>
+						<a href="javascript:;" class="wx">微信<i></i></a>
+						<div class="vipHdWxPop">
+							<div class="wxPopline">
+								订阅号<img src="http://resource.vipkid.com.cn/newhome/wxma.jpg"/>家长活动、阅读群
+							</div>
+							<div class="wxPopline">
+								服务号<img src="http://resource.vipkid.com.cn/newhome/rssnumber.jpg"/>学员约课、服务
+							</div>
+						</div>
+					</li>			
+					<li><span class="tell">400-005-6666</span></li>	
+				</ul>
+				<ul class="vipHdList vipHasLogin">
+					<li class="vipHdLoginOut"><span th:text="|Hi, ${parentName}|"></span><a href="javascript:;" onclick="signout()">退出</a></li>
+					<li>
+						<a href="javascript:;" class="vipHdMy">我的VIPKID<i></i></a>
+						<div class="vipHdUserInfo">
+							<p><a th:href="@{/parent/setting}">帐号信息</a></p>
+							<p><a th:href="@{/parent/modifyPassword}" >修改密码</a></p>							
+						</div>
+					</li>		
+					<li><a th:href="@{/parent/orders}">我的订单<span class="vipHdorderNum" th:if="${toPayNum} > 0" th:text="${toPayNum}"></span></a></li>
+					<li><a th:href="|http://help.duobeiyun.com/room/test/?result=http://app-proxy.vipkid.com.cn/api/service/public/ittest/callback&amp;lang=zh&amp;role=FAMILY&amp;id=${familyId}|" target="_blank">在线教室检测</a></li>
+					<li><a th:href="@{/parent/download}">常用软件</a></li>
+				</ul>		
+			</div>
+			<p class="vipHbg"></p>
+		</div>
+		<div class="vipHdWaper">
+			<div class="vipHdTop">
+				<a th:href="@{/parent/home}" class="vipHdLogo">VipKid</a>
+				<ul class="vipHdNav">
+					<li th:class="${path} == '/parent/home' ? cur : ''"><a th:href="@{/parent/home}">个人主页</a></li>
+					<li th:class="${path} == '/parent/openclass' ? cur : ''"><a th:href="@{/parent/openclass}">公开课</a><i class="iconNew"></i></li>
+					<li><a th:href="${learningUrl} + '/learning/home'" target="_blank">学习中心</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 无登录 -->
+	<div th:fragment="header-notlogined">
+		
+	</div>
+	
+	<!-- 简易版 -->
+	<div th:fragment="header-simple">
+		
+	</div>
+	
+<!-- 	<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script> -->
+<!-- 	<script th:src="@{/static/parent/js/layout.js}"></script> -->
+<!-- 	<script th:src="@{/static/parent/js/vipkid.header.js}"></script> -->
+</body>
+</html>

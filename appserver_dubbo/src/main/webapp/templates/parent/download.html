@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/common/baseLayout">
+<head>
+    <title>常用下载 - VIPKID美国小学在家上</title> 
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/header.css}" />
+</head>
+<body>
+	<section layout:fragment="content">
+		<div th:replace="common/header::header-logined"></div>
+		
+		<div class="w960">
+			<p class="downTitle">常用下载</p>
+			<ul class="downSoft">
+				<li class="clear">
+					<span class="softName"><img src="/static/parent/image/chorme_img.png" /></span>			
+					<a class="downwinBtn lh40" href="http://resource.vipkid.com.cn/static/images/home_portal/download/Chrome.exe" target="_blank"><span>Chrome<br/> for Windows下载</span></a>
+					<a class="downmacBtn lh40" href="http://resource.vipkid.com.cn/static/images/home_portal/download/Chrome.dmg" target="_blank"><span>Chrome<br/> for Mac下载</span></a>
+				</li>
+				<li class="clear">
+					<span class="softName"><img src="/static/parent/image/team_img.png" /></span>			
+					<a class="downwinBtn" href="http://resource.vipkid.com.cn/static/images/home_portal/download/TeamViewerQS.exe" target="_blank"><span>TeamViewer<br/> for Windows下载</span></a>
+					<a class="downmacBtn" href="http://resource.vipkid.com.cn/static/images/home_portal/download/TeamViewerQS.dmg" target="_blank"><span>TeamViewer<br/> for Mac下载</span></a>
+				</li>
+				<li class="clear">
+					<span class="softName"><img src="/static/parent/image/qq_img.png" /></span>			
+					<a class="downwinBtn lh40" href="http://resource.vipkid.com.cn/static/images/home_portal/download/QQ7.3.exe" target="_blank"><span>QQ <br/>for Windows下载</span></a>
+					<a class="downmacBtn lh40" href="http://resource.vipkid.com.cn/static/images/home_portal/download/QQ_V4.0.3.dmg" target="_blank"><span>QQ <br/>for Mac下载</span></a>
+				</li>				
+			</ul>
+		</div>
+		<div th:replace="common/footer::footer-normal"></div>
+	</section>
+</body>
+</html>

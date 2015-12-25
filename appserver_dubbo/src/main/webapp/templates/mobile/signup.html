@@ -1,0 +1,48 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="utf-8" />
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta name="viewport" content="width=device-width,maxinum-scale=1.0 initial-scale=1.0, user-scalable=0"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<link rel="stylesheet" th:href="@{/static/mobile/css/m.signup.css}"/>
+<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script>
+<script th:src="@{/static/mobile/js/auth.js}"></script>
+<title>VIPKID-美国小学在家上</title>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?5e1b9d2c20eff9c9278a43f0870f4593";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+	<header>
+		<a href="/" class="back">back</a>
+		<h1 class="pageTitle">注册新用户</h1>
+	</header>
+	<form method="POST" action="/mobile/signup/username">
+		<div class="sDiv">
+			<input id="signup-mobile" name="mobile" class="sInput" type="tel" th:value="${used_mobile}" placeholder="请输入您的手机号码" autofocus="autofocus" />
+		</div>	
+		<p id="signup-step1-error-message" class="sTips"></p>
+		<p id="signup-step1-mobile-error-message" th:if="${mobile_used_error}" class="sTips" th:text="${mobile_used_error}"></p>
+		<button class="subRegBtn" id="signup-step1-next-button" type="submit">下一步</button>
+	</form>
+
+	<!--手机号已注册提示-->
+	<div class="tipsPop" th:if="${mobile_used_error}">
+		<div class="tipsPopWaper">
+			<div class="tipsWords">您的手机号码已注册，<br/>可直接登录~</div>
+			<div class="tipsHandle"><a href="/mobile/signup">取消</a><a href="/mobile/login" class="gotoLogin">去登录</a></div>
+		</div>
+	</div>
+</body>
+</html>

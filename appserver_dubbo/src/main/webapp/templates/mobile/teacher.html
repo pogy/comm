@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 
+	  class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+<title>外教团队</title>
+<meta name="viewport" content="target-densitydpi=get-target-densitydpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml;charset=utf-8" />
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache" />
+<meta name="viewport" content="width=device-width;initial-scale=1.0;maximum-scale=2.0;user-scalable=1" />
+<link rel="stylesheet" th:href="@{/static/mobile/css/main.css}"/>
+<script>
+if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+	var version = parseFloat(RegExp.$1);
+	if (version > 2.3) {
+		var phoneScale = parseInt(window.screen.width) / 640;
+		document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi" />');
+	} else {
+		document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi" />');
+	}
+} else {
+	document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi" />');
+}
+</script>
+</head>
+
+<body>
+<header>
+    <a href="javascript:;" class="mainMenu" title="菜单列表"><em>菜单列表</em></a>
+    <span class="login"><a href="/mobile/login">登录</a><a href="/mobile/signup">注册</a></span>
+</header>
+<section class="kidLogo">
+<img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo.png}" />
+</section>
+<a class="tel400" href="tel:4000056666" title=""><em></em><span>服务热线：400 - 005 - 6666</span></a>
+<nav>
+	<section class="navMain clearfix">
+        <span>外教团队</span>
+        <ul>
+        	<li><a href="index" title="首页">首页</a></li>
+            <li><a href="teacher" title="外教团队">外教团队</a></li>
+            <li><a href="teachmethod" title="教学方法">教学方法</a></li>
+            <li><a href="curriculum" title="课程体系">课程体系</a></li>
+            <li><a href="process" title="上课流程">上课流程</a></li>
+            <li><a href="classDiary" title="课堂日志">课堂日志</a></li>
+        </ul>
+        <em></em>
+    </section>
+</nav>
+<!-- 焦点图 start -->
+<section class="swiper-container" id="m-focus">
+    <section class="swiper-wrapper">
+        <section class="swiper-slide">
+            <div class="tmItem">
+                <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/01.jpg}"/><section class="mask"></section> <section class="mask-tt">美国小学  发挥孩子天性<br/>充分培养"应用力"和"创造力"</section>
+            </div>
+        </section>
+        <section class="swiper-slide">
+            <div class="tmItem"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/banner2.jpg}"/><section class="mask"></section> <section class="mask-tt">通过互联网，随时随地上课 <br/>自由选择老师</section>
+            </div>
+        </section>
+        <section class="swiper-slide">
+            <div class="tmItem"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/banner3.jpg}"/><section class="mask"></section> <section class="mask-tt">个性、沉浸、自由、趣味<br/>实现线上线下浸入式学习的终极体验</section>
+            </div>
+        </section>
+    </section>
+    <!-- Add Pagination -->
+    <section class="swiper-pagination" id="m-pagination"></section>
+</section>
+<!-- 焦点图 end -->
+    
+    
+<section class="teaSource">
+	<strong class="titleOne">师资来源</strong>
+    <!-- 焦点图 start -->
+    <section class="swiper-container" id="S-focus">
+        <section class="swiper-wrapper">
+            <section class="swiper-slide" data-hash="slide1">
+                <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_10.png}" alt="北美外教" />
+                <span>北美外教</span>
+                <p>100%来自于美国、加拿大，众多老师旅居世界各地，熟悉北美文化，拥有国际视野</p>
+                 <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_11.png}" alt="北美外教" />
+                <span>名校毕业</span>
+                <p>90%名校毕业，众多老师来自于哈佛、耶鲁、皇后等国际著名学府</p>
+            </section>
+            <section class="swiper-slide" data-hash="slide2">
+                <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_10.png}" alt="北美外教" />
+                <span>北美外教</span>
+                <p>100%来自于美国、加拿大，众多老师旅居世界各地，熟悉北美文化，拥有国际视野</p>
+                 <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_11.png}" alt="北美外教" />
+                <span>名校毕业</span>
+                <p>90%名校毕业，众多老师来自于哈佛、耶鲁、皇后等国际著名学府</p>
+            </section>
+        </section>
+        <!-- Add Arrows -->
+        <section class="swiper-button-next"></section>
+        <section class="swiper-button-prev"></section>
+    </section>
+    <!-- 焦点图 end -->
+</section>
+<section class="teaShow">
+	<strong class="titleOne">教师风采</strong>
+    <ul class="teacherList">
+    	
+    </ul>
+</section>
+
+<section class="trust">
+	<strong class="titleOne">信任与期待</strong>
+    <img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kid_09.png}" alt="信任与期待" />
+	<p class="clearfix"><em class="gCircle"></em><span>100%满意保证</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>30天无条件退款承诺</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>付费后，每位学员都会与VIPKID签订一份购买协议，我们向学员保障外教资质，和服务水平。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>如果您和小朋友对购买后的课程或服务感到不满意，可以在交费后的30天内向我们提出“无条件退款”申请。</span></p>
+    <p class="clearfix"><em class="gCircle"></em><span>我们将以最快的速度将未消耗的课时，按照交款方式退还。</span></p>
+</section>
+
+<section class="enterprise">
+	<ul class="clearfix">
+    	<li><a href="http://www.forbeschina.com/review/201406/0033532.shtml"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_01.png}" alt="" /></a></li>
+        <li><a href="http://www.wtoutiao.com/a/242742.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_02.png}" alt="" /></a></li>
+        <li><a href="http://blog.sina.com.cn/s/blog_6dbc86af0101fqn2.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_03.png}" alt="" /></a></li>
+        <li><a href="http://www.jmdedu.com/viewpoint/detail/575"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_04.png}" alt="" /></a></li>
+        <li><a href="http://tech.163.com/14/0609/16/9UAHEAJH00094ODU.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_05.png}" alt="" /></a></li>
+        <li><a href="http://v.qq.com/boke/page/o/y/j/o0129h4kmyj.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_06.png}" alt="" /></a></li>
+        <li><a href="http://www.zuojing.com/201403/5045.shtml"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_07.png}" alt="" /></a></li>
+        <li><a href="http://fudaoquan.com/p/4864.html"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_08.png}" alt="" /></a></li>
+        <li><a href="http://power.internet2share.com/?p=754"><img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo_09.png}" alt="" /></a></li>
+    </ul>
+</section>
+
+<section class="regEntrance">
+  <img class="kl" th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kl.png}" />
+  <p>注册获得免费体验课</p>
+  <a href="#" title=""><span>GO</span><em></em></a>
+  <span class="close"></span>
+</section>
+<footer>Copyright (C)2010-2014 Inc. All rights reserved. </footer>
+
+
+
+
+<section class="scrPop" id="listLeft" style="display:none">
+    <section class="scrMenu">
+        <section class="scrBack">
+        	<a class="scrTitle clearfix" href="http://parent.vipkid.com.cn/lessonManagement/dashboard"><em></em><span>个人中心</span></a>
+            <section class="scrRolling">
+                <section class="scrList">
+                	<ul>
+                    	<li><a href="http://parent.vipkid.com.cn/lessonManagement/dashboard" title="约课"><em class="one"></em><span>约课</span></a></li>
+                        <li class="active"><a href="http://parent.vipkid.com.cn/lessonManagement/dashboard" title="我的课表"><em class="two"></em><span>我的课表</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/learningOverview/takenClassList" title="已上课程"><em class="three"></em><span>已上课程</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/report/report" title="学习报告"><em class="four"></em><span>学习报告</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/services/orders" title="我的订单"><em class="five"></em><span>我的订单</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/services/parentProfile" title="个人资料"><em class="six"></em><span>个人资料</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="scrDown" id="canvas"></section>
+</section>
+
+
+
+<script th:src="@{/static/mobile/js/iZepto.js}"></script>
+<script th:src="@{/static/mobile/js/main.js}"></script>
+<script th:src="@{/static/mobile/js/swiper.min.js}"></script>
+<script type="text/javascript">
+	// 焦点图切换
+	var mySwiperfocus = new Swiper('#m-focus', {
+		pagination: '#m-pagination',
+		loop: true,
+		grabCursor: true,
+		paginationClickable: true,
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoplay: 4000,
+		calculateHeight: true
+	});
+	var swiper = new Swiper('#S-focus', {
+        paginationClickable: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        hashnav: true
+    });
+	var canvas = document.getElementById("canvas");
+	function touchStart(event) {closeLeft();}
+	canvas.addEventListener("touchstart", touchStart, false);
+</script>
+</body>
+</html>

@@ -1,0 +1,5954 @@
+html{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+} 
+
+body {
+	width: 100%;
+	margin: 0px;
+	font-family: "sans-serif","Helvetica","Hiragino Sans GB","STHeiti Light","Microsoft YaHei";
+	font-size: 18px;
+	text-align: left;
+	overflow-y: auto;
+	background:#FFF;
+}
+
+
+/*Signup style*/
+
+.signupBackground {
+    background-color: #ECECEC;
+}
+
+.signupStyle {
+    margin: 0 auto;
+    background-color: #ECECEC;
+    min-height: 800px;
+}
+
+.signupStyle #head {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.signupStyle #head .logo {
+    position: absolute;
+    margin-top: 30px;
+}
+
+.signupStyle #head .contact .contactPhoto {
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 530px;
+    width: 20px;
+    padding-top: 0px;
+}
+
+.signupStyle #head .contact .contactNumber {
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 560px;
+    color: #FF8b16;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.signupStyle .content {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 130px;
+}
+
+.signupStyle .content .cat {
+    width: 290px;
+    margin-top: 35px;
+}
+
+.signupStyle .content .skipToLogin {
+    font-size: 12px;
+    width: 180px;
+    margin-left: 170px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #8c8c8c;
+}
+
+.signupStyle .content .skipToLogin .text {
+    text-decoration: none;
+    color: #8c8c8c;
+}
+
+.signupStyle .content .formbox {
+    width: 360px;
+    border: #dfdede solid 1px;
+    margin: 0px auto;
+    padding: 5px 20px;
+    position: relative;
+    background-color: #F8F8F8;
+    text-align: center;
+    margin-top: -385px;
+    margin-left: 330px;
+}
+
+.signupStyle .content .formbox #childNameText {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-bottom: 6px;
+    border: #dbdbdb solid 1px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.signupStyle .content .formbox #childBirthText {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-bottom: 6px;
+    border: #dbdbdb solid 1px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.signupStyle .content .formbox #parentMobileText {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-bottom: 1px;
+    border: #dbdbdb solid 1px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.signupStyle .content .formbox #verifyNumber {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-bottom: 16px;
+    border: #dbdbdb solid 1px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.signupStyle .content .formbox #signupPassword {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-top: -8px;
+    margin-bottom: 6px;
+    border: #dbdbdb solid 1px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.signupStyle .content .formbox #signupConfirmedPassword {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-bottom: 6px;
+    border: #dbdbdb solid 1px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.signupStyle .content .formbox #verifyMobileButton {
+    width: 90px;
+    border-radius: 10px;
+    height: 32px;
+    position: absolute;
+    padding-top: 8px;
+    margin-top: -37px;
+    margin-left: 226px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #c2c2c2;
+}
+
+.signupStyle .content .formbox .invalidSignupNote {
+    font-size: 12px;
+    color: #959595;
+    text-align: left;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg1 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg2 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg3 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg4 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg5 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg6 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg7 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNoteImg8 {
+    margin-left: 3px;
+    width: 18px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote1 {
+    margin-left: 25px;
+    margin-top: -21px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote2 {
+    margin-left: 25px;
+    margin-top: -21px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote3 {
+    margin-left: 25px;
+    margin-top: -18px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote4 {
+    margin-top: -18px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote5 {
+    margin-top: -17px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote6 {
+    margin-top: -18px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote7 {
+    margin-top: -18px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .invalidSignupNote8 {
+    margin-top: -18px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+
+.signupStyle .content .formbox .warningNote {
+    text-align: left;
+    margin-left: -42px;
+    color: #FFCC33;
+    font-size: 12px;
+}
+
+.signupStyle .content .formbox .warningNote .warningNote1Photo {
+    margin-left: 46px;
+}
+
+.signupStyle .content .formbox .warningNote .warningNote1Text {
+    width: 264px;
+    margin-left: 67px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.signupStyle .content .formbox .signupButton {
+    background-color: #f88b16;
+    width: 318px;
+    height: 40px;
+    margin: 8px 0;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: microsoft Yahei;
+}
+.signupStyle .content .formbox .signupButton:hover {
+    background-color: #ea6c00;
+    width: 318px;
+    height: 40px;
+    margin: 8px 0;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: microsoft Yahei;
+}
+
+.signupStyle #formbox .error {
+    border: 1.5px solid red !important;
+}
+
+.signupStyle .helpText {
+    margin: 0 auto;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.signupStyle .footer {
+    border-top: 1px solid #d1d1d1;
+    overflow: hidden;
+    font-size: 12px;
+    height: 80px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #D5D5D5;
+}
+
+.signupStyle .footer .links {
+    line-height: 30px;
+    text-align: center;
+}
+
+.signupStyle .footer .links .link {
+    text-decoration: none;
+    color: #555555;
+    ;
+}
+
+.signupStyle .footer .links .gap {
+    margin: 0px 6px;
+}
+
+.signupStyle .footer .copyright {
+    text-align: center;
+}
+
+.signupStyle .footer a {
+    color: #fff;
+    margin: 0 7px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.signupStyle .footer a:hover {
+    color: #c19a8c;
+}
+
+.signupStyle .footer span {
+    margin: 0 5px;
+}
+
+.signupStyle .footer .logo {
+    background-image: url("http://resource.vipkid.com.cn/homepage/images/home/footer_logo_normal.png");
+    background-repeat: no-repeat;
+    display: inline;
+    height: 18px;
+    width: 52px;
+    margin: 9px -350px 0 350px;
+    float: left;
+}
+
+.signupStyle .footer .logo:hover {
+    background-image: url("http://resource.vipkid.com.cn/homepage/images/home/footer_logo_hover.png");
+    background-repeat: no-repeat;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+}
+/*loginStyle*/
+
+.loginBackground {
+    background-color: #ECECEC;
+}
+
+section .loginStyle {
+    margin: 0 auto;
+    background-color: #ECECEC;
+    min-height: 800px;
+}
+
+section .loginStyle #head {
+    width: 700px;
+    margin: 0 auto;
+}
+
+section .loginStyle #head .logo {
+    position: absolute;
+    margin-top: 30px;
+}
+
+section .loginStyle #head .contact .contactPhoto {
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 530px;
+    width: 20px;
+    padding-top: 0px;
+}
+
+section .loginStyle #head .contact .contactNumber {
+    position: absolute;
+    margin-top: 57px;
+    margin-left: 560px;
+    color: #FF8b16;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section .loginStyle .content {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 130px;
+}
+
+section .loginStyle .content .cat {
+    width: 290px;
+}
+
+section .loginStyle .content #loginForm {
+    width: 360px;
+    border: #999 solid 1px;
+    margin: 0px auto;
+    padding: 5px 20px;
+    position: relative;
+    background-color: #F8F8F8;
+    text-align: center;
+    margin-top: -290px;
+    margin-left: 330px;
+    overflow: auto;
+}
+
+section .loginStyle .content #loginForm .skipToSignup {
+    margin-bottom: -23px;
+}
+
+section .loginStyle .content #loginForm .skipToSignup .text {
+    font-size: 12px;
+    width: 200px;
+    margin-left: 110px;
+    margin-top: 20px;
+    color: #8c8c8c;
+    text-decoration: none;
+    color: #8c8c8c;
+}
+
+section .loginStyle .content #loginForm .error {
+    border: 1px red solid !important;
+}
+
+section .loginStyle .content #loginForm #usernameInput {
+    width: 320px;
+    height: 40px;
+    margin: 30px auto;
+    margin-bottom: 10px;
+    border: 1px #dbdbdb solid;
+    text-indent: 20px;
+    font-size: 16px;
+    color: #777;
+}
+
+section .loginStyle .content #loginForm #passwordInput {
+    width: 320px;
+    height: 40px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    border: 1px #dbdbdb solid;
+    text-indent: 20px;
+    font-size: 16px;
+    color: #777;
+}
+
+section .loginStyle .content #loginForm #loginButton {
+    background-color: #f88b16;
+    width: 318px;
+    height: 40px;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-family: microsoft Yahei;
+}
+section .loginStyle .content #loginForm #loginButton:hover {
+    background-color: #ea6c00;
+    width: 318px;
+    height: 40px;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-family: microsoft Yahei;
+}
+
+section .loginStyle .content #loginForm #remenber #fogetPassword {
+    margin-top: 5px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-bottom: 22px;
+}
+
+section .loginStyle .content #loginForm #remenber #fogetPassword .text {
+    color: #777;
+    font-size: 12px;
+}
+
+section .loginStyle .footer {
+    border-top: 1px solid #d1d1d1;
+    overflow: hidden;
+    font-size: 12px;
+    height: 80px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #D5D5D5;
+}
+
+section .loginStyle .footer .links {
+    line-height: 30px;
+    text-align: center;
+}
+
+section .loginStyle .footer .links .link {
+    text-decoration: none;
+    color: #555555;
+}
+
+section .loginStyle .footer .links .gap {
+    margin: 0px 6px;
+}
+
+section .loginStyle .footer .copyright {
+    text-align: center;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote {
+    text-align: left;
+    font-size: 12px;
+    color: #959595;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote .invalidLoginNoteImg1 {
+    width: 19px;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote .invalidLoginNoteImg2 {
+    width: 19px;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote .invalidLoginNoteImg3 {
+    width: 19px;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote .invalidLoginNote1 {
+    margin-left: 40px;
+    margin-top: -21px;
+    margin-bottom: 3px;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote .invalidLoginNote2 {
+    margin-left: 40px;
+    margin-top: -21px;
+    margin-bottom: 3px;
+}
+
+section .loginStyle .content #loginForm #invalidLoginNote .invalidLoginNote3 {
+    margin-left: 40px;
+    margin-top: -21px;
+    margin-bottom: 3px;
+}
+
+section .loginStyle .footer a {
+    color: #fff;
+    margin: 0 7px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+section .loginStyle .footer a:hover {
+    color: #c19a8c;
+}
+
+section .loginStyle .footer span {
+    margin: 0 5px;
+}
+
+section .loginStyle .footer .logo {
+    background-image: url("http://resource.vipkid.com.cn/homepage/images/home/footer_logo_normal.png");
+    background-repeat: no-repeat;
+    display: inline;
+    height: 18px;
+    width: 52px;
+    margin: 9px -350px 0 350px;
+    float: left;
+}
+
+section .loginStyle .footer .logo:hover {
+    background-image: url("http://resource.vipkid.com.cn/homepage/images/home/footer_logo_hover.png");
+    background-repeat: no-repeat;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+}
+
+.topbar {
+    width: 100%;
+    height: 27px;
+    background: #f5f5f5;
+    color: #666;
+    -webkit-text-size-adjust: none;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    font-size: 14px;
+}
+
+.topbar .w_pos {
+    width: 1160px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.topbar .w_pos .lh {
+    line-height: 27px;
+}
+
+.topbar .w_pos .gap {
+    color: #ccc;
+    margin: 0 6px;
+}
+
+.topbar .w_pos .quit {
+    text-decoration: none;
+    color: #666;
+}
+    
+.topbar .w_pos .quit:hover {
+    text-decoration: underline;
+    color: #00d6d3;
+}
+
+.homeLink{
+	height:20px;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+}
+.homeLink p{
+	width: 105px;
+	margin: 0 auto;
+	line-height:20px;
+}
+.homeLink a:link{
+	color:0;
+}
+.mask{
+	width:100%;
+	position:absolute;
+	background:rgba(0,0,0,0.2);
+	display:none;
+}
+.mask .ackedDialog{
+	width:440px;
+	height:250px;
+	margin:200px auto;
+	background-color:#FFF;
+}
+.mask .ackedDialog p{
+	line-height:40px;
+	margin-left:20px;
+	font-size:16px;
+	padding:0;
+	margin:0px;
+}
+.mask .divider{
+	width:100%;
+	height:1px;
+	background-color:#AAA;
+	margin:40px auto;
+}
+.mask .buttonBox{
+	width:100%;
+	padding-left:30px;
+	padding-right:30px;
+}
+.mask .ackedDialog .buttonBox .ackedButton{
+	width:100px;
+	height:50px;
+	position:absolute;
+	background-color:#82CD29;
+	line-height:50px;
+	text-align:center;
+	position:relative;
+	float:left;
+	margin-right:5px;
+/* 	margin:20px; */
+/* 	margin-left:50px; */
+/* 	cursor:pointer; */
+}
+.successLoginOrSignUp{
+	padding:0;
+	margin:0;
+	overflow:auto;
+	margin-bottom:100px;
+}
+.successLoginOrSignUp .banner{
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width: 100%;
+	height: 480px;
+	margin: 0,auto;
+	background-color: #CDCDCD;
+	background-image: url('../images/welcome/banner.jpg');
+	
+}
+.successLoginOrSignUp .banner .logo{
+	width: 316px;
+	position: absolute;
+	top: 20px;
+	left: 15%;
+	width:316px
+
+}
+.successLoginOrSignUp .banner .contact{
+	position: absolute;
+	top: 58px;
+	right: 19%;
+	text-align: center;
+	width: 190px;
+	height: 20px;
+}
+.successLoginOrSignUp .banner .contact .contactNumber{
+	color: #FF3D02;
+	position: absolute;
+	margin-left: 25px;
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: -1px;
+}
+.successLoginOrSignUp .banner .photo{
+	width: 20px;
+	float: left;
+}
+.successLoginOrSignUp .userInformation{
+	position: absolute;
+	top: 0px;
+	right: 25%;
+}
+.successLoginOrSignUp .userInformation .parentMobile{
+	margin-top:0px;
+	color: #909090;
+	font-size: 14px;
+}
+.successLoginOrSignUp .userInformation .portrait{
+	float: left;
+	width: 30px;
+	height: 30px;	
+}
+.successLoginOrSignUp .quitText{
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	right: 15%;
+	margin: 0;
+	padding: 0;
+	cursor:pointer;
+	color: #909090;
+}
+.successLoginOrSignUp .banner .middlePart{
+	width: 650px;
+	height: 280px;
+	margin: 150px auto 0 auto;
+	padding: 0;
+	top: 150px;
+	text-align: center;
+	
+}
+.successLoginOrSignUp .banner .middlePart .welcomeText1{
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.successLoginOrSignUp .banner .middlePart .welcomeText2{
+	margin-bottom: 50px;
+}
+.successLoginOrSignUp .banner .middlePart .middleBox{
+	text-align: left;
+	background-color: rgba(106,105,110,0.5);
+	text-indent: 10px;
+	width: 650px;
+	height: 125px;
+	padding: 10px 10px;
+	margin-top: -30px;
+	color: #fff;
+	font-size: 16px;
+}
+.successLoginOrSignUp .banner .middlePart .middleBox .text1{
+	margin-top: 10px;
+	margin-bottom: 7px;
+	margin-left: 20px;
+}
+.successLoginOrSignUp .banner .middlePart .middleBox .text2{
+	margin-bottom: 7px;
+	margin-left: 20px;
+}
+.successLoginOrSignUp .banner .middlePart .middleBox .text{
+	margin-bottom: 7px;
+	margin-left: 20px;
+}
+.successLoginOrSignUp .banner .middlePart .middleBox .text3{
+	margin-left: 20px;
+}
+.successLoginOrSignUp .banner .middlePart .middleBox .QRCode{
+	width: 100px;
+	height: 100px;
+	float: right;
+	padding: 0;
+	margin-right: 10px;
+	margin-top: -92px;
+}
+.successLoginOrSignUp .content{
+	position: absolute;
+	top: 500px;
+	width: 100%;
+	height:1150px;
+	text-align: center;
+/* 	overflow-y: auto; */
+	
+}
+.successLoginOrSignUp .content .title{
+	color: #FF5200;
+	font-size: 30px;
+}
+.successLoginOrSignUp .content .title .titleShadow{
+	background-color:#FF5200;
+	color: #FFFFFF;
+}
+.successLoginOrSignUp .content .description{
+
+}
+.successLoginOrSignUp .content .description .text1{
+	font-size: 20px;
+	font-weight: bold;
+}
+.successLoginOrSignUp .content .description .text2{
+	height: 30px;
+	margin-bottom: 30px;
+}
+.successLoginOrSignUp .content .step{
+	position: relative;
+	width: 170px;
+	height: 20px;
+	margin: 20px auto;
+	text-align: -webkit-auto;
+}
+.successLoginOrSignUp .content .step .text{
+	background-color:#FF5200;
+	color: #FFFFFF;
+	font-size:15px;
+	position: absolute;
+
+}
+.successLoginOrSignUp .content .step .desc{
+	color: #FF5200;
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: -50px;
+	margin-top: 14px;
+}
+.successLoginOrSignUp .content .step2{
+	width: 170px;
+	height: 20px;
+	margin: 0px auto;
+	margin-top: -10px;
+	text-align: -webkit-auto;
+}
+.successLoginOrSignUp .content .step2 .text{
+	background-color:#FF5200;
+	color: #FFFFFF;
+	font-size:15px;
+	position: absolute;
+	margin-top: 0px;
+}
+.successLoginOrSignUp .content .step2 .desc1{
+	color: #FF5200;
+	font-size:15px;
+	margin-left: 50px;
+	font-weight:bold;
+}
+.successLoginOrSignUp .content .step2 .desc2{
+	width: 400px;
+	height: 20px;
+	margin: 0;
+	margin-left: -80px;
+	font-size: 13px;
+}
+.successLoginOrSignUp .content .step3{
+	width: 360px;
+	height: 20px;
+	margin: 10px auto;
+	margin-top:-20px;
+	text-align: -webkit-auto;
+}
+.successLoginOrSignUp .content .step3 .desc1{
+	color: #FF5200;
+	font-size: 15px;
+	margin-left: 335px;
+	font-weight: bold;
+}
+.successLoginOrSignUp .content .step3 .desc2{
+	text-align: center;
+	margin-bottom: 30px;
+	margin-left: 200px;
+	font-size: 13px;
+}
+
+.homeLink {
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.homeLink p {
+    width: 105px;
+    margin: 0 auto;
+    line-height: 20px;
+}
+
+.homeLink a:link {
+    color: 0;
+}
+
+.mask {
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.mask .ackedDialog {
+    width: 440px;
+    height: 250px;
+    margin: 200px auto;
+    background-color: #FFF;
+}
+
+.mask .ackedDialog p {
+    line-height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 0;
+    margin: 0px;
+}
+
+.mask .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #AAA;
+    margin: 40px auto;
+}
+
+.mask .buttonBox {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.mask .ackedDialog .buttonBox .ackedButton {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    background-color: #82CD29;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    color:#fff;
+    /* 	margin:20px; */
+    /* 	margin-left:50px; */
+    /* 	cursor:pointer; */
+}
+
+.successLoginOrSignUp {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    margin-bottom: 100px;
+}
+
+.successLoginOrSignUp .banner {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    height: 480px;
+    margin: 0, auto;
+    background-color: #CDCDCD;
+    background-image: url('http://resource.vipkid.com.cn/static/images/home_portal/welcome/banner.jpg');
+}
+
+.successLoginOrSignUp .banner .logo {
+	position: absolute;
+	top: 30px;
+	left: 19%;
+	width: 152px;
+}
+
+.successLoginOrSignUp .banner .contact {
+    position: absolute;
+    top: 58px;
+    right: 19%;
+    text-align: center;
+    width: 190px;
+    height: 20px;
+}
+
+.successLoginOrSignUp .banner .contact .contactNumber {
+    color: #F88b16;
+    position: absolute;
+    margin-left: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -1px;
+}
+
+.successLoginOrSignUp .banner .photo {
+    width: 20px;
+    float: left;
+}
+
+.successLoginOrSignUp .userInformation {
+    position: absolute;
+    top: 0px;
+    right: 25%;
+}
+
+.successLoginOrSignUp .userInformation .parentMobile {
+    margin-top: 0px;
+    color: #909090;
+    font-size: 14px;
+}
+
+.successLoginOrSignUp .userInformation .portrait {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.successLoginOrSignUp .quitText {
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    right: 15%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #909090;
+}
+
+.successLoginOrSignUp .banner .middlePart {
+    width: 650px;
+    height: 280px;
+    margin: 150px auto 0 auto;
+    padding: 0;
+    top: 150px;
+    text-align: center;
+}
+
+.successLoginOrSignUp .banner .middlePart .welcomeText1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.successLoginOrSignUp .banner .middlePart .welcomeText2 {
+    margin-bottom: 50px;
+}
+
+.successLoginOrSignUp .banner .middlePart .middleBox {
+    text-align: left;
+    background-color: rgba(106, 105, 110, 0.5);
+    text-indent: 10px;
+    width: 650px;
+    height: 152px;
+    padding: 10px 10px;
+    margin-top: -30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.successLoginOrSignUp .banner .middlePart .middleBox .text1 {
+    margin-top: 25px;
+    margin-bottom: 7px;
+    margin-left: 20px;
+}
+
+.successLoginOrSignUp .banner .middlePart .middleBox .text2 {
+    margin-bottom: 7px;
+    margin-left: 20px;
+}
+
+.successLoginOrSignUp .banner .middlePart .middleBox .text {
+    margin-bottom: 7px;
+    margin-left: 20px;
+}
+
+.successLoginOrSignUp .banner .middlePart .middleBox .text3 {
+    margin-left: 20px;
+}
+
+.successLoginOrSignUp .banner .middlePart .middleBox .QRCode {
+    width: 100px;
+    height: 100px;
+    float: right;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: -92px;
+}
+
+.successLoginOrSignUp .content {
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    height: 1150px;
+    text-align: center;
+    /* 	overflow-y: auto; */
+}
+
+.successLoginOrSignUp .content .title {
+    color: #F88b16;
+    font-size: 30px;
+}
+
+.successLoginOrSignUp .content .title .titleShadow {
+    background-color: #F88b16;
+    color: #FFFFFF;
+}
+
+.successLoginOrSignUp .content .description {}
+
+.successLoginOrSignUp .content .description .text1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.successLoginOrSignUp .content .description .text2 {
+    height: 30px;
+    margin-bottom: 30px;
+    margin-top: 12px;
+}
+
+.successLoginOrSignUp .content .step {
+    position: relative;
+    width: 170px;
+    height: 20px;
+    margin: 20px auto;
+    text-align: -webkit-auto;
+}
+
+.successLoginOrSignUp .content .step .text {
+    background-color: #F88b16;
+    color: #FFFFFF;
+    font-size: 15px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step .desc {
+    color: #F88b16;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: -50px;
+    margin-top: 12px;
+}
+#successBox #list #myFreeLearn{
+	font-size: 15px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+#successBox #list #ing{
+	margin-top: -35px;
+	margin-left: 70px;
+	color: #acacac;
+	font-size: 14px;
+}
+
+.successLoginOrSignUp .content .step2 {
+    width: 170px;
+    height: 20px;
+    margin: 0px auto;
+    margin-top: -10px;
+    text-align: -webkit-auto;
+}
+
+.successLoginOrSignUp .content .step2 .text {
+    background-color: #F88b16;
+    color: #FFFFFF;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+}
+
+.successLoginOrSignUp .content .step2 .desc1 {
+    color: #F88b16;
+    font-size: 15px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.successLoginOrSignUp .content .step2 .desc2 {
+    width: 400px;
+    height: 20px;
+    margin: 0;
+    margin-left: -80px;
+    font-size: 13px;
+}
+
+.successLoginOrSignUp .content .step3 {
+    width: 360px;
+    height: 20px;
+    margin: 10px auto;
+    margin-top: -20px;
+    text-align: -webkit-auto;
+}
+
+.successLoginOrSignUp .content .step3 .desc1 {
+    color: #F88b16;
+    font-size: 15px;
+    margin-left: 335px;
+    font-weight: bold;
+}
+
+.successLoginOrSignUp .content .step3 .desc2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 200px;
+    font-size: 13px;
+}
+
+.successLoginOrSignUp .content .photo {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+
+.successLoginOrSignUp .content .desc {
+    position: absolute;
+    top: 1px;
+    left: 100px;
+}
+
+.successLoginOrSignUp .content .detaildesc {
+    width: 750px;
+    height: 220px;
+    margin-left: -285px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.successLoginOrSignUp .content .detaildesc .detailPhoto {
+    width: 700px;
+    height: 140px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .detailPhoto .detailPhoto1 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .detailPhoto .dotLine1 {
+    color: #00E9E8;
+    font-size: 39px;
+    position: absolute;
+    top: -15px;
+    left: 130px;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .detailPhoto .detailPhoto2 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 315px;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .detailPhoto .dotLine2 {
+    color: #00E9E8;
+    font-size: 39px;
+    position: absolute;
+    top: -15px;
+    margin-left: 445px;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .detailPhoto .detailPhoto3 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 630px;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .descriptionText {
+    height: 50px;
+    width: 750px;
+    position: relative;
+    top: 130px;
+    left: 30px;
+    font-size: 13px;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .text1 {}
+
+.successLoginOrSignUp .content .step2 .detaildesc .text2 {
+    position: absolute;
+    left: 284px;
+    top: -15px;
+    text-align: center;
+    width: 126px;
+}
+
+.successLoginOrSignUp .content .step2 .detaildesc .text3 {
+    width: 135px;
+    position: absolute;
+    top: -15px;
+    left: 591px;
+    text-align: center;
+}
+
+.successLoginOrSignUp .content .arrow2 {
+    margin-top: 275px;
+}
+
+.successLoginOrSignUp .content .step3 .text {
+    background-color: #F88b16;
+    color: #FFFFFF;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto {
+    margin-left: 130px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .detailPhoto1 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .detailPhoto2 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    margin-left: 190px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .detailPhoto3 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: 380px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .detailPhoto4 {
+    width: 120px;
+    position: absolute;
+    height: 120px;
+    top: 0px;
+    left: 571px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .dotLine1 {
+    top: -10px;
+    left: 122px;
+    color: #00E9E8;
+    font-size: 39px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .dotLine2 {
+    top: -10px;
+    margin-left: 312px;
+    color: #00E9E8;
+    font-size: 39px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .detailPhoto .dotLine3 {
+    top: -10px;
+    margin-left: 502px;
+    color: #00E9E8;
+    font-size: 39px;
+    position: absolute;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .descriptionText {
+    position: absolute;
+    width: 690px;
+    top: 220px;
+    height: 20px;
+    left: 130px;
+    font-size: 13px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .descriptionText .text1 {
+    position: relative;
+    top: -20px;
+    left: 20px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .descriptionText .text2 {
+    position: absolute;
+    top: -20px;
+    left: 192px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .descriptionText .text3 {
+    position: absolute;
+    top: -20px;
+    left: 383px;
+}
+
+.successLoginOrSignUp .content .step3 .detaildesc .descriptionText .text4 {
+    position: absolute;
+    top: -20px;
+    left: 620px;
+}
+
+.successLoginOrSignUp .footer {
+    padding: 0px;
+    margin: 0px;
+    height: 60px;
+    width: 100%;
+    background: #D3D3D3;
+    position: fixed;
+    bottom: 0px;
+    color: #555555;
+}
+
+.successLoginOrSignUp .footer .links {
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+}
+
+.successLoginOrSignUp .footer .links .link {
+    text-decoration: none;
+}
+
+.successLoginOrSignUp .footer .links .gap {
+    margin: 0px 6px;
+}
+
+.successLoginOrSignUp .footer .copyright {
+    text-align: center;
+}
+/*home page style*/
+
+.new {
+    width: 960px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -500px;
+}
+
+#signupBox {
+    width: 310px;
+    position: relative;
+    background-color: #616161;
+    text-align: center;
+    z-index: 10;
+    float: right;
+}
+
+#signupBox .title {
+    height: 50px;
+    line-height: 50px;
+    padding-bottom: 13px;
+    margin-bottom: 16px;
+    background-color: #CCCCCC;
+}
+
+#signupBox .titleText {
+    font-size: 16px;
+    width: 157px;
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    line-height: 50px;
+    background-color: #616161;
+    color: #fff;
+    cursor: pointer;
+}
+
+#signupBox .skipTologin {
+    font-size: 16px;
+    margin: 0;
+    margin-top: -50px;
+    padding: 0;
+    height: 50px;
+    float: right;
+    width: 155px;
+    display: inline-block;
+    line-height: 50px;
+    background-color: #8c8c8c;
+    color: #fff;
+    cursor: pointer;
+}
+
+#signupBox #form {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#signupBox #form #childNameText {
+    width: 290px;
+    margin-left: 3px;
+    margin-top: -5px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: #c2c2c2 1px solid;
+    font-size: 15px;
+    color: #333;
+    text-indent: 0.5em;
+}
+
+#signupBox #form #childBirthText {
+    width: 290px;
+    margin-left: 3px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: #c2c2c2 1px solid;
+    font-size: 15px;
+    color: #333;
+    text-indent: 0.5em;
+}
+
+#signupBox #form #parentMobileText {
+    width: 290px;
+    margin-left: 2px;
+    height: 40px;
+    margin-bottom: 22px;
+    color: #333;
+    border: #c2c2c2 1px solid;
+    font-size: 15px;
+    text-indent: 0.5em;
+}
+
+#signupBox #form #signupPassword {
+    width: 290px;
+    margin-left: 3px;
+    height: 40px;
+    margin-top: -16px;
+    margin-bottom: 10px;
+    color: #333;
+    border: #c2c2c2 1px solid;
+    font-size: 15px;
+    text-indent: 0.5em;
+}
+
+#signupBox #form #signupConfirmedPassword {
+    width: 290px;
+    margin-left: 3px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: #333;
+    border: #c2c2c2 1px solid;
+    font-size: 15px;
+    text-indent: 0.5em;
+}
+
+#signupBox #form #verifyMobileButton {
+    background-color: #e9e9e9;
+    width: 100px;
+    height: 38px;
+    line-height: 18px;
+    position: absolute;
+    top: 162px;
+    left: 199px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#signupBox #form #verifyMobileButton #text {
+    color: #848484;
+    font-size: 14px;
+    height: 10px;
+    line-height: 15px;
+    display: inline-block;
+}
+
+#signupBox #form #verifyNumber {
+    width: 290px;
+    height: 40px;
+    margin-top: -12px;
+    margin-bottom: 24px;
+    margin-left: 2px;
+    color: #333;
+    border: #c2c2c2 1px solid;
+    text-indent: 0.5em;
+    font-size: 15px;
+}
+
+#signupBox #form #signupButton {
+    width: 290px;
+    height: 50px;
+    background-color: #f88b16;
+    color: #fff;
+    font-family: Microsoft Yahei;
+    font-size: 19px;
+    border: 0;
+    margin-top: 6px;
+    cursor: pointer;
+}
+#signupBox #form #signupButton:hover{
+    width: 290px;
+    height: 50px;
+    background-color: #ea6c00;
+    color: #fff;
+    font-family: Microsoft Yahei;
+    font-size: 19px;
+    border: 0;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+#signupBox #form .stamp {
+    margin-top: -50px;
+    margin-left: 200px;
+}
+
+#signupBox .helpText {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 14px;
+}
+
+#signupBox .helpText em {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    font-style: normal;
+    font-size: 12px;
+}
+
+#signupBox .helpText a {
+    float: right;
+    margin-right: 11px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+#signupBox #form .error {
+    border: 1.5px solid red !important;
+}
+
+#signupBox #invalidSignupNote {
+    margin-bottom: -5px;
+}
+
+#signupBox .invalidSignupNoteImg1 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg2 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg3 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg4 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg5 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg6 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg7 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNoteImg8 {
+    margin-left: -275px;
+}
+
+#signupBox .invalidSignupNote1 {
+    margin-left: -100px;
+    margin-top: -22px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote2 {
+    margin-left: -90px;
+    margin-top: -21px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote3 {
+    margin-left: -100px;
+    margin-top: -21px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote4 {
+    margin-left: -100px;
+    margin-top: -21px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote5 {
+    margin-top: -20px;
+    margin-left: 33px;
+    width: 240px;
+    font-size: 12px;
+    text-align: left;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote6 {
+    margin-top: -21px;
+    margin-left: -62px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote7 {
+    margin-top: -21px;
+    margin-left: -125px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox .invalidSignupNote8 {
+    margin-top: -21px;
+    margin-left: -150px;
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#signupBox #warningNote {
+    margin-top: 0px;
+    width: 280px;
+    text-align: left;
+    margin-bottom: 12px;
+    color: #bebebe;
+}
+
+#signupBox #warningNote .warningNote1Photo {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#signupBox #warningNote .warningNote1Text {
+    margin-left: 34px;
+    margin-top: -19px;
+    font-size: 12px;
+}
+/*login Box*/
+
+#loginBox {
+    width: 310px;
+    background-color: #616161;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    float: right;
+    display: none;
+}
+
+#loginBox .title {
+    height: 50px;
+    margin-bottom: 16px;
+    background-color: #CCCCCC;
+    width: 310px;
+}
+
+#loginBox .titleText {
+    font-size: 16px;
+    width: 155px;
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: right;
+    line-height: 50px;
+    background-color: #616161;
+    color: #fff;
+    cursor: pointer;
+}
+
+#loginBox .skipTologin {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    float: left;
+    width: 155px;
+    background-color: #8c8c8c;
+    display: inline-block;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#loginBox #loginForm {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#loginBox #loginForm #usernameInput {
+    width: 290px;
+    height: 45px;
+    margin-bottom: 12px;
+    margin-top: -5px;
+    border: #c2c2c2 1px solid;
+    font-size: 16px;
+    text-indent: 0.5em;
+}
+
+#loginBox #loginForm #passwordInput {
+    width: 290px;
+    height: 45px;
+    margin-bottom: 12px;
+    border: #c2c2c2 1px solid;
+    font-size: 16px;
+    text-indent: 0.5em;
+}
+
+#loginBox #loginForm #remeber {
+    text-align: left;
+    margin-left: 20px;
+}
+
+#loginBox #loginForm .error {
+    border: 1.5px solid red !important;
+}
+
+#loginBox #loginForm #loginButton {
+    width: 290px;
+    height: 50px;
+    background-color: #f88b16;
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: Microsoft Yahei;
+    cursor: pointer;
+}
+#loginBox #loginForm #loginButton:hover{
+    width: 290px;
+    height: 50px;
+    background-color: #ea6c00;
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: Microsoft Yahei;
+    cursor: pointer;
+}
+#loginBox #invalidLoginNote {
+    font-size: 12px;
+    color: #bebebe;
+}
+
+#loginBox #invalidLoginNote .invalidLoginNoteImg1 {
+    margin-left: -275px;
+}
+
+#loginBox #invalidLoginNote .invalidLoginNoteImg2 {
+    margin-left: -275px;
+}
+
+#loginBox #invalidLoginNote .invalidLoginNoteImg3 {
+    margin-left: -275px;
+}
+
+#loginBox #invalidLoginNote .invalidLoginNote1 {
+    margin-top: -20px;
+    margin-left: -105px;
+}
+
+#loginBox #invalidLoginNote .invalidLoginNote2 {
+    margin-top: -20px;
+    margin-left: -115px;
+}
+
+#loginBox #invalidLoginNote .invalidLoginNote3 {
+    margin-top: -20px;
+    margin-left: -47px;
+}
+
+#loginForm #remenber #fogetPassword {
+    margin-left: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    float: left;
+}
+
+#loginForm #remenber #fogetPassword a {
+    color: #fff;
+    font-size: 12px;
+}
+
+#successBox {
+    width: 310px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    float: right;
+    display: none;
+    background-color: rgb(97, 97, 97);
+}
+
+#successBox .title {
+    height: 50px;
+    line-height: 50px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    margin-bottom: 16px;
+    background-color: #979797;
+}
+
+#successBox .titleText {
+    font-size: 16px;
+    margin-left: -170px;
+    margin-top: -10px;
+    color: #fff;
+    font-family: Microsoft Yahei;
+}
+
+#successBox #list {
+    text-align: left;
+}
+
+#successBox #list .freeLearn {
+    border-bottom: solid 1px #7A7A7A;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#successBox #list #myFreeLearn {
+    font-size: 15px;
+    color: #fff;
+}
+
+#successBox #list #ing {
+    margin-top: -20px;
+    margin-left: 70px;
+    color: #acacac;
+    font-size: 14px;
+}
+
+#successBox #list #contact {
+    color: #acacac;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-bottom: 7px;
+}
+
+#successBox #list #myOrder {
+    border-bottom: solid 1px #7A7A7A;
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+#successBox #list #myOrder #order {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 12px;
+}
+
+#successBox #list #myOrder .jumpToOrderPage {
+    /*border: 1px #fff solid;*/
+    
+    border-radius: 5px;
+    width: 50px;
+    height: 22px;
+    text-align: center;
+    margin-top: -18px;
+    margin-bottom: 12px;
+    margin-left: 200px;
+    padding-bottom: 1.2px;
+}
+
+#successBox #list #myOrder .jumpToOrderPage .text {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#successBox .jumpToLearnCenter {
+    width: 280px;
+    height: 50px;
+    background-color: #F88b16;
+    color: #fff;
+    font-family: microsoft Yahei;
+    font-size: 19px;
+    margin: 10px auto;
+    padding-top: 12px;
+}
+
+#successBox .jumpToLearnCenter .text {
+    color: #fff;
+    text-decoration: none;
+    font-family: Microsoft Yahei;
+}
+
+#successBox .learnContact {
+    color: #BDB2B2;
+    font-size: 12px;
+}
+
+#successBox #list .freeLearn .time {
+    color: #acacac;
+    font-size: 14px;
+}
+
+#successBox #list .freeLearn .name {
+    margin-top: -32px;
+    margin-left: 140px;
+    padding-left: 25px;
+    color: #acacac;
+    font-size: 14px;
+}
+
+#successBox #list #myOrder #leftBracket {
+    margin-top: -34px;
+    margin-left: 70px;
+    color: #acacac;
+    font-size: 14px;
+}
+
+#successBox #list #myOrder #orderCount {
+    margin-top: -19px;
+    margin-left: 71px;
+    color: #acacac;
+    font-size: 14px;
+}
+
+#successBox #list #myOrder #rightBracket {
+    margin-top: -31px;
+    margin-left: 105px;
+    color: #acacac;
+    font-size: 14px;
+}
+
+#successBox #list #usefulDownload {
+    margin-bottom: 15px;
+}
+
+#successBox #list #usefulDownloadText {
+    color: black;
+    margin-top: -23px;
+    margin-left: 45px;
+}
+
+#successBox #list #usefulDownloadText .text {
+    color: #fff;
+    font-size: 15px;
+}
+
+
+/*forget Password*/
+.forget .box{
+	margin-left: 50px;
+	margin-top:50px;
+	
+}
+.forget .head{
+	margin: 10px auto;
+	width: 800px;
+	margin-bottom: 50px;
+}
+.forget .process{
+	width: 805px;
+	margin: 0 auto;
+	text-align: center;
+}
+.forget .process .part1{
+	text-align:left;
+}
+.forget .process .part1 .step1{
+	width: 20px;
+	background-color: #00D6D3;
+	border-radius: 10px;
+	padding: 1px 5px;
+	color: #fff;
+	font-size: 18px;
+}
+.forget .process .part1 .step2{
+	width: 21px;
+	background-color: #9C9C9C;
+	border-radius: 10px;
+	padding: 1px 5px;
+	color: #fff;
+	font-size: 18px;
+}
+.forget .process .part1 .step3{
+	width: 21px;
+	background-color: #9C9C9C;
+	border-radius: 10px;
+	padding: 1px 5px;
+	color: #fff;
+	font-size: 18px;
+}
+.forget .process .part1 .step4{
+	width: 21px;
+	background-color: #9C9C9C;
+	border-radius: 10px;
+	padding: 1px 5px;
+	color: #fff;
+	font-size: 18px;
+}
+.forget .process .part1 .line1{
+	color: #9C9C9C;
+	
+}
+.forget .process .part1 .line2{
+	color: #9C9C9C;
+	
+}
+.forget .process .part1 .line3{
+	color: #9C9C9C;
+	
+}
+.forget .process .part1 .text{
+	font-size: 14px;
+	margin-top: 5px;
+}
+.forget .process .part1 .text .desc1{
+	color: #92c918;
+	margin-left:5px;
+}
+.forget .process .part1 .text .desc2{
+	margin-left: 170px;
+}
+.forget .process .part1 .text .desc3{
+	margin-left: 155px;
+}
+.forget .process .part1 .text .desc4{
+	margin-left: 174px;
+}
+.forget .head .text{
+	margin-top: -35px;
+	margin-left: 160px;
+}
+.forget.box #inputMobile{
+	width: 200px;
+	height: 150px;
+}
+.forget .box #inputMobile #mobile{
+	width: 200px;
+	height: 40px;
+	margin-bottom: 19px;
+	text-indent: 15px;
+	margin-left: 8px;
+}
+.forget .box #inputMobile #nextButton{
+	border-radius: 5px;
+	border: none;
+	background-color: #92c918;
+	color: #fff;
+	font-family: Microsoft Yahei;
+	width: 79px;
+	height: 35px;
+	margin-left: -119px;
+	cursor: pointer;
+}
+.forget .box #inputMobile .mobileInvalidNote{
+	margin-bottom:10px;
+}
+.forget .box #inputVerifyNumber #verifyNumberForm #submitButton{
+	border-radius: 5px;
+	border: none;
+	background-color: #00D6D3;
+	color: #fff;
+	font-family: Microsoft Yahei;
+	width: 75px;
+	height: 32px;
+	margin-left: -135px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.forget .box #firstStep #mobileInvalidNote{
+	font-size: 14px;
+	margin-top: -10px;
+	margin-bottom: 15px;
+	color: red;
+}
+.forget .box #firstStep #mobileInvalidNote #invalidMobileText{
+	margin-left: -100px;
+}
+.forget .box #firstStep #mobileInvalidNote #invalidMobileText2{
+	margin-left: -100px;
+}
+.forget .box #firstStep .error{
+	border: 1.5px solid red !important; 
+}
+.forget .box #inputMobile #firstStep #text{
+	font-size: 15px;
+	font-weight: bold;
+}
+.forget .box #inputMobile #firstStep #mobileInvalidNote #invalidMobileText{
+	
+}
+
+.forget #inputVerifyNumber #verifyNumberForm #text2{
+	font-size:14px;
+}
+.forget .box #inputVerifyNumber #submitButton{
+	border-radius: 6px;
+	border: 1px solid black;
+	background-color: #fff;
+	width: 80px;
+	height: 25px;
+}
+.forget .box #verifyNumberForm .error{
+	border: 1.5px solid red !important; 
+}
+.forget .box #verifyNumberForm #verifyNumber{
+	width: 200px;
+	height: 40px;
+	margin-left: -10px;
+	text-indent: 15px;
+}
+.forget .box #inputVerifyNumber #verifyNumberForm .verifyNumberInvalidNote{
+	margin-bottom: 0px;
+	font-size: 14px;
+	color:red;
+}
+.forget .box #inputVerifyNumber #verifyNumberForm #verifyNumberInvalidNote #verifyNumberInvalidNoteText{
+	margin-left: -110px;
+}
+.forget .box #inputVerifyNumber #verifyNumberForm #countTime{
+	cursor: pointer;
+	margin-top: -30px;
+	margin-left:290px;
+	font-size: 14px;
+	
+}
+.forget .box #inputVerifyNumber #verifyNumberForm #text1{
+	font-size: 15px;
+	font-weight: bold;
+}
+.forget .box #setNewPassword #setNewPasswordForm #text2{
+	font-size: 14px;
+}
+.forget .box #setNewPassword{
+
+}
+.forget .box #setNewPassword #setNewPasswordForm #password{
+	width: 200px;
+	height: 40px;
+	margin-left: -100px;
+	text-indent:15px;
+	
+}
+.forget .box #setNewPassword #setNewPasswordForm #verifyPassword{
+	width: 200px;
+	height: 40px;
+	margin-left: -100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-indent:15px;
+}
+.forget .box #setNewPassword #setNewPasswordForm #finish{
+	border-radius: 5px;
+	border: none;
+	background-color: #00D6D3;
+	color: #fff;
+	font-family: Microsoft Yahei;
+	width: 79px;
+	height: 35px;
+	margin-left: -228px;
+	cursor: pointer;
+}
+.forget .box #setNewPassword #setNewPasswordForm #invalidPasswordNote{
+	margin-bottom: 30px;
+	margin-top: 0px;
+	color: red;
+}
+.forget .box #setNewPassword #setNewPasswordForm #invalidPasswordNote #invalidPasswordStyle{
+	margin-left: -180px;
+	font-size: 14px;
+	margin-bottom: -10px;
+}
+.forget .box #setNewPassword #setNewPasswordForm #invalidPasswordNote #invalidPasswordNoteText{
+	font-size: 14px;
+	margin-left: -164px;
+	margin-bottom: -10px;
+}
+.forget .box #setNewPasswordForm .error{
+	border: 1.5px solid red !important; 
+}
+.forget #succussChangePw .text1{
+	color: #00D6D3;
+}
+.forget #succussChangePw .text2{
+	font-size: 14px;
+}
+.forget .footer {
+	border-top: 1px solid #d1d1d1;
+	overflow: hidden;
+	font-size: 12px;
+	height: 80px;
+	position:fixed;
+	bottom:0px;
+	width: 100%;
+	background-color: #D5D5D5;
+}
+.forget .footer .links{
+	line-height:30px;
+	text-align:center;
+}
+.forget .footer .links .link{
+	text-decoration: none;
+	color: #555555;;
+}
+.forget .footer .links .gap{
+	margin:0px 6px;
+}
+.forget .footer .copyright{
+	text-align:center;
+}
+.forget .footer a {
+	color: #fff;
+	margin: 0 7px;
+	font-weight: bold;
+	line-height: 40px;
+}
+.forget .footer a:hover {
+	color: #c19a8c;
+}
+
+.forget .footer span {
+	margin: 0 5px;
+}
+
+.forget .footer .logo {
+	background-image: url("http://resource.vipkid.com.cn/homepage/images/home/footer_logo_normal.png");
+	background-repeat: no-repeat;
+	display: inline;
+	height: 18px;
+	width: 52px;
+	margin: 9px -350px 0 350px;
+	float: left;
+}
+.forget .footer .logo:hover {
+	background-image: url("http://resource.vipkid.com.cn/homepage/images/home/footer_logo_hover.png");
+	background-repeat: no-repeat;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform:scale(1.1);
+	-webkit-transition-duration: 0.2s;
+	-o-transition-duration:0.2s;
+	-webkit-transition-duration:0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-o-transition-timing-function:ease-in-out;
+}
+
+.main {}
+
+.main .common_header {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.main .headerCenterFixer {
+    position: absolute;
+    width: 960px;
+    margin: 0 auto;
+    z-index: 1000;
+}
+
+.main .common_header .infoGroup {
+    float: right;
+    margin: 6px 10px 0 0;
+    font-size: 16px;
+}
+
+.main .common_header .infoGroup .tel {
+    height: 15px;
+    margin: 2px 0px 0 -1px !important;
+    padding: 2px 0 0 0px;
+}
+
+.main .common_header .infoGroup .link {
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    color: #8C8C8C;
+}
+
+.main .common_header .navGroup {
+    padding-top: 9px;
+}
+
+.main .common_header .topLogo {
+    width: 100px;
+    height: 40px;
+    display: inline;
+    float: left;
+}
+
+.main .common_header .navGroup ul {
+    list-style-type: none;
+    margin: 0;
+    height: 100px;
+    padding: 35px 0 0 0;
+}
+
+.main .common_header .navGroup ul li {
+    display: inline;
+    height: 30px;
+    font-size: 18px;
+    width: 130px;
+    float: left;
+    text-align: center;
+    padding: 2px 0 0 0;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 0 14px;
+    line-height: 30px;
+}
+
+.main .common_header .trmobile {
+    position: fixed;
+    top: -2px;
+    right: 25px;
+    background: url("http://resource.vipkid.com.cn/static/images/home_portal/teacher/400mobile.png") 0 0 no-repeat;
+    /* display: block; */
+    width: 307px;
+    height: 37px;
+    /* margin: -100px; */
+    /* float: right; */
+}
+
+.main .common_header .navGroup .topLogo {
+    cursor: pointer;
+    background-image: url(http://resource.vipkid.com.cn/static/images/home_portal/logo.png);
+    height: 77px;
+    width: 152px;
+    background-repeat: no-repeat;
+}
+
+.main .common_header .navGroup .telPic {}
+
+.main .common_header .navGroup ul li:hover {
+    cursor: pointer;
+    background-color: #f88b16;
+}
+
+.main .common_header .navGroup ul .active {
+    cursor: pointer;
+    background-color: #f88b16;
+}
+
+.main .common_header .navGroup ul .inactive {
+    cursor: pointer;
+    background-color: #8C8C8C;
+}
+
+.main .common_header .navGroup ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* classDiary */
+
+.classDiary {
+    /*     overflow: hidden; */
+}
+
+.classDiary .topLayer {
+    min-height: 538px;
+    min-width: 1280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.classDiary .topLayer .playBtn {}
+
+.classDiary .topLayer .videoGroup {
+    margin: 0 auto;
+    width: 480px;
+}
+
+.classDiary .popup {
+    /* left: 15%; */
+    /* position: absolute; */
+    /* top: 2358px; */
+    
+    z-index: 9999;
+    opacity: 1;
+    margin: 0 auto;
+    /* display: none; */
+    
+    clear: both;
+}
+
+.classDiary .item {
+    width: 320px;
+    float: left;
+    border: 2px solid #eee;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 2% -4% 0 1%;
+    background-color: white;
+    border: solid 1px #FFOOOO;
+}
+
+.classDiary .item .imgBox {
+    overflow: hidden;
+    width: 320px;
+    /* padding: 14px 0 0 16px; */
+}
+
+.classDiary .item .cover-img {
+    /* margin: 2% 0 0 3%; */
+    
+    width: 320px;
+    transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    opacity: 0.7;
+}
+
+.classDiary .item .cover-img:hover {
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    opacity: 1;
+}
+
+.classDiary .item .title-img {
+    margin: 24px 0 0 13px;
+    width: 1%;
+    height: 18px;
+    float: left;
+}
+
+.classDiary .item .description {
+    margin: 3% 0 5% 4%;
+    width: 94%;
+    float: left;
+    font-size: 14px;
+}
+
+.classDiary .item .viewsource {
+    margin: 0 4% 5% 0;
+    width: 100%;
+    float: right;
+    text-align: right;
+    color: #0068B7;
+}
+
+.classDiary .layer {
+    padding: 2% 0 4% 0;
+    margin: 0 auto;
+    min-width: 1280px;
+    background-repeat: repeat;
+}
+
+.classDiary .layer .container {
+    margin: 0 auto;
+    width: 1020px;
+}
+
+.classDiary .topLayerBackground {
+    /* 	background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/classdiary/bg_repeat.png"); */
+}
+
+.classDiary .catGroup {
+    margin: 0 auto;
+    height: 170px;
+    width: 300px;
+    margin-top: 120px;
+}
+
+.classDiary .catGroup .catHead {
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/classdiary/cat.png");
+    height: 190px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.classDiary .catGroup .leftClaw {
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/classdiary/claw.png");
+    width: 50px;
+    height: 39px;
+    margin: -42px 0 0 2px;
+    background-repeat: no-repeat;
+    /* z-index: 1000000; */
+    /* float: left; */
+    /* clear: both; */
+    
+    position: relative;
+}
+
+.classDiary .catGroup .rightClaw {
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/classdiary/claw.png");
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/classdiary/claw.png");
+    width: 50px;
+    height: 39px;
+    margin: -37px 0 0 244px;
+    background-repeat: no-repeat;
+    /* z-index: 1000000; */
+    
+    position: relative;
+}
+/* classDiary end */
+
+
+.footer a {
+    color: #555;
+    margin: 0 7px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.footer span {
+    margin: 0 5px;
+}
+
+.footer .logo {
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/logo.png");
+    background-repeat: no-repeat;
+    display: inline;
+    background-size: 100% 100%;
+    height: 29px;
+    width: 70px;
+    margin: 1px -350px 0 350px;
+    float: left;
+}
+
+.applyFooter {
+    background-color: #545454;
+    height: 60px;
+    width: 100%;
+}
+
+.applyFooter .trailBtn {
+    background-color: #545454;
+    height: 60px;
+    width: 100%;
+    font-size: 25px;
+}
+
+.applyFooter .wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 12px 0;
+    text-align: center;
+    color: white;
+}
+
+.applyFooter .applyBtn {
+    margin: -4px 0 0 0;
+    width: 150px;
+    padding: 9px 10px;
+    text-align: center;
+    background-color: #f88b16;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+/* join us */
+
+.joinus {}
+
+.joinus .topLayer {
+    height: 440px;
+    width: 1280px;
+    margin: 0 auto;
+    background: url(http://resource.vipkid.com.cn/homepage/images/joinus/joinus_banner.png);
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.joinus .label-group-1 {
+    width: 860px;
+    margin: 0 auto 4% auto;
+}
+
+.joinus ul,
+.joinus li {
+    text-align: left;
+}
+
+.joinus .ul-level1 {
+    line-height: 30px;
+    font-size: 24px;
+}
+
+.joinus .ul-level2 {
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.joinus .title {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    margin: 11px 0 0 3px;
+}
+
+.joinus .dot {
+    height: 1px;
+    border-bottom-style: dotted;
+    color: #e1e1e1;
+    margin: 4% auto 4% auto;
+}
+/* end join us */
+/* mediareport */
+
+.mediareport {
+    /* 	margin-top: -50px; */
+}
+
+.mediareport .topLayer {
+    height: 440px;
+    width: 1280px;
+    margin: 0 auto;
+    background: url(http://resource.vipkid.com.cn/homepage/images/mediareport/media_banner.png);
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.mediareport .label-group-1 {
+    margin: -26.7% 0 0 90px;
+    height: 200px;
+}
+
+.mediareport .label-group-1 .label-wrapper {
+    height: 130px;
+}
+
+.mediareport .container .wrapper {
+    margin: 0% 0 1% 0;
+    width: 1100px;
+    height: 366px;
+}
+
+.mediareport .container .wrapper .coverImg {
+    width: 504px;
+    height: 314px;
+    margin: 2% 500px 0 0;
+}
+
+.mediareport .container .wrapper .title {
+    display: block;
+    font-size: 24px;
+    margin-top: 0px;
+    text-align: left;
+    margin-left: 455px;
+    width: 564px;
+}
+
+.mediareport .container .wrapper .desc {
+    width: 564px;
+    text-align: left;
+    margin: 10px 0 0 455px;
+    text-indent: 2em;
+    color: #6A3906;
+    font-size: 16px;
+}
+
+.mediareport .container .wrapper .articleLink {
+    width: 193px;
+    height: 74px;
+    display: inline;
+}
+
+.pageTitle {
+    font-size: 48px;
+    font-weight: bold;
+    color: #6A3906;
+    text-align: center;
+    display: block;
+    margin: 70px 0 0 0;
+}
+/* end mediareport */
+/* about */
+
+.about {
+    /* 	margin-top: -50px; */
+}
+
+.about .topLayer {
+    height: 440px;
+    width: 1280px;
+    margin: 0 auto;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/about/aboutus_banner.png);
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.about .label-group-1 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.about .label-group-1 .label-wrapper {
+    height: 130px;
+}
+/* about end */
+/* teacherRecruit */
+
+#teacherRecruit {
+    width: 100%;
+    height: auto;
+}
+
+#teacherRecruit .section1 {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/one.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+#teacherRecruit .section1 .btn1 {
+    position: relative;
+    top: 400px;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/button1.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 64px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+#teacherRecruit .section1 .btn1:hover {
+    position: relative;
+    top: 400px;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/button1hover.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 64px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+#teacherRecruit .section2,
+#teacherRecruit .section3,
+#teacherRecruit .section4 {
+    width: 100%;
+    height: 300px;
+}
+
+#teacherRecruit .section3 {
+    background-color: #f6f6f6;
+}
+
+#teacherRecruit .section2 .section2main,
+#teacherRecruit .section3 .section3main,
+#teacherRecruit .section4 .section4main {
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#teacherRecruit .section2 .section2main .section2text,
+#teacherRecruit .section4 .section4main .section4text {
+    width: 500px;
+    height: 220px;
+    float: left;
+}
+
+#teacherRecruit .section2 .section2main .section2text h2,
+#teacherRecruit .section4 .section4main .section4text h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+#teacherRecruit .section2 .section2main .section2text p,
+#teacherRecruit .section4 .section4main .section4text p {
+    font-size: 16px;
+    text-indent: 0;
+}
+
+#teacherRecruit .section2 .section2main .section2pic {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/two.png) 0 0 no-repeat;
+    width: 350px;
+    height: 230px;
+    float: right;
+}
+
+#teacherRecruit .section3 .section3main {
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#teacherRecruit .section3 .section3main .section3text {
+    width: 500px;
+    height: 300px;
+    float: right;
+}
+
+#teacherRecruit .section3 .section3main .section3text h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+#teacherRecruit .section3 .section3main .section3text p {
+    font-size: 16px;
+    text-indent: 0;
+}
+
+#teacherRecruit .section3 .section3main .section3pic {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/three.png) 0 0 no-repeat;
+    width: 350px;
+    height: 230px;
+    float: left;
+}
+
+#teacherRecruit .section4 .section4main .section4pic {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/four.png) 0 0 no-repeat;
+    width: 350px;
+    height: 230px;
+    float: right;
+}
+
+#teacherRecruit .section5 {
+    width: 100%;
+    height: 500px;
+}
+
+#teacherRecruit .section5 .section5main {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #00cfcc;
+}
+
+#teacherRecruit .section5 .section5main>p {
+    background-color: #01bbb8;
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    height: 50px;
+    line-height: 58px;
+    font-size: 26px;
+    text-align: center;
+}
+
+#teacherRecruit .section5 .section5main .section5text1,
+#teacherRecruit .section5 .section5main .section5text2 {
+    width: 960px;
+    height: 200px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+#teacherRecruit .section5 .section5main .section5text1 h3,
+#teacherRecruit .section5 .section5main .section5text2 h3 {
+    display: block;
+    width: 960px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#teacherRecruit .section5 .section5main i {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 1901px;
+    left: 48%;
+    background-color: #00cfcc;
+    border-left: 1px solid #00cfcc;
+    border-bottom: 1px solid #00cfcc;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    z-index: 1000;
+}
+
+#teacherRecruit .section6 {
+    width: 100%;
+    height: 150px;
+    background-color: #00a2a0;
+}
+
+#teacherRecruit .section6 p {
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+#teacherRecruit .section6 p a {
+    color: #fff;
+}
+
+#teacherRecruit .section6 .btn2 {
+    position: relative;
+    top: 0;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/button2.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 55px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+#teacherRecruit .section6 .btn2:hover {
+    position: relative;
+    top: 0;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/english/button2hover.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 55px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}
+/* teacherRecruit end */
+/* parentManagement start*/
+
+.parentManagement {
+    position: relative;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/bg.png) 0 0 no-repeat;
+    width: 100%;
+    min-height: 1100px;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.parentManagement .main {
+    width: 960px;
+    margin: 0 auto;
+    min-height: 1100px;
+}
+
+.parentManagement .left {
+    position: relative;
+    top: 130px;
+    width: 500px;
+    height: 600px;
+    float: left;
+}
+
+.parentManagement .left h2 {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.parentManagement .left i {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/middle.png) 0 0 no-repeat;
+    width: 10px;
+    height: 600px;
+    display: inline-block;
+    position: absolute;
+    left: 247px;
+}
+
+.parentManagement .left em {
+    position: absolute;
+    left: 168px;
+    margin-top: 60px;
+    background: url("http://resource.vipkid.com.cn/homepage/images/home/qrcode.jpg");
+    width: 160px;
+    height: 160px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.parentManagement .left .tabs {
+    margin: 0 auto;
+    padding: 0;
+    width: 343px;
+    font-size: 14px;
+}
+
+.parentManagement .left .tabs li {
+    display: inline-block;
+    width: 340px;
+    height: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.parentManagement .left .tabs li a {
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.parentManagement .left .tabs li:nth-child(2n+1) a {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/right.png) 0 0 no-repeat;
+    background-size: 100%;
+    float: right;
+}
+
+.parentManagement .left .tabs li:nth-child(2n) a {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/left.png) 0 0 no-repeat;
+    background-size: 100%;
+    float: left;
+}
+
+.parentManagement .left .tabs li .white {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/white.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 23px;
+    height: 23px;
+    display: none;
+}
+
+.parentManagement .left .tabs li .whiteable {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/white.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 23px;
+    height: 23px;
+    display: block;
+    margin: 7px 0px 0px 0px;
+    position: relative;
+    left: 158px;
+}
+
+.parentManagement .right {
+    position: relative;
+    top: 140px;
+    width: 331px;
+    height: 709px;
+    float: right;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/parentcenter/phone.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.parentManagement .right .rightmain {
+    width: 288px;
+    height: 510px;
+    border: 1px solid;
+    position: relative;
+    top: 102px;
+    left: 23px;
+    overflow: hidden;
+}
+
+.parentManagement .right .rightmain embed {
+    width: 288px;
+    height: 510px;
+}
+/* parentManagement end */
+/* learningSystem style start*/
+
+.learningSystem {
+    width: 100%;
+    height: 100%;
+}
+
+.learningSystem .head {
+    background-color: #E1E1E1;
+    width: 100%;
+    min-width: 900px;
+    /* 	height:610px; */
+    
+    margin: 0 auto;
+}
+
+.learningSystem .head .banner {
+    /* 	width: 1881px; */
+    /* 	height: 1000px; */
+    
+    position: absolute;
+    /* 	margin-top: 0px; */
+}
+
+.learningSystem .head .experience_button {
+    position: absolute;
+    left: 12%;
+    top: 80%;
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.6;
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/teacher/experience.png");
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.learningSystem .head .experience_button:hover {
+    opacity: 1;
+}
+
+.learningSystem .content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.learningSystem .content .desc1 {
+    width: 820px;
+}
+
+.learningSystem .content .interest {
+    background-color: #F9F9F9;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.learningSystem .content .leftPart {
+    width: 370px;
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.learningSystem .content .leftPart .title {
+    font-size: 25px;
+}
+
+.learningSystem .content .leftPart .detail {
+    font-size: 13px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+
+.learningSystem .content .leftPart .icon {
+    width: 375px;
+}
+
+.learningSystem .content .photo1 {
+    width: 400px;
+    background-color: #EAEAEA;
+    margin-top: -325px;
+    margin-left: 430px;
+    padding: 0;
+    float: right;
+    padding: 5px 5px;
+}
+
+.learningSystem .content .personal {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.learningSystem .content .photo2 {
+    width: 400px;
+    background-color: #EAEAEA;
+    margin-left: -420px;
+    padding: 5px 5px;
+}
+
+.learningSystem .content .rightPart {
+    width: 370px;
+    text-align: left;
+    margin-top: -320px;
+    margin-left: 450px;
+}
+
+.learningSystem .content .rightPart .title {
+    font-size: 25px;
+}
+
+.learningSystem .content .rightPart .detail {
+    font-size: 13px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+
+.learningSystem .content .rightPart .icon {
+    width: 375px;
+}
+
+.learningSystem .content .addict {
+    background-color: #F9F9F9;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.learningSystem .content .free {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.learningSystem .content .lastPhoto {
+    margin-top: 40px;
+    width: 820px;
+    margin-bottom: 40px;
+}
+/** download **/
+
+.download {
+    padding: 0px;
+    margin: 0px;
+}
+
+.download .main_container {
+    background: rgba(211, 211, 211, 1);
+    align: center;
+}
+
+.download .main_container img {
+    width: 960px;
+    margin: 100px auto;
+}
+/** teacher **/
+
+.teacher {
+    padding: 0px;
+    margin: 0px;
+}
+
+.teacher .main_container {
+    min-height: 538px;
+    min-width: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+.teacher .main_container .img_welcome {
+    position: absolute;
+}
+
+.teacher .main_container .quotations {
+    width: 400px;
+    height: 215px;
+    background: rgba(0, 0, 0, 0.4);
+    list-style: none;
+    left: 20%;
+    bottom: 150px;
+    position: absolute;
+    padding: 5px;
+}
+
+.teacher .main_container .quotations li {
+    color: #FFF;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 9px;
+}
+
+.teacher .main_container .experience_button {
+    position: absolute;
+    left: 20%;
+    bottom: 80px;
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.6;
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/teacher/experience.png");
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.teacher .main_container .experience_button:hover {
+    opacity: 1;
+}
+
+.teacher .introduct {
+    margin: 10px auto;
+    width: 950px;
+    height: 700px;
+}
+
+.teacher .introduct .left {
+    margin: 20px 10px;
+    float: left;
+}
+
+.teacher .introduct .right {
+    float: right;
+    margin: 20px 10px;
+    width: 290px;
+    height: 620px;
+    background: url('http://resource.vipkid.com.cn/static/images/home_portal/teacher/teacher_word_bg.gif');
+    padding: 35px;
+    padding-top: 142px;
+    color: #777;
+}
+
+.teacher .introduct .right span {
+    line-height: 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.teacher .introduct .right .experience_button2 {
+    margin-top: 380px;
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.6;
+    background-image: url("http://resource.vipkid.com.cn/static/images/home_portal/teacher/experience.png");
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.teacher .introduct .right .experience_button2:hover {
+    opacity: 1;
+}
+
+.teacher .teacher_title {
+    width: 950px;
+    margin: 20px auto;
+    height: 25px;
+}
+
+.teacher .teacher_title .word {
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+
+.teacher .teacher_title .divider {
+    background: #ddd;
+    float: left;
+    width: 830px;
+    height: 1px;
+    margin: 15px 10px;
+}
+
+.teacher .teacher_team {
+    margin: 10px auto;
+    width: 950px;
+    height: 800px;
+}
+
+.teacher .teacher_team ul {
+    width: 100%;
+    height: 750px;
+    list-style: none;
+    padding: 0px;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.teacher .teacher_team ul li {
+    width: 265px;
+    height: 330px;
+    float: left;
+    margin: 12px 25px;
+    background: rgba(111, 111, 111, 0.1);
+    cursor: pointer;
+}
+
+.teacher .teacher_team ul li:hover {
+    border-radius: 0 0 1px 1px;
+    box-shadow: 0 1px 2px #c0c0c0;
+}
+
+.teacher .teacher_team .img_box {
+    overflow: hidden;
+    width: 265px;
+    height: 170px;
+}
+
+.teacher .teacher_team .img_box img {
+    transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    opacity: 0.7;
+}
+
+.teacher .teacher_team ul li:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    opacity: 1;
+}
+
+.teacher .teacher_team .introduct {
+    width: 265px;
+    height: 160px;
+    padding: 5px;
+}
+
+.teacher .teacher_team .introduct .name {
+    margin: 0px;
+}
+
+.teacher .teacher_team .introduct .info {
+    margin: 0px;
+    font-size: 14px;
+    color: #999;
+}
+
+.teacher .noborder {
+    padding: 0px;
+    margin: 0px;
+}
+
+.teacher .pagination {
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 20px;
+}
+
+.teacher .pagination .go {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ddd;
+    float: right;
+    cursor: pointer;
+    background: rgba(200, 200, 200, 0.8);
+    font-size: 28px;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.teacher .pagination .go:hover {
+    background: #ff8b16;
+}
+
+.teacher .pagination .page_num {
+    height: 40px;
+    width: 40px;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ddd;
+}
+
+.teacher .pagination .selected {
+    background-color: #f88b16;
+    border: 1px solid #f88b16;
+    color: #FFF;
+}
+
+.teacher .pagination .selected:hover {
+    background: rgba(255, 0, 0, 1);
+    background-color: #f88b16;
+}
+
+.teacher .video_box {
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.teacher .video_box .teacher_video_box {
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    background: white;
+    top: -500px;
+}
+
+.teacher .video_box .b-close {
+    position: absolute;
+    right: -22px;
+    top: -23px;
+    z-index: 9999;
+    height: 46px;
+    width: 46px;
+    background: url(http://resource.vipkid.com.cn/homepage/images/home/close_video.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    transition: all 0.3s ease-out;
+}
+/*home*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#superContainer {
+    height: 100%;
+    position: relative;
+    /* Touch detection for Windows 8 */
+    
+    -ms-touch-action: none;
+    /* IE 11 on Windows Phone 8.1*/
+    
+    touch-action: none;
+}
+
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    /* Safari<=5 Android<=3 */
+    
+    -moz-box-sizing: border-box;
+    /* <=28 */
+    
+    box-sizing: border-box;
+}
+
+.fp-slide {
+    float: left;
+}
+
+.fp-slide,
+.fp-slidesContainer {
+    height: 100%;
+    display: block;
+}
+
+.fp-slides {
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out;
+    /* Safari<=6 Android<=4.3 */
+    
+    transition: all 0.3s ease-out;
+}
+
+.fp-section.fp-table,
+.fp-slide.fp-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.fp-tableCell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+}
+
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #8c8c8c transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #8c8c8c;
+}
+
+.fp-scrollable {
+    overflow: scroll;
+}
+
+.fp-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+
+#fp-nav.right {
+    right: 17px;
+}
+
+#fp-nav.left {
+    left: 17px;
+}
+
+.fp-slidesNav {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+
+.fp-slidesNav.bottom {
+    bottom: 17px;
+}
+
+.fp-slidesNav.top {
+    top: 17px;
+}
+
+#fp-nav ul,
+.fp-slidesNav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #333;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+}
+
+#fp-nav ul li:hover .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+
+#fp-nav ul li .fp-tooltip.right {
+    right: 20px;
+}
+
+#fp-nav ul li .fp-tooltip.left {
+    left: 20px;
+}
+
+#newheader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid red;
+    z-index: 100;
+    display: none;
+}
+
+#newfooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid red;
+    display: none;
+}
+/*section1*/
+
+#newcontent .section1 {
+    overflow: hidden;
+}
+
+#newcontent .section1 .slide:nth-child(1) {
+    background: url(http://vipkid.oss-cn-beijing.aliyuncs.com/homepage/images/home/banner01.jpg) top center no-repeat;
+    background-size: 100% 100%;
+}
+
+#newcontent .section1 .slide:nth-child(2) {
+    background: url(http://vipkid.oss-cn-beijing.aliyuncs.com/homepage/images/home/banner02.jpg) top center no-repeat;
+    background-size: 100% 100%;
+}
+
+#newcontent .section1 .slide:nth-child(3) {
+    background: url(http://vipkid.oss-cn-beijing.aliyuncs.com/homepage/images/home/banner03.jpg) top center no-repeat;
+    background-size: 100% 100%;
+}
+
+#newcontent .section1 .slideItem {
+    width: 100%;
+    height: 20px;
+    z-index: 1000;
+    position: absolute;
+    bottom: 10%;
+}
+
+#newcontent .section1 .slideItem ul {
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+#newcontent .section1 .slideItem ul li {
+    float: left;
+    font-size: 50px;
+    color: #8c8c8c;
+}
+
+#newcontent .section1 .slideItem ul li:nth-child(1),
+#newcontent .section1 .slideItem ul li:nth-child(2) {
+    margin: 0 44px 0 0;
+}
+
+#newcontent .section1 .slideItem .slideactive {
+    color: #ff3c00;
+}
+
+#newcontent .section1 .newnav {
+    position: relative;
+    top: 0;
+    width: 960px;
+    height: 90px;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+#newcontent .section1 .navup {
+    width: 960px;
+    height: 40px;
+    border: 1px solid;
+    font-size: 14px;
+    color: #949494;
+}
+
+#newcontent .section1 .navdown {
+    widows: 960px;
+    height: 50px;
+    border: 1px solid;
+}
+
+#newcontent .section1 .newnav ul {
+    display: block;
+}
+
+#newcontent .section1 .navup ul {
+    float: right;
+}
+
+#newcontent .section1 .navdown ul {
+    margin: 0 auto;
+    width: 640px;
+}
+
+#newcontent .section1 .navup ul li {
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    float: left;
+    border: 1px solid;
+}
+
+#newcontent .section1 .navdown ul li {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    float: left;
+    border: 1px solid;
+}
+
+#newcontent .section1 .navdown ul .logo {
+    height: 50px;
+    border: 1px solid;
+}
+
+#newcontent .section1 .slidepoint {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    z-index: 1000;
+    border: 1px solid black;
+}
+
+#newcontent .section1 .slidepoint ul {
+    list-style-type: none;
+}
+.schedule-logo,
+.main .common_header .navGroup .topLogo{
+	cursor: pointer;
+	background-image:url(http://resource.vipkid.com.cn/static/images/home_portal/logo.png);
+	height: 77px;
+	width: 152px;
+	background-repeat: no-repeat;
+}
+
+#newcontent .section1 .slidepoint ul li {
+    float: left;
+    font-size: 4em;
+}
+/*section2*/
+
+#newcontent .section2 ul {
+    display: block;
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0
+}
+
+#newcontent .section2 ul li {
+    display: table;
+    width: 960px;
+    height: 26%;
+    margin: 0 auto;
+}
+
+#newcontent .section2 ul li:nth-child(1) {
+    margin-top: 120px;
+}
+
+#newcontent .section2 ul li .newpicture {
+    display: table-cell;
+    width: 170px;
+    padding-left: 80px;
+    vertical-align: middle;
+}
+
+#newcontent .section2 ul li .newpicture i {
+    display: table-cell;
+    width: 140px;
+    height: 140px;
+    vertical-align: middle;
+}
+
+#newcontent .section2 ul li .newtext {
+    display: table-cell;
+    width: 750px;
+    height: 140px;
+    vertical-align: middle;
+    margin-left: 150px;
+}
+
+#newcontent .section2 ul li .newtext div {
+    display: table-cell;
+    width: 700px;
+    height: 140px;
+    margin-left: 20px;
+}
+
+#newcontent .section2 ul li .newtext h1 {
+    font-size: 30px;
+    margin: 0 0 0 10px;
+    color: #f88b16;
+}
+
+#newcontent .section2 ul li .newtext p {
+    margin: 7px 0 0 10px;
+    ;
+    color: #727272;
+    font-size: 24px;
+}
+
+#newcontent .section2 ul li .newtext a {
+    margin: 14px 0 0 10px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #f88b16;
+    text-decoration: none;
+    color: #f88b16;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+#newcontent .section2 ul li .newtext em {
+    display: inline-block;
+    color: #ff550d;
+    padding: 0 0 0 10px;
+    border-left: 1px solid;
+    margin-left: 10px;
+    height: 29px;
+    line-height: 30px;
+}
+
+#newcontent .section2 ul li .newtext em img {
+    position: relative;
+    top: 4px;
+}
+/*section3*/
+
+#newcontent .section3 #gallery {
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 3px #AAAAAA;
+    -moz-box-shadow: 0 0 3px #AAAAAA;
+    box-shadow: 0 0 3px #AAAAAA;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid red;
+    width: 1000px;
+    overflow: hidden;
+}
+
+#newcontent .section3 .thirdSlide {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#newcontent .section3 .slide {
+    float: left;
+}
+
+#newcontent .section3 #menu {
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    height: 230px;
+    width: 100%;
+    border: 1px solid;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#newcontent .section3 #menu .menuLeft {
+    width: 400px;
+    height: 230px;
+    float: left;
+    position: relative;
+    left: 12%;
+    color: #fff;
+}
+
+#newcontent .section3 #menu .menuLeft h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    height: 16px;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+#newcontent .section3 #menu .menuLeft p {
+    font-size: 16px;
+    text-align: center;
+}
+
+#newcontent .section3 #menu .menuLeft img {
+    margin: 10px auto;
+    display: block;
+}
+
+#newcontent .section3 #menu .menuRight {
+    width: 500px;
+    height: 230px;
+    float: right;
+    position: relative;
+    right: 10%;
+    margin: 55px 0 0 0;
+}
+
+#newcontent .section3 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#newcontent .section3 li {
+    width: 100px;
+    display: inline-block;
+    list-style: none;
+    height: 100px;
+    overflow: hidden;
+    border: 5px solid;
+    border-color: rgba(255, 255, 255, .5);
+}
+
+#newcontent .section3 li.inact:hover {
+    border: 5px solid #f88b16;
+}
+
+#newcontent .section3 li.act:hover,
+#newcontent .section3 li.act {
+    border: 5px solid #f88b16;
+}
+
+#newcontent .section3 li i:hover {
+    cursor: pointer;
+}
+
+#newcontent .section3 li i {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#newcontent .section3 .menuRight a {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#newcontent .section3 li:nth-child(1) {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/teacher02_s.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+#newcontent .section3 li:nth-child(2) {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/teacher03_s.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+#newcontent .section3 li:nth-child(3) {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home_img/teacher_more.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+#newcontent .section3 a img {
+    border: none;
+}
+
+#newcontent .section3 .thirdSlide .s1 .fp-tableCell {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/teacher01.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+#newcontent .section3 .thirdSlide .s2 .fp-tableCell {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/teacher02.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+#newcontent .section3 .thirdSlide .s3 .fp-tableCell {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/teacher03.jpg) top center no-repeat;
+    background-size: cover;
+}
+/*section4*/
+
+#newcontent .section4 .fourthMain {
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+    display: table;
+}
+
+#newcontent .section4 .fourthLeft {
+    padding: 20% 50px 0;
+    width: 900px;
+    float: left;
+    display: table-cell;
+}
+
+#newcontent .section4 .fourthLeft .fourthLeftMain {
+    position: absolute;
+    top: 50%;
+    height: 400px;
+    margin-top: -235px;
+    width: 900px
+}
+
+#newcontent .section4 .fourthLeft h2 {
+    font-size: 36px;
+    margin-left: 25px;
+    color: #333;
+    font-weight: 100;
+}
+
+#newcontent .section4 .fourthLeft #fourthSlidersMain {
+    width: 764px;
+    height: 102px;
+    overflow: hidden;
+    float: left;
+    overflow: hidden;
+}
+
+#newcontent .section4 .fourthLeft #fourthSlidersMain .fourthSlidersMainInner {
+    width: 1200px;
+    height: 102px;
+}
+
+#newcontent .section4 .fourthLeft .fourthSliderPrev,
+#newcontent .section4 .fourthLeft .fourthSliderNext {
+    width: 24px;
+    height: 44px;
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    margin-right: 7px;
+    margin-left: 10px;
+}
+
+#newcontent .section4 .fourthLeft .fourthSliderPrev {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/section4left.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+#newcontent .section4 .fourthLeft .fourthSliderNext {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/section4right.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+#newcontent .section4 .fourthLeft #fourthSlidersMain .fourthSliderItem {
+    float: left;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    padding: 0px;
+    border: 1px solid #E6E6E6;
+    margin-left: 5px;
+}
+
+#newcontent .section4 .fourthLeft #fourthSlidersMain .fourthSliderItem img {
+    width: 80px;
+    height: 80px;
+    margin: 4px
+}
+
+#newcontent .section4 .fourthLeft #fourthSlidersMain .fourthSliderItem img:hover {
+    cursor: pointer
+}
+
+#newcontent .section4 .fourthLeft #fourthSlidersMain .act {
+    border: 1px solid #ff550d;
+    width: 90px;
+    height: 90px;
+}
+
+#newcontent .section4 .fourthLeft .fourthSlider {
+    width: 900px;
+    height: 120px;
+    margin: 40px 0 0 26px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext {
+    width: 860px;
+    height: 300px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textmain {
+    width: 750px;
+    height: 295px;
+    float: left;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textmain .texttitle {
+    margin-top: 15px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textmain .textcontent {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textmain .texttitle h3 {
+    font-size: 25px;
+    color: #f88b16;
+    text-align: center;
+    font-weight: 100;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textmain .texttitle p {
+    font-size: 18px;
+    color: #f88b16;
+    text-align: center;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textmain .textcontent {
+    width: 721px;
+    font-size: 18px;
+    color: #9e9e9e;
+    text-align: left;
+    text-indent: 2em;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textsLeft,
+#newcontent .section4 .fourthLeft .fourthtext .textsRight {
+    display: inline-block;
+    width: 20px;
+    height: 300px;
+    float: left;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textsLeft {
+    margin: 80px 30px 0 20px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textsRight {
+    margin: 80px 0 0 21px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textsLeft img {
+    margin-top: 30px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext .textsRight img {
+    margin-top: 30px;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext #texts {
+    width: 720px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+}
+
+#newcontent .section4 .fourthLeft .fourthtext #texts .textsInner {
+    width: 10000px;
+    height: 300px;
+}
+
+#newcontent .section4 .fourthRight {
+    width: 322px;
+    height: 634px;
+    display: table-cell;
+}
+
+#newcontent .section4 .fourthRight img {
+    position: absolute;
+    top: 50%;
+    height: 634px;
+    margin-top: -290px;
+}
+/*section5*/
+
+#newcontent .section5 .fifthMain {
+    display: table;
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+}
+
+#newcontent .section5 .fifthMain .fifthLeft {
+    display: table-cell;
+    float: left;
+    width: 485px;
+    height: 100%;
+}
+
+#newcontent .section5 .fifthMain .fifthLeft ul {
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    height: 600px;
+    margin-top: -240px;
+}
+
+#newcontent .section5 .fifthMain .fifthLeft ul li {
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    border-radius: 30px;
+	border: 1px solid #f88b16;
+    margin: 0 0 20px 0;
+}
+/** teacher **/
+.teacher {
+	padding:0px;
+	margin:0px;
+}
+
+.teacher .teacher-avatar {
+	display: inline-block;
+	background: blue;
+	width: 102px;
+	height: 102px
+}
+
+.teacher .teacher-info {
+	display: inline-block;
+	background: yellow;
+}
+
+.teacher .main_container{
+	min-height:538px;
+	min-width:900px;
+	overflow:hidden;
+	position: relative;
+}
+.teacher .main_container .img_welcome{
+	position:absolute;
+}
+.teacher .main_container .quotations{
+	width:400px;
+	height:215px;
+	background:rgba(0,0,0,0.4);
+	list-style:none;
+	left:20%;
+	bottom:150px;
+	position: absolute;
+	padding:5px;
+}
+.teacher .main_container .quotations li{
+	color:#FFF;
+	margin:0px;
+	padding:0px;
+	font-size:14px;
+	line-height:20px;
+	margin-top:9px;
+}
+.teacher .main_container .experience_button{
+	position: absolute;
+	left:20%;
+	bottom:80px;
+	width:220px;
+	height:50px;
+	cursor:pointer;
+	opacity:0.6;
+	background-image:url("http://resource.vipkid.com.cn/static/images/home_portal/teacher/experience.png");
+	transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+}
+.teacher .main_container .experience_button:hover{
+	opacity:1;
+}
+.teacher .introduct{
+	margin:10px auto;
+	width:950px;
+	height:700px;
+}
+.teacher .introduct .left{
+	margin:20px 10px;
+	float:left;
+}
+.teacher .introduct .right{
+	float:right;
+	margin:20px 10px;
+	width:290px;
+	height:620px;
+	background:url('http://resource.vipkid.com.cn/static/images/home_portal/teacher/teacher_word_bg.gif');
+	padding:35px;
+	padding-top:142px;
+	color:#777;
+}
+.teacher .introduct .right span{
+	line-height:40px;
+	font-size:20px;
+	letter-spacing:1px;
+}
+.teacher .introduct .right .experience_button2{
+	margin-top:380px;
+	width:220px;
+	height:50px;
+	cursor:pointer;
+	opacity:0.6;
+	background-image:url("http://resource.vipkid.com.cn/static/images/home_portal/teacher/experience.png");
+	transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;	
+}
+.teacher .introduct .right .experience_button2:hover{
+	opacity:1;
+}
+.teacher .teacher_title{
+	width:950px;
+	margin:20px auto;
+	height:25px;
+}
+.teacher .teacher_title .word{
+	font-size:24px;
+	float:left;
+	font-weight:bold;
+}
+.teacher .teacher_title .divider{
+	background:#ddd;
+	float:left;
+	width:830px;
+	height:1px;
+	margin:15px 10px;
+}
+.teacher .teacher_team{
+	margin:10px auto;
+	width:950px;
+	height:800px;
+}
+.teacher .teacher_team ul{
+	width:100%;
+	height:750px;
+	list-style:none;
+	padding:0px;
+	padding-top:10px; 
+	margin:0px;
+}
+.teacher .teacher_team ul li{
+	width:265px;
+	height:330px;
+	float:left;
+	margin:12px 25px;
+	background:rgba(111,111,111,0.1);
+	cursor:pointer;
+}
+.teacher .teacher_team ul li:hover{
+	border-radius: 0 0 1px 1px;
+	box-shadow: 0 1px 2px #c0c0c0;
+}
+.teacher .teacher_team .img_box{
+	overflow:hidden;
+	width:265px;
+	height:170px;
+}
+.teacher .teacher_team .img_box img{
+	transition: .3s;
+	-moz-transition: .3s;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	opacity:0.7;
+}
+.teacher .teacher_team ul li:hover img{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	opacity:1;
+}
+.teacher .teacher_team .introduct{
+	width:265px;
+	height:160px;
+	padding:5px;
+}
+.teacher .teacher_team .introduct .name{
+	margin:0px;
+	
+}
+
+#newcontent .section5 .fifthMain .fifthLeft ul li i {
+    width: 12px;
+    height: 16px;
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/section51.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin: 10px 9px 0 0;
+}
+
+#newcontent .section5 .fifthMain .fifthLeft .tabs li {
+    list-style-type: none;
+}
+
+#newcontent .section5 .fifthMain .fifthLeft .tabs li a {
+    display: inline-block;
+    text-decoration: none;
+    display: inline-block;
+    height: 50px;
+    
+}
+
+#newcontent .section5 .fifthMain .fifthLeft ul li:hover {
+    cursor: pointer;
+    background-color: #f88b16;
+    font-size: 14px;
+    display: inline-block;
+    height: 40px;
+    /* padding: 12px; */
+    border-radius: 30px;
+    margin: 0 0 20px 0;
+}
+
+#newcontent .section5 .fifthMain .fifthLeft .tabs a.active {
+    
+}
+
+#newcontent .section5 .fifthMain .fifthRight {
+    display: table-cell;
+    float: right;
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain {
+    position: absolute;
+    top: 50%;
+    height: 600px;
+    margin-top: -275px;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain div {
+    height: 500px;
+    margin: 0 auto;
+    font-size: 50px;
+    text-align: center;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain div h2 {
+    font-size: 32px;
+    color: #727272;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain div .fifVideo {
+    width: 360px;
+    height: 260px;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain div .fifVideo video {
+    width: 328px;
+    height: 246px;
+    border: 1px solid #92c918;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain div .fifVideoTitle {
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: '脙篓脜鈥櫭⑩偓娄脙搂脗娄芒鈧久兟偮棵偮矫兟偮棵偮矫兟偮棵偮矫兟⑩偓潞脗虏脙漏芒鈥灺⒚⑩偓聽脙炉脗驴脗陆脙炉脗驴脗陆脙炉脗驴脗陆';
+    width: 300px;
+    background-color: #92c918;
+    color: #fff;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+#newcontent .section5 .fifthMain .fifthRight .fifthRightMain div .fifVideoContent {
+    font-size: 12px;
+    color: #727272;
+    text-indent: 2em;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 211px;
+    border: 1px solid #92c918;
+    padding: 20px;
+    width: 328px;
+    text-align: left;
+}
+/*section6*/
+
+#newcontent .section6 .sixthMain {
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+    display: table;
+}
+
+#newcontent .section6 .sixthMain .sixthLeft {
+    float: left;
+    margin: 0 auto;
+    width: 500px;
+    height: 80%;
+    display: table-cell;
+}
+
+#newcontent .section6 .sixthMain .sixthLeft .sixthLeftMain {
+    position: absolute;
+    top: 50%;
+    height: 600px;
+    margin-top: -300px;
+    width: 500px;
+}
+
+#newcontent .section6 .sixthMain .sixthLeft .sixthLeftMain h1 {
+    font-size: 30px;
+    color: #4b4b4b;
+    margin-bottom: 40px;
+    font-weight: 100;
+}
+
+#newcontent .section6 .sixthMain .sixthLeft .sixthLeftMain p {
+    text-indent: 2em;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#newcontent .section6 .sixthMain .sixthLeft .sixthLeftMain .unsatisfied {
+    width: 500px;
+    height: 400px;
+}
+
+#newcontent .section6 .sixthMain .sixthLeft .sixthLeftMain .unsatisfied img {
+    width: 361px;
+    height: 339px;
+    margin: 30px auto 0;
+    display: table-cell;
+}
+
+#newcontent .section6 .sixthMain .sixthRight {
+    float: right;
+    margin: 0 auto;
+    width: 355px;
+    height: 80%;
+    display: table-cell;
+}
+
+#newcontent .section6 .sixthMain .sixthRight .sixthRightMain {
+    position: absolute;
+    top: 50%;
+    height: 500px;
+    margin-top: -290px;
+    width: 330px;
+}
+
+#newcontent .section6 .sixthMain .sixthRight .sixthRightMain h2 {
+    font-size: 20px;
+    color: #727272;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 100;
+}
+
+#newcontent .section6 .sixthMain .sixthRight .sixthRightMain ul {
+    width: 330px;
+    height: 500px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#newcontent .section6 .sixthMain .sixthRight .sixthRightMain ul li {
+    width: 140px;
+    height: 52px;
+    float: left;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#newcontent .section6 .sixthMain .sixthRight .sixthRightMain ul li:nth-child(2n) {
+    margin-left: 40px;
+}
+/*btnNext*/
+
+.btnNext {
+    position: absolute;
+    bottom: 0;
+    width: 960px;
+    height: 30px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.btnNext i {
+    background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/btnNext.png) 0 0 no-repeat;
+    display: table;
+    margin: 0 auto;
+    width: 53px;
+    height: 24px;
+}
+
+#newcontent .section1 .btnNext,
+#newcontent .section3 .btnNext,
+#newcontent .section4 .btnNext {
+    margin: 0 auto;
+    width: 100%;
+}
+/*btnNext*/
+.btnNext{position:absolute;bottom:0;width:960px;height: 30px;z-index: 1000;cursor: pointer;}
+.btnNext i{background: url(http://resource.vipkid.com.cn/static/images/home_portal/home/btnNext.png) 0 0 no-repeat;display: table;margin: 0 auto;width: 53px;height: 24px;}
+#newcontent .section1 .btnNext,#newcontent .section3 .btnNext,#newcontent .section4 .btnNext{margin: 0 auto;width: 100%;}
+
+.schedule-welcome {
+	text-align: right;
+	width: 1200px;
+	margin: auto;
+	font-size: 13px;
+	padding: 5px 0;
+	color: #909090;
+}
+
+.schedule-logo-text {
+	display: inline-block;
+	font-size: 30px;
+	position: relative;
+	top: -19px;
+}
+
+.schedule {
+	width: 1200px;
+	margin: auto;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.schedule .schedule-table {
+	width: 100%;
+}
+
+.schedule .child-column {
+	width: 280px;
+	height: inherit;
+	background: #f8f8f8;
+	display: inline-block;
+	position: absolute;
+  	top: 89px;
+}
+
+.schedule .teacher-column {
+	width: 280px;
+	height: inherit;
+	position: absolute;
+	top: 89px;
+	left: 287px;
+	padding-bottom: 3px;
+	background: #fff;
+}
+
+.schedule .teacher-column *{
+	 -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.schedule .teacher-column *::-webkit-scrollbar { width: 0 !important }
+
+
+.schedule .time-table-column {
+	width: 630px;
+	height: inherit;
+	border: 0;
+	position: absolute;
+	top: 89px;
+	left: 574px;
+}
+
+.schedule .time-table-column td {
+	height: 35px;
+	border: 1px solid #eee;
+	font-size: 13px;
+	width: 13%;
+}
+
+.child-column {
+	font-size: 15px;
+	
+}
+.child-column *::-webkit-scrollbar { width: 0 }
+.child-column .catagory{position:relative;}
+.child-column .catagory button {
+	background-color: #ff8b30;
+	border: 0px;
+	color: #ffffff;
+	padding: 5px 6px;
+	border-radius: 5px;
+	font-size: 13px;
+	cursor: pointer;
+	line-height:16px;
+	position:absolute;
+	right:8px;
+	top:9px;
+}
+
+.one-to-many hr,
+.one-to-one hr,
+.child-column hr {
+	margin: 0;
+	color: #f6f8f0;
+	border: 1px solid #F6F8f0;
+}
+
+.child-column .basic-info {
+	background-color: #ffffff;
+	clear: both;
+	padding: 8px;
+	border-bottom: 1px solid #f4f7f9;
+}
+
+.child-column .basic-info .avatar {
+	display: inline-block;
+	width: 66px;
+	vertical-align: top;
+	margin-left: 6px;
+}
+
+.child-column .basic-info .avatar img {
+	display: inline-block;
+	width: 100%;
+	border-radius: 60px;
+}
+
+.child-column .basic-info .info {
+	display: inline-block;
+	padding: 1% 1%;
+	width: 70%;
+}
+
+.child-column .basic-info .info .first-line img {
+	position: relative;
+  	top: -13px;
+}
+
+.child-column .basic-info .info .second-line {
+	display: inline-block;
+	padding: 2% 4%;
+	background: #d5d5d5;
+	border-radius: 5px;
+}
+
+.child-column .basic-info .second-line {
+	background: url("img_tree.png") no-repeat right top;
+}
+
+.child-column .basic-info .info .names {
+	display: inline-block;
+	font-size: 18px;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 69px;
+	vertical-align: middle;
+}
+
+.child-column .change-button {
+	border: 0px;
+	background-color: #FFFFFF;
+	height: 33px;
+	width: 100%;
+}
+
+.child-column .change-button button {
+	background-color: #ffffff;
+	border: 0px;
+	float: right;
+	color: black;
+	padding: 10px 10px 0 0;
+}
+
+.child-column .change-button img {
+	width: 20px;
+}
+
+.child-column .change-button div {
+	display: inline-block;
+	margin: 0 5px;
+	color: #6F6F6F;
+}
+
+.child-column .basic-info .info .serial {
+	font-size: 12px;
+	display: inline-block;
+}
+
+.child-column .basic-info .info .secret {
+	font-size: 11px;
+	display: inline-block
+}
+
+.child-column .tab-line {
+	background-color: #ef7a1e;
+	padding: 7px 0px;
+}
+
+.child-column .tab-line .class-table {
+	width: 32%;
+	height: 30px;
+	margin-left: 1%;
+	border: #ffffff solid 1px;
+	color: #ef7a1e;
+	background-color: #ffffff;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 14px;
+}
+
+.child-column .tab-line .history {
+	width: 34%;
+	height: 30px;
+	margin-left: -5px;
+	margin-right: -6px;
+	border: #ffffff solid 1px;
+	color: #ffffff;
+	background-color: #ef7a1e;
+	font-size: 14px;
+}
+
+.child-column .tab-line .report {
+	width: 33%;
+	height: 30px;
+	border: #ffffff solid 1px;
+	color: #ffffff;
+	background-color: #ef7a1e;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 14px;
+}
+
+.child-column .group-class,
+.child-column .standard-class {
+	background-color: #ffffff;
+	color: #6F6F6F;
+	border-bottom: 1px solid #f4f7f9;
+}
+
+.child-column .group-class .catagory,
+.child-column .standard-class .catagory {
+	padding-left: 3%;
+	background: #f8f8f8;
+}
+
+.child-column .group-class  .catagory img {
+	display: inline-block;
+	width: 18px; 
+	height: 18px;
+	margin: 5px;
+	vertical-align: middle;	
+}
+
+.child-column .standard-class .catagory img {
+	display: inline-block;
+	padding: 0px;
+	width: 18px;
+	height: 18px;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.child-column .group-class .catagory .text,
+.child-column .standard-class .catagory .text {
+  display: inline-block;
+  line-height: 45px;
+  vertical-align: middle;
+  font-weight: 800;
+  width: 180px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.catagory .next-triangle {
+	display: inline-block;
+	height: 12px;
+	width: 10px;
+	background: url(http://resource.vipkid.com.cn/homepage/images/schedule/triangle.png) no-repeat;
+}
+
+.child-column .standard-class .tip {
+	line-height: 45px;
+	margin-left: 8%;
+}
+
+.child-column .group-class .single-class-line,
+.child-column .standard-class .single-class-line {
+	margin-left: 3%
+}
+
+.single-class-line button {
+	background-color: #777;
+	border: 0px;
+	color: white;
+	padding: 5px 5px;
+	border-radius: 5px;
+	float: right;
+	margin: 10px 9px  0 0 ;
+	font-size: 13px;
+	cursor: pointer;
+	line-height:16px;
+}
+
+.child-column .group-class .single-class-line hr,
+.child-column .standard-class .single-class-line hr {
+	margin-left: 5px;
+}
+
+.child-column .group-class .single-class-line img {
+	display: inline-block;
+	vertical-align: top;
+	width: 35px;
+	height: 35px;
+	margin: 5px;
+	position: relative;
+	top: 13px;
+}
+
+.child-column .standard-class .single-class-line img {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 5px;
+	position: relative;
+	top: 8px;
+}
+
+.child-column .group-class .single-class-line .text {
+	display: inline-block;
+	line-height: 45px;
+	width: 75%;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+
+.child-column .standard-class .single-class-line .text {
+	display: inline-block;
+	line-height: 45px;
+	width: 179px;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 12px;
+}
+
+.child-column .standard-class .single-class-line .detail {
+  display: inline-block;
+  width: 231px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12px;
+  margin-left: 33px;
+  line-height: 15px;
+  vertical-align: super;
+  margin-bottom: 5px;
+}
+
+.child-column .group-class .single-class-line .book-button {
+	display: inline-block;
+	position: relative;
+	top: -7px;
+	background-color: #80c400;
+	border-radius: 5px;
+	color: #ffffff;
+	border: #80c400 solid 1px;
+}
+
+.child-column .group-class .single-class-line .teacher {
+	margin-left: 21%;
+}
+
+.child-column .group-class .single-class-line .teacher-info {
+	display: inline-block;
+    width: 66%;
+}
+
+.child-column .group-class .single-class-line .book-button .seat {
+	background-color: #ffffff;
+	color: black;
+	border-radius: 5px 5px 0px 0px;
+	padding: 5px;
+}
+
+.child-column .group-class .single-class-line .book-button .button-name {
+	padding: 5px;
+	text-align: center;
+}
+
+.child-column .group-class .single-class-line .book-button .button-name-full {
+	padding: 5px;
+	text-align: center;
+	background-color: #40da8c;
+	color: #749B2c;
+}
+
+.child-column .group-class .learning-progress-group {
+	margin-left: 3%;
+}
+
+.child-column .group-class .learning-progress-group img {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.child-column .group-class .learning-progress-group .text {
+	display: inline-block;
+	line-height: 45px;
+	vertical-align: middle;
+}
+
+.child-column .group-class .book {
+	
+}
+
+.child-column .group-class .book .class-info {
+	display: inline-block;
+}
+
+.child-column .group-class .book .class-info .time {
+	
+}
+
+.child-column .group-class .book .class-info .teacher {
+	
+}
+
+.one-to-many .book-info .book-button,
+.child-column .group-class .book .book-button {
+	display: inline-block;
+	background-color: whitesmoke;
+	border-radius: 5px;
+}
+
+.child-column .group-class .book .book-button .seat {
+	background-color: grey;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.teacher-column .search .title {
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* line 1578, ../../Compass/main.scss */
+.teacher-column .nav .title {
+  font-size: 17px;
+  line-height: 44px;
+}
+
+/* line 1589, ../../Compass/main.scss */
+.teacher-column .side {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1500;
+}
+
+.teacher-column .side .left {
+  position: fixed;
+  top: 0px;
+  width: 40%;
+  height: 100%;
+  left: 0px;
+  background: #000000;
+  opacity: 0.6;
+  z-index: 1500;
+}
+
+/* line 1618, ../../Compass/main.scss */
+.teacher-column .side .item-row {
+  height: 44px;
+  position: relative;
+  padding: 8px 0 0 19%;
+}
+
+/* line 1640, ../../Compass/main.scss */
+.teacher-column .side .item-row-click {
+  height: 44px;
+  position: relative;
+  padding: 7px 0 0 19%;
+  background-color: #ff843e;
+  color: white;
+  display: none;
+}
+
+/* line 1654, ../../Compass/main.scss */
+.teacher-column .side .item-row-click img {
+  width: 20px;
+  margin: -4px 10px 0 0;
+}
+
+/* line 1664, ../../Compass/main.scss */
+.teacher-column .side .item-row img {
+  width: 20px;
+  margin: -4px 10px 0 0;
+}
+
+/* line 1674, ../../Compass/main.scss */
+.teacher-column .side .item-row .hyperspan {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 1687, ../../Compass/main.scss */
+.teacher-column .side .right {
+  position: fixed;
+  top: 0px;
+  width: 60%;
+  height: 100%;
+  right: 0px;
+  background: white;
+  z-index: 1500;
+}
+
+/* line 1702, ../../Compass/main.scss */
+.teacher-column .side .right .heads {
+  white-space: nowrap;
+  height: 60px;
+  overflow-x: visible;
+  padding-top: 7px;
+  position: relative;
+}
+
+/* line 1715, ../../Compass/main.scss */
+.teacher-column .side .right .heads .selected {
+  border: 1px solid;
+  border-radius: 25px;
+}
+
+/* line 1734, ../../Compass/main.scss */
+.teacher-column .side .right .studentName {
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* line 1740, ../../Compass/main.scss */
+.teacher-column .search {
+  height: 44px;
+  font-size: 17px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.teacher-column .filter {
+  height: 44px;
+  width: 100%;
+  font-size: 17px;
+  background-color: #f8f8f8;
+  z-index: 1000;
+}
+
+.teacher-column .filter select {
+	 width: 97px;
+	 margin-left: 15px;
+	 position: relative;
+	 top: 10px;
+	 font-size: 15px;
+}
+
+.teacher-column .filter-button {
+	border: none;
+	color: #fff;
+	width: 17%;
+	border-radius: 5px;
+	background: #ff843e;
+	font-size: 14px;
+	padding: 4px;
+	cursor: pointer;
+	position: relative;
+	top: 10px;
+}
+
+.teacher-column .filter span {
+  line-height:44px;
+}
+
+/* line 1751, ../../Compass/main.scss */
+.teacher-column .search .selected {
+  background-color: #ff843e;
+  border: 1px solid #ff843e;
+  width: 112px;
+  height: 30px;
+  font-size: 14px;
+  margin-top: 6px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+/* line 1763, ../../Compass/main.scss */
+.teacher-column .search .unselected {
+  background-color: transparent;
+  border: 1px solid #ff843e;
+  width: 112px;
+  height: 30px;
+  font-size: 14px;
+  margin-top: 6px;
+  display: inline-block;
+  text-align: center;
+  color: #ff843e;
+}
+
+/* line 1775, ../../Compass/main.scss */
+.teacher-column .search .pullDownButton {
+  background-color: transparent;
+  height: 20px;
+  width: 15px;
+  border: 0px;
+  margin-top: 10px;
+  background: url(http://resource.vipkid.com.cn/parent_portal/images/tl_pullDown_expand.png) no-repeat center;
+  background-size: 15px 10px;
+}
+
+/* line 1785, ../../Compass/main.scss */
+.teacher-column .search .searchTeacherButton {
+  background-color: transparent;
+  height: 44px;
+  width: 20px;
+  border: 0px;
+  margin-right: 8px;
+  float: right;
+  background: url(http://resource.vipkid.com.cn/parent_portal/images/tl_search.png) no-repeat center;
+  background-size: 20px 20px;
+}
+
+/* line 1796, ../../Compass/main.scss */
+.teacher-column .pullDownList {
+  height: 88px;
+  width: 100%;
+  font-size: 14px;
+  position: fixed;
+  top: 88px;
+  z-index: 1000;
+  background-color: white;
+}
+
+/* line 1806, ../../Compass/main.scss */
+.teacher-column .pullDownList .item {
+  width: 100%;
+  font-size: 14px;
+  background-color: white;
+  padding-left: 8px;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+/* line 1816, ../../Compass/main.scss */
+.teacher-column .list {
+  overflow: scroll;
+}
+
+/* line 1826, ../../Compass/main.scss */
+.teacher-column .list .teacher {
+  height: 103px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* line 1831, ../../Compass/main.scss */
+.teacher-column .list .teacher .click-area {
+  width: 90px;
+  height: 103px;
+  z-index: 2000;
+  position: relative;
+  top: 105px;
+  left: 95px;
+}
+
+/* line 1839, ../../Compass/main.scss */
+.teacher-column .list .teacher .avatar {
+  float: left;
+  display: inline;
+  height: 83px;
+  width: 83px;
+  overflow: hidden;
+  margin: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 1850, ../../Compass/main.scss */
+.teacher-column .list .teacher .ribbon {
+  z-index: 500;
+  position: relative;
+  left: -91px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+/* line 1859, ../../Compass/main.scss */
+.teacher-column .list .teacher .ribbon_invisible {
+  z-index: 500;
+  position: relative;
+  left: -91px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+
+/* line 1869, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar {
+  height: 99px;
+  margin-right: 8px;
+}
+
+/* line 1877, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar .teacherName {
+  height: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  position: relative;
+  top: -23px;
+}
+
+/* line 1883, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar .teacherName .name {
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  width: 100px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 1890, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar .teacherName .faverate {
+	height: 20px;
+	width: 55px;
+	float: right;
+	font-size: 12px;
+	border: 1px solid #868686;
+	color: #868686;
+	display: inline-block;
+	border-radius: 5px;
+	padding-left: 3px;
+	margin-top: -3px;
+}
+
+/* line 1904, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar .teacherName .notFaverate {
+	height: 20px;
+	width: 55px;
+	float: right;
+	font-size: 12px;
+	border: 1px solid #ff843e;
+	color: #ff843e;
+	display: inline-block;
+	border-radius: 5px;
+	padding-left: 3px;
+	margin-top: -3px;
+}
+
+/* line 1917, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar .teacherName .classFull {
+  width: 42px;
+  height: 22px;
+  margin-bottom: 7px;
+  margin-left: 9px;
+}
+
+/* line 1924, ../../Compass/main.scss */
+.teacher-column .list .teacher .sideBar .info {
+  font-size: 12px;
+  height: 53px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  top: -66px;
+  padding-left: 100px;
+}
+
+.teacher-column .pager {
+  margin: 0px 13px 0px 0px;
+  text-align: right;
+}
+
+.teacher-column .pager .prev ,.teacher-column .pager .next {
+	margin-top:4px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ff8b30;
+	background:#ddd;
+	font-size:12px;
+	border:#ccc 1px solid;
+	padding:2px 4px;
+}
+
+.time-table-column .head {
+  background: url("http://resource.vipkid.com.cn/parent_portal/images/teacher_background.gif");
+  background-size: 100%;
+  height: 186px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+/* line 1943, ../../Compass/main.scss */
+.time-table-column .nav {
+  height: 44px;
+  width: 100%;
+  color: white;
+  position: fixed;
+}
+
+/* line 1950, ../../Compass/main.scss */
+.time-table-column .nav .title {
+  font-size: 17px;
+  position: relative;
+  top: 12px;
+}
+
+/* line 1956, ../../Compass/main.scss */
+.time-table-column .nav .buttonLeft {
+  float: left;
+  width: 43px;
+  height: 31px;
+  margin-top: 11px;
+  margin-left: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%;
+  border-width: 0px;
+  border-radius: 3px;
+}
+
+/* line 1968, ../../Compass/main.scss */
+.time-table-column .nav .buttonFavorate {
+  width: 43px;
+  height: 31px;
+  margin-top: 11px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%;
+  border-width: 0px;
+  border-radius: 3px;
+  float: right;
+}
+
+/* line 1983, ../../Compass/main.scss */
+.time-table-column .nav .buttonFavorate img {
+  height: 21px;
+}
+
+/* line 1987, ../../Compass/main.scss */
+.time-table-column .nav .buttonRight {
+  width: 76px;
+  height: 31px;
+  margin-top: 11px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%;
+  border-width: 0px;
+  border-radius: 3px;
+  float: right;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 2002, ../../Compass/main.scss */
+.time-table-column .nav .buttonRight div {
+  margin-top: 1px;
+}
+
+/* line 2006, ../../Compass/main.scss */
+.time-table-column .nav .buttonLeft img {
+  height: 21px;
+}
+
+/* line 2010, ../../Compass/main.scss */
+.time-table-column .teacher {
+  position: fixed;
+  top: 50px;
+  height: 103px;
+}
+
+/* line 2016, ../../Compass/main.scss */
+.time-table-column .teacher .avatar {
+  float: left;
+  display: inline;
+  height: 68px;
+  width: 68px;
+  overflow: hidden;
+  margin: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 2027, ../../Compass/main.scss */
+.time-table-column .teacher .ribbon {
+  z-index: 500;
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+
+/* line 2037, ../../Compass/main.scss */
+.time-table-column .teacher .ribbon_invisible {
+  z-index: 1500;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 25px;
+  height: 25px;
+  float: left;
+  opacity: 0;
+}
+
+/* line 2048, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar {
+  float: right;
+  display: inline-block;
+  height: 99px;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+/* line 2056, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar .teacherName {
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+/* line 2061, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar .teacherName .faverate {
+  height: 30px;
+  width: 75px;
+  float: right;
+  font-size: 16px;
+  border: 1px solid #868686;
+  color: #868686;
+  display: inline-block;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 3.5px;
+  border-radius: 2.5px;
+}
+
+/* line 2075, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar .teacherName .notFaverate {
+  height: 30px;
+  width: 75px;
+  float: right;
+  font-size: 16px;
+  border: 1px solid #ff843e;
+  color: #ff843e;
+  display: inline-block;
+  padding-top: 3.5px;
+  border-radius: 2.5px;
+}
+
+/* line 2087, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar .teacherName .name {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 2096, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar .teacherName .classFull {
+  width: 42px;
+  height: 22px;
+  margin-left: -40px;
+}
+
+/* line 2102, ../../Compass/main.scss */
+.time-table-column .teacher .sideBar .info {
+  font-size: 17px;
+  height: 43px;
+  overflow: hidden;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+/* line 2110, ../../Compass/main.scss */
+.time-table-column .scheduleTableTitle {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 35px;
+  position: fixed;
+  top: 151px;
+  width: 100%;
+  font-size: 15px;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+/* line 2121, ../../Compass/main.scss */
+.time-table-column .tableHead {
+  position: fixed;
+  top: 119px;
+  height: 40px;
+}
+
+
+.empty {
+  cursor: pointer;
+  height: 35px;
+  color: #c4c4c4;
+}
+
+.available {
+  cursor: pointer;
+  height: 35px;
+  background-color: #efefef;
+  color: #666666;
+}
+
+.cell {
+  text-align: center;
+  font-size: 15px;
+  border-color: #ececec;
+}
+
+.booked {
+  cursor: pointer;
+  height: 35px;
+  background-color: #ff965b;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.ready {
+  cursor: pointer;
+  height: 35px;
+  background-color: #ff843e;
+  border-radius: 4px;
+}
+
+.finished {
+  cursor: pointer;
+  height: 35px;
+  background-color: #c8c8c8;
+}
+
+.expired {
+  cursor: pointer;
+  height: 35px;
+  background-color: #c8c8c8;
+}
+
+#successBox #list #myClasses4 .child-line .first-line .child-name {
+	font-size: 14px;
+	color: #c6c6c6;
+}
+
+#successBox #list #myClasses4 .child-line .first-line button {
+	float: right;
+	background: #6c6c6c;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	margin-right: 15px;
+	font-size: 13px;
+	width: 50px;
+}
+
+#successBox #list #myClasses4 .child-line .first-line button a {
+	color: #fff;
+	text-decoration: blink;
+}
+
+#successBox #list #myClasses4 .child-line .second-line {
+	font-size: 14px;
+	color: #c6c6c6;
+}
+/*tq娴眰*/
+.tqdiv{position: fixed;left: 0;top:150px;width:25px; height: 145px;cursor:pointer;}
+.tqSmall{width:25px; height: 145px;background: url(../images/home/tqsmall.jpg) no-repeat;position: absolute;left: 0;top:0;cursor:pointer;}
+.tqBig{width:120px; height: 145px;background: url(../images/home/tqbig.jpg) no-repeat;position: absolute;left:-120px;top:0;cursor:pointer;}

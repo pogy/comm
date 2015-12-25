@@ -1,0 +1,152 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/common/baseLayout">
+<head>
+    <title>资料设置 - VIPKID美国小学在家上</title> 
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/myset.css}" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/header.css}" />
+</head>
+<body>
+	<section layout:fragment="content">
+		<!-- Header -->
+		<div th:replace="common/header::header-logined"></div>
+		
+		<section class="w960 clear">
+			<h1 class="pageTitle">帐号信息</h1>
+			<section class="acWaper">
+				<div class="acArea clear">
+					<p class="acAvatar">
+						<span class="acParentIcon">我的信息</span>
+					</p>
+					<div class="acContent">
+						<div class="acTitle">管理联系信息，便于中教老师与您及时联系沟通学习进度、反馈等内容。</div>
+						<div class="acParentText">
+							<p class="f16 bold mb10" th:text="${parent.name}"></p>
+							<p>联系电话： <span th:text="${parent.mobile}"></span></p>
+							<p>电子邮箱： <span th:text="${parent.email}"></span></p>
+							<p>快递地址： <span th:text="${family.province}+${family.city}+${family.district}+${family.address}"></span></p>
+							<p>快递邮编： <span th:text="${family.zipcode}"></span></p>
+							<a href="javascript:editParentInfo()" class="acParentEdit">编辑</a>
+						</div>
+					</div>
+				</div>
+				<div class="acArea clear">
+					<p class="acAvatar">
+						<span class="acChildrenIcon">孩子信息</span>
+					</p>
+					<div class="acContent">
+						<div class="acTitle">您已创建<span class="colorO" th:text="${studentCount}">2</span>个孩子信息，最多可创建<span class="colorO">3</span>个</div>
+						<ul class="acChildrenList">
+							<li th:each="student:${students}">
+								<div class="acChildrenInfo">
+									<img th:src="'http://resource.vipkid.com.cn/static/images/common/avatar/'+${student.avatar}+'.png'" />
+									<p class="acChildrenName"><span th:text="${student.name}"></span><span th:text="${student.englishName}" class="f12"></span></p>
+									<p class="acChildrenMale"><span th:text="${(student.gender==null or student.gender=='')?'':student.gender.name() == 'MALE' ? '男孩':'女孩'}" class="mr5"></span><span th:if="${student.birthday} != null" th:text="${#dates.format(student.birthday, 'yyyy-MM-dd')}"></span></p>
+								</div>
+								<a href="javascript:;" class="acChildrenEdit" th:id="${student.id}">编辑</a>
+							</li>
+						</ul>
+						<a th:if="${alreadyThreeKids}?false:true" href="javascript:addStudentConfirm()" class="acChildrenAdd">添加孩子</a>
+					</div>
+				</div>
+			</section>
+		</section>
+		<div th:replace="common/footer::footer-normal"></div>
+	
+		<div class="editPop" id="parentEditPop">
+			<div class="editPopCon">
+				<p class="editPopTitle"><strong>我的信息</strong><a href="javascript:closeEditPop()" class="editPopClose" title="关闭"></a></p>			
+				<div class="editPopContent">
+					<div class="editPraLine">
+						<label for="parentName">中文姓名：</label><input type="text" class="editPraInput" id="parentName" th:value="${parent.name}" maxLength="10"/>	
+						<p class="regtips" id="parentNameTips"></p>		
+					</div>
+					<div class="editPraLine">
+						<label for="parentPhone">联系电话：</label><input type="text" class="editPraInput" id="parentPhone" th:value="${parent.mobile}" maxLength="11"/>	
+						<p class="regtips" id="parentMobileTips"></p>					
+					</div>
+					<div class="editPraLine">
+						<label for="parentEmail">电子信箱：</label><input type="text" class="editPraInput" id="parentEmail" th:value="${parent.email}" maxLength="80"/>	
+						<p class="regtips" id="parentEmailTips"></p>					
+					</div>
+					<div class="editPraLine" id="editPraAddress">
+						<label for="parentAddress">快递地址：</label>
+						<div class="editAddressLine">												
+							<select class="parentSelect prov" id="addSelectProvinceValue"></select>
+							<select class="parentSelect city" id="addSelectCityValue" disabled="disabled"></select>
+	        				<select class="parentSelect dist" id="addSelectDistrictValue" disabled="disabled"></select>
+						</div>								
+					</div>
+					<div class="editPraLine">
+						<label for="parentPhone">详细地址：</label>
+						<span class="parentAddessXx"  id="addProviceCityDistrict"></span><input type="text" class="editPraInput" id="parentAddress" maxLength="80"/>	
+						<p class="regtips" id="parentAddressTips"></p>					
+					</div>
+					<div class="editPraLine">
+						<label for="parentEmail">快递邮编：</label><input type="text" class="editPraInput" id="parentZipcode" th:value="${family.zipcode}" maxLength="6"/>
+						<p class="regtips" id="parentZipcodeTips"></p>					
+					</div>
+					<div class="editButtonLine">
+						<button onclick="doSave()" class="editBtn editSubmitBtn" id="saveButton">保存我的信息</button>			
+					</div>
+				</div>
+			</div>
+			<p class="editPopBg"></p>
+		</div>
+		
+		<div class="editPop" id="childrenEditPop">
+			<div class="editPopCon">
+				<p class="editPopTitle"><strong>孩子信息</strong><a href="javascript:closeChildrenPop()" class="editPopClose" title="关闭"></a></p>			
+				<div class="editPopConChildren">
+					<div class="editPraLine">
+						<label for="childrenCnName">选择头像：</label>
+						<div class="clear">
+							<ul class="childrenAvatarList normal">
+								<li id="boy_1"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/boy_1.png" /><i></i></li>
+								<li id="boy_2"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/boy_2.png" /><i></i></li>
+								<li id="boy_3"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/boy_3.png" /><i></i></li>
+								<li id="boy_4"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/boy_4.png" /><i></i></li>
+								<li id="girl_1"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/girl_1.png" /><i></i></li>
+								<li id="girl_2"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/girl_2.png" /><i></i></li>
+								<li id="girl_3"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/girl_3.png" /><i></i></li>
+								<li id="girl_4"><img src="http://resource.vipkid.com.cn/static/images/common/avatar/girl_4.png" /><i></i></li>
+							</ul>
+							<a href="javascript:;" class="childrenMoreAvatar">更多&gt;</a>
+						</div>	
+					</div>			
+					<div class="editPraLine">
+						<label for="childrenCnName">孩子中文名：</label><input type="text" class="editChildrenInput" placeholder="用于班主任沟通" id="childrenCnName" maxLength="10"/>
+						<p class="regtips" id="studentCHNameTips"></p>					
+					</div>
+					<div class="editPraLine">
+						<label for="childrenEnName">孩子英文名：</label><input type="text" class="editChildrenInput" placeholder="用于外教老师沟通" id="childrenEnName" maxLength="20"/>
+						<p class="regtips" id="studentENNameTips"></p>				
+					</div>
+					<div class="editPraLine">
+						<span class="childrenGenderLine">孩子性别：</span>
+						<input type="radio" class="editChildrenRadio" id="childrenGirl"/><label for="childrenGirl" class="childrenGender">女孩</label>	
+						<input type="radio" class="editChildrenRadio" id="childrenBoy"/><label for="childrenBoy" class="childrenGender">男孩</label>				
+					</div>
+					<div class="editPraLine">
+						<label for="parentAddress">孩子生日：</label><input type="text" class="editChildrenInput" id="childrenBirth"/>	
+					</div>			
+					<div class="editButtonLine">					
+						<button  class="editBtn editSubmitBtn" id="saveStudentInfo">保存孩子信息</button>			
+					</div>
+				</div>
+			</div>
+			<p class="editPopBg"></p>
+		</div>
+		
+		<div th:replace="parent/layout::alertConfirm"></div>
+	</section>
+	<section layout:fragment="contentjs">
+		<script type="text/javascript" src="/static/lib/jquery/jquery.cityselect.js"></script>
+		<script th:src="@{/static/parent/js/usersetting.js}"></script>
+		<script type="text/javascript" src="/static/home/js/WdatePicker.js"></script>
+	</section>
+</body>
+</html>

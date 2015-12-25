@@ -1,0 +1,71 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/parent/layout">
+<head>
+    <title>已上课程 - VIPKID美国小学在家上</title> 
+    <link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" />
+</head>
+<body>
+	<section layout:fragment="contentjs">
+		<script th:src="@{/static/parent/js/lessons.js}"></script>
+	</section>
+	<section class="pMain" layout:fragment="content">
+	
+			<div class="pArea" id="lessons">
+				<p class="pAreaTitle">我的课程 - 已上课程</p>
+				<div class="pCon" th:if="${totalRecords!=0}">
+					<table class="hasClassTalbe" border="0" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th class="hcth1">课程</th>
+								<th class="hcth2">成就</th>
+								<th class="hcth3">详情</th>
+								<th class="hcth4">外教点评</th>
+							</tr>							
+						</thead>
+						<tbody>
+							<tr th:each="lessonsView : ${lessonsViews}">
+								<td>
+									<p th:text="|时间: ${#dates.format({lessonsView.scheduledDateTime}, 'yyyy-MM-dd HH:mm')}|"></p>
+									<p th:if="${lessonsView.unitName!=null and lessonsView.unitName!=''}">课程: <a th:text="|${lessonsView.level}- ${lessonsView.unitName}- ${lessonsView.lessonName}|" th:href="@{/parent/studiedlessondetail(onlineClassId=${lessonsView.onlineClassId},teacherCommentId=${lessonsView.teacherCommentId},sign=1)}"></a></p>
+									<p th:if="${lessonsView.unitName==null or lessonsView.unitName==''}">课程: <a th:text="|${lessonsView.level}- ${lessonsView.lessonName}|" th:href="@{/parent/studiedlessondetail(onlineClassId=${lessonsView.onlineClassId},teacherCommentId=${lessonsView.teacherCommentId},sign=1)}"></a></p>
+									<p>老师: <a th:text="|${lessonsView.teacherName}|" th:href="@{/parent/teacherdetail(teacherId=${lessonsView.teacherId})}" target="_blank"></a></p>
+									<p th:text="|状态: ${lessonsView.finishType==null?'':lessonsView.finishType}|"></p>
+								</td>
+								<td class="lessonStar">
+									<p th:if="${lessonsView.finishType=='生成中...'}"><span>-</span></p>	
+									<p th:if="${lessonsView.finishType!='生成中...'}" class="recClassStar"><span th:class="${'rcs'+lessonsView.stars}"></span></p>	
+									<p th:if="${lessonsView.medalId!=0 and lessonsView.finishType!='生成中...'}" class="recClassMedal" th:text="${lessonsView.medalName}"></p>	
+								</td>
+								<td class="tc">
+									<a th:href="@{/parent/studiedlessondetail(onlineClassId=${lessonsView.onlineClassId},teacherCommentId=${lessonsView.teacherCommentId},sign=1)}">教学内容</a><br/>
+									<a th:if="${lessonsView.finishType!='生成中...'}" th:href="${learningUrl} + '/adventureLogs/replay/' + ${lessonsView.onlineClassId} + '/home'" target="_blank" >课堂回放</a><br/>
+									<a th:href="@{${lessonsView.unitTestPath}}" th:if="${lessonsView.unitTestPath!=null and lessonsView.unitTestPath!='' and lessonsView.finishType!='生成中...'}" target="_blank">作业下载</a>
+								</td>
+								<td class="hctd4">
+									<a th:if="${lessonsView.finishType!='生成中...'}" th:href="@{/parent/studiedlessondetail(onlineClassId=${lessonsView.onlineClassId},teacherCommentId=${lessonsView.teacherCommentId},sign=2)}">教师评语</a>
+									<a th:if="${lessonsView.finishType=='生成中...'}">-</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					<div hidden="true">
+						<input type="hidden" id="totalRecords" th:value="${totalRecords}"/>
+						<input type="hidden" id="currNum" th:value="${currNum}"/>
+						<a id="links" th:href="@{/parent/lessons}"></a>
+					</div>
+					<div class="noClassTips tabShow" th:if="${totalRecords==0}">
+						<div class="noTeacherCon">
+							<span>您还没有上过课...</span><br/>
+							<a  th:href="@{/parent/preschedule}">快去约课吧！</a>
+						</div>
+					</div>
+					<div id="kkpager" th:if="${totalRecords!=0}"></div>
+			</div>
+		
+	</section>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/common/baseLayout">
+<head>
+    <meta charset="UTF-8"/>		
+	<meta name="baidu-site-verification" content="8SALM4aETp" />
+	<meta name="msvalidate.01" content="C99CBBDA9CD136894A8971CE94EE9B92" />
+	<meta name="360-site-verification" content="1b8ba692dd60752b3a9245aebb986870" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="VIPKID是大米未来科技有限公司旗下的少儿国际教育品牌。致力于为‘有趣、独立和好奇’的‘新家长、大小孩’打造原汁原味的外教1对1在线美国小学课堂。我们的愿景是：‘科技，让教育更人性化’。"/>
+	<meta name="keywords" content="在线少儿英语领导品牌,一对一,外教,VIP个性化，学科英语，儿童，小学，英语，美国小学，教材，在线，翻转式课堂，浸入式英语学习"/>
+	<link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" /> 
+    <title>课程回放</title> 
+    <link rel="stylesheet" th:href="@{/static/parent/css/class.css}" type="text/css" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/parenting.css}" type="text/css" />
+</head>
+<body class="onlineBody">
+<section layout:fragment="content">
+
+	<div class="tc">
+		<div class="onlineTitle">
+			<p th:text="${lessonName}"></p>
+		</div>
+	</div>
+	<div class="ocWaper">
+		<div class="ocMain">
+			<div class="ocTitleInfo clear">
+				<p class="fl">
+					<span>教师：<span th:text="${teacherName}"></span></span>
+				</p>
+				<p class="fr">
+					<a href="http://help.duobeiyun.com/room/test/?result=http://app-proxy.vipkid.com.cn/api/service/public/ittest/callback&amp;lang=zh&amp;role=FAMILY&amp;id=327" target="_blank" class="underline">在线教室检测</a>
+					<a href="/parent/download" target="_blank" class="underline">常用下载</a>
+				</p>
+			</div>
+			<div class="ocClassArea">
+				<iframe id='wxtIframe' th:src="${roomURL}" width="1000" height="520" frameborder="0" scrolling="no"></iframe>
+			</div>
+			<p class="ocClassMobile">咨询电话：400-005-6666</p>
+			<i class="ocLeftCloud"></i><i class="ocRightCloud"></i>
+		</div>
+	</div>
+	<div class="ocFooter">
+		<p class="ocFooterCon"></p>
+	</div>
+	<div class="tipsPop" id="finishedClassPop">
+		<div class="ocPopDiv">
+			<p class="ocPopTitle"><a href="#" id="finishedClassBtn"></a></p>
+			<div class="ocPopTop">
+				<p class="ocLight"></p>
+				<p class="ocDebris"></p>
+				<p class="ocCircle"></p>
+				<p class="ocText"></p>
+				<p class="ocWords">你获得了<span>5枚星币！</span></p>
+			</div>
+			<div class="ocPopBot">
+				<p>意犹未尽？预约免费外教1对1体验课吧！</p>
+				<p><img src="http://resource.vipkid.com.cn/parent_home/static/parent/image/ocpopimg.jpg"/></p>
+				<a href="#" class="ocYueButton">我要预约</a>
+				<a href="" class="ocSharelink">分享公开课 ></a>
+			</div>
+		</div>
+		<div class="tipsBg"></div>
+	</div>
+	
+	<div class="tipsPop" id="classEwmPop">
+		<div class="ocPopDiv">
+			<p class="ocPopTitle"><a href="#" id="closeWxBtn"></a></p>
+			<div class="ocPopTop">
+				<p class="ocLight"></p>
+				<p class="ocDebris"></p>
+				<p class="ocCircle"></p>
+				<p class="ocText"></p>
+				<p class="ocWords">你获得了<span>5枚星币！</span></p>
+			</div>
+			<div class="ocPopBot">
+				<p>微信扫二维码并转发，邀请朋友参加VIPKID公开课吧！</p>
+				<p class="opPopEwm"><img src="http://resource.vipkid.com.cn/parent_home/static/home/image/openclass_ewm.png" /></p>
+				<a href="" class="ocSharelink">返回 ></a>
+			</div>
+		</div>
+		<div class="tipsBg"></div>
+	</div>		
+</section>
+<section layout:fragment="contentjs">
+	<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script>
+	<script th:src="@{/static/parent/js/classroom.js}"></script>
+</section>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/common/baseLayout">
+<head>
+    <title>新手引导 - VIPKID美国小学在家上</title>
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/header.css}" /> 
+    <link rel="stylesheet" th:href="@{/static/home/css/vipkid.guide.css}" />  
+    <link rel="stylesheet" th:href="@{/static/duobei/css/index-51b3b789.css}"/>
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="sHd">
+			<div class="sHdCon">
+				<a href="/parent/guide_step2" class="sHdLogo"><img
+					th:src="@{/static/home/image/vipkid_logo.png}" /></a> <span
+					class="sHdLink"><span class="mr20" id="parentMobile"></span><a
+					href="/signout">退出</a></span>
+			</div>
+		</div>
+		<div class="welcomeWaper">
+			<p class="welcomeTitle">为了更好体验VIPKID为您提供的教学服务，请按照下方引导，完成相关信息设置</p>
+			<div class="welcomeStep">
+				<ul class="welcomeStepItem">
+					<li class="welcomeStepOne has"><i></i><span>填写孩子信息</span></li>
+					<li class="welcomeStepTwo has"><i></i><span>电脑设备测试</span></li>
+					<li class="welcomeStepThr"><i></i><span>在线免费体验课</span></li>
+				</ul>
+				<span class="welcomeStepCircle left"></span> <span
+					class="welcomeStepCircle right"></span>
+				<div class="welcomeStepLine"></div>
+			</div>
+			<div class="welcomeCon" id="step2">
+				<div class="equipmentCheck">
+					<div class="equipmentItem">
+						<p class="equipmentTitle">
+							<strong>1</strong>设备准备
+						</p>
+						<p class="equipmentCon">
+							请自行准备<span class="colorO">摄像头</span>和<span class="colorO">耳麦</span>（或音箱+麦克风）
+						</p>
+						<i class="equipmentItemIsb"></i>
+					</div>
+					<div class="equipmentItem">
+						<i class="equipmentItemIts"></i>
+						<div class="equipmentTitle">
+							<strong>2</strong>
+							<div class="start_view">
+								<div class="no_flash tab" style="display: none;">
+									<p data-i18n="start.flash">要参加网络直播课，需要Flash Player插件，请先下载安装。</p>
+									<p>
+										<span data-i18n="start.flashLink">下载链接：</span><a
+											target="_blank" href="http://get.adobe.com/cn/flashplayer/">http://get.adobe.com/cn/flashplayer/</a>
+									</p>
+								</div>
+	
+								<div class="flash_privacy_content tab cf" style="display: block;">
+									<div>
+										<h3 class="start_title" data-i18n="start.privacyTip">重要提示</h3>
+									</div>
+	
+									<div class="is_chrome default_hide" style="display: block;">
+										<p>
+											<em>*</em><span data-i18n="start.privacychrome">如果在页面顶部出现弹出条，请点击
+												"允许"/"Allow"，如下图所示:</span>
+										</p>
+										<div class="chrome_tip_img"></div>
+									</div>
+	
+									<p>
+										<em>*</em> <span data-i18n="start.privacyflash">在下方的设置框中，点击
+											"允许"/"Allow"，并勾选 "记住"/"Remember"。</span>
+									</p>
+									<div class="cf">
+										<div class="fl tip_arrowhead"></div>
+										<!-- 用于设置flash允许的swf -->
+										<div class="fl privacy_area_wrap">
+											<div class="privacy_area" style="width: 224px; height: 140px;">
+												<object id="privacy" name="privacy" align="middle"
+													width="100%" height="100%"
+													type="application/x-shockwave-flash"
+													data="http://help.duobeiyun.com/room/test/swf/Privacy-47c95c0b.swf">
+													<param name="quality" value="high" />
+													<param name="bgcolor" value="grey" />
+													<param name="allowscriptaccess" value="always" />
+													<param name="allowfullscreen" value="true" />
+													<param name="base" value="." />
+												</object>
+											</div>
+										</div>
+									</div>
+	
+									<!-- <p class="spinner">设置完成后，点击下方按钮</p> -->
+									<a class="btn setting_complete" href="javascript:void()"
+										data-i18n="start.complete">设置完毕, 开始测试</a>
+								</div>
+	
+								<div class="init_tip tab" style="display: none;">
+									<p data-i18n="start.loading">正在加载测试组件，请稍等...</p>
+								</div>
+	
+								<div class="init_failed tab" style="display: none;">
+									<p data-i18n="start.failed">你的设备不支持Flash，无法参与课程，请更换设备。</p>
+								</div>
+	
+								<div class="init_no_mic tab" style="display: none;">
+									<p data-i18n="start.no_mic">你的电脑没有连接麦克风，无法进测试，请先插入麦克风。</p>
+								</div>
+	
+							</div>
+	
+							<div class="ui_checking test_view hide">
+								<div>
+									<h3 class="checking_title" data-i18n="test.check">正在检测...</h3>
+									<span class="main_tip" data-i18n="test.checkingTip">检测过程大概需要2分钟，请准备好麦克风和耳机，请按提示进行操作</span>
+								</div>
+	
+								<table class="dbchecktab">
+									<thead>
+										<tr>
+											<th class="row_title"></th>
+											<th class="name" data-i18n="test.type">检测项</th>
+											<th class="value" data-i18n="test.result">检测结果</th>
+											<th class="result" data-i18n="test.state">状态</th>
+											<th class="suggestion"><span class="title"
+												data-i18n="test.suggest">建议</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="first_row unchecked system">
+											<td rowspan="3" class="row_title" data-i18n="test.softwar">软件</td>
+											<td class="name" data-i18n="test.system">操作系统</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion"><span class="system"
+												data-i18n="test.systemTip">请使用Windows7及以上的操作系统</span></td>
+										</tr>
+										<tr class="unchecked browser">
+											<td class="name" data-i18n="test.browser">浏览器</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion"><span class="browser"> <span
+													data-i18n="test.browserTip">请升级浏览器，点击下载:</span> <a
+													class="download_btn" data-i18n="test.browserTip2"
+													href="http://d2.duobei.com/ChromeStandaloneSetup-36.exe"
+													target="_blank">谷歌浏览器</a></span></td>
+										</tr>
+										<tr class="last_row unchecked flash">
+											<td class="name" data-i18n="test.flash">Flash Player版本</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion"><span class="flash"><span
+													data-i18n="test.flashTip">请升级Flash Player: </span><a
+													class="download_btn"
+													href="http://get.adobe.com/cn/flashplayer/" target="_blank"
+													data-i18n="test.flashTip2">点击升级Flash</a></span></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr class="first_row unchecked connect">
+											<td rowspan="3" class="row_title" data-i18n="test.net">网络</td>
+											<td class="name" data-i18n="test.connect">网络连接</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion network" rowspan="3"><span
+												class="net" data-i18n="test.connectTip">你的网络不稳定。上课时，请勿使用下载软件或观看在线视频；如果你使用的是小区宽带，最好升级为ADSL宽带或光纤宽带；如果开启了VPN，请将其关闭。</span></td>
+										</tr>
+										<tr class="unchecked delay">
+											<td class="name" data-i18n="test.delay">网络延迟</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+										</tr>
+										<tr class="last_row unchecked bandWidth">
+											<td class="name" data-i18n="test.speed">下载速度</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr class="first_row unchecked sound">
+											<td rowspan="3" class="row_title" data-i18n="test.hardware">硬件</td>
+											<td class="name" data-i18n="test.sound">耳机</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion"><span class="sound"
+												data-i18n="test.soundTip">请检查或更换耳机</span></td>
+										</tr>
+										<tr class="unchecked mic">
+											<td class="name" data-i18n="test.mic">麦克风</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion"><span class="mic"
+												data-i18n="test.micTip">请检查或更换麦克风</span></td>
+										</tr>
+										<tr class="last_row unchecked camera">
+											<td class="name" data-i18n="test.camera">摄像头</td>
+											<td class="value">&nbsp;--</td>
+											<td class="result"></td>
+											<td class="suggestion"><span class="camera"
+												data-i18n="test.cameraTip">请检查或更换摄像头</span></td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="skip">
+									<a class="skipLink" href="javascript:skipGuide()">跳过进入个人主页&gt;&gt;</a>
+								</p>
+								<p class="tc">
+									<a class="welcomeSubmit" href="javascript:nextStep()">下一步</a>
+								</p>
+							</div>
+	
+	
+						</div>
+					</div>
+					<a href="/parent/download" class="softDownload">常用软件下载</a>
+					<!-- <a href="http://help.duobeiyun.com/room/test/" target="_blank" class="softDownload">在线测试</a> -->
+				</div>
+			</div>
+	
+		</div>
+	
+		<div id="sound_test" class="mfp-hide pop_modal">
+			<div class="modal_header">
+				<h3 data-i18n="modalSound.title">硬件检测 - 耳机</h3>
+			</div>
+			<div class="modal_content">
+				<p data-i18n="modalSound.tip">请戴上耳机，听一段音乐：</p>
+				<div class="sound_holder">
+					<div id="sound_swf_holder"></div>
+				</div>
+				<p data-i18n="modalSound.canHear">你可以听到播放的声音吗？</p>
+				<a class="btn" href="javascript:void(0);"
+					data-i18n="modalSound.chooseYes">听得到</a> <a class="btn no_sound"
+					href="javascript:void(0);" data-i18n="modalSound.chooseNo">听不到</a>
+			</div>
+		</div>
+	
+		<div id="mic_test" class="mfp-hide pop_modal">
+			<div class="modal_header">
+				<h3 data-i18n="modalMic.title">硬件检测 - 麦克风</h3>
+			</div>
+			<div class="modal_content">
+	
+				<div class="mic_swf_wrap">
+					<div id="mic_swf_holder"></div>
+				</div>
+	
+				<div class="mic_test_content">
+					<p data-i18n="modalMic.step1">第1步：选择要使用的麦克风：</p>
+					<div class="mic_list">
+						<select name="mic_list" id="mic_list">
+						</select>
+					</div>
+					<p data-i18n="modalMic.step2">第2步：对着麦克风说一句话，比如：</p>
+					<div class="mic_sound_wrap">
+						<div class="mic_level"></div>
+						<div class="mic_sound">
+							<p data-i18n="modalMic.words">“天生我材必有用，千金自挂东南枝。”</p>
+						</div>
+					</div>
+	
+					<div class="default_tip tab">
+						<p data-i18n="modalMic.tip">如果麦克风正常，你将听到自己的声音</p>
+						<a class="btn count_down" href="javascript:void(0);"><span
+							class="count_second">10</span><span data-i18n="modalMic.second">秒</span></a>
+					</div>
+					<div class="next_display tab">
+						<p class="tip" data-i18n="modalMic.work">检测到你的声音了，麦克风正常。</p>
+						<a class="btn next_btn" href="javascript:void(0);"
+							data-i18n="modalMic.next">下一步</a>
+					</div>
+					<div class="mic_unsupport tab">
+						<p class="tip" data-i18n="modalMic.unwork">啊哦，一直没有检测到你的声音</p>
+						<a class="btn next_btn no_mic" href="javascript:void(0);"
+							data-i18n="modalMic.next">下一步</a> <a class="btn next_btn no_mic"
+							href="javascript:void(0);" data-i18n="modalMic.next">下一步</a>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	
+		<div id="camera_test" class="mfp-hide pop_modal">
+			<div class="modal_header">
+				<h3 data-i18n="modalCam.title">硬件检测 - 摄像头</h3>
+			</div>
+			<div class="modal_content">
+				<p data-i18n="modalCam.select">选择要使用的摄像头：</p>
+				<div class="camera_list">
+					<select name="camera_list" id="camera_list">
+					</select>
+				</div>
+				<div class="camera_display">
+					<div class="camera_holder">
+						<div id="camera_swf_holder"></div>
+					</div>
+				</div>
+	
+				<div class="btns">
+					<p data-i18n="modalCam.tip">你可以看到视频图像吗？</p>
+					<a class="btn" href="javascript:void(0);"
+						data-i18n="modalCam.chooseYes">看得见</a> <a class="btn no_view"
+						href="javascript:void(0);" data-i18n="modalCam.chooseNo">看不见</a>
+				</div>
+			</div>
+		</div>
+	
+		<div id="main_swf_wrap">
+			<object id="main" name="main" align="middle" width="100%"
+				height="100%" type="application/x-shockwave-flash"
+				data="http://help.duobeiyun.com/room/test/swf/Plusle-1a8e0fee.swf?id=main">
+				<param name="quality" value="high"></param>
+				<param name="bgcolor" value="grey"></param>
+				<param name="allowscriptaccess" value="always"></param>
+				<param name="allowfullscreen" value="true"></param>
+				<param name="base" value="."></param>
+			</object>
+		</div>
+	
+		<div id="check_swf_wrap">
+			<object id="check" name="check" align="middle" width="100%"
+				height="100%" type="application/x-shockwave-flash"
+				data="http://help.duobeiyun.com/room/test/swf/Check-f14f80fd.swf">
+				<param name="quality" value="high"></param>
+				<param name="bgcolor" value="grey"></param>
+				<param name="allowscriptaccess" value="always"></param>
+				<param name="allowfullscreen" value="true"></param>
+				<param name="base" value="."></param>
+			</object>
+		</div>
+	
+	
+		<input type="hidden" id="checkSwfPath"
+			value="http://help.duobeiyun.com/room/test/swf/Check-f14f80fd.swf" />
+		<input type="hidden" id="privacySwfPath"
+			value="http://help.duobeiyun.com/room/test/swf/Privacy-47c95c0b.swf" />
+		<input type="hidden" id="plusleSwfPath"
+			value="http://help.duobeiyun.com/room/test/swf/Plusle-1a8e0fee.swf" />
+	
+		<div th:replace="common/footer::footer-simple"></div>
+	</section>
+
+	<section layout:fragment="contentjs">
+		<script th:src="@{/static/lib/jquery/jquery.1.9.1.min.js}"></script>
+		<script th:src="@{/static/lib/jquery/jquery.cookie.js}"></script>
+		<script th:src="@{/static/home/js/auth/guide.js}"></script>
+		<script th:src="@{/static/home/js/WdatePicker.js}"></script>
+	</section>
+<!-- 	<script type="text/javascript" src="/static/duobei/js/lib/i18next-1.7.4.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/lib/jquery.magnific-popup.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/lib/then.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/lib/detector.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/lib/swfobject.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/jsInterface-390b3f82.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/flashInterface-81fb587b.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/helper-8c3defe6.js"></script> -->
+<!-- 	<script type="text/javascript" src="/static/duobei/js/index-059f40d7.js"></script> -->
+</body>
+</html>

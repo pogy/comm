@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+<title>课堂日志</title>
+<meta name="viewport" content="target-densitydpi=get-target-densitydpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml;charset=utf-8" />
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache" />
+<meta name="viewport" content="width=device-width;initial-scale=1.0;maximum-scale=2.0;user-scalable=1" />
+<link rel="stylesheet" th:href="@{/static/mobile/css/main.css}"/>
+<script>
+if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+	var version = parseFloat(RegExp.$1);
+	if (version > 2.3) {
+		var phoneScale = parseInt(window.screen.width) / 640;
+		document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi" />');
+	} else {
+		document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi" />');
+	}
+} else {
+	document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi" />');
+}
+</script>
+</head>
+
+<body>
+<header>
+    <a href="javascript:;" class="mainMenu" title="菜单列表"><em>菜单列表</em></a>
+    <span class="login"><a href="/mobile/login">登录</a><a href="/mobile/signup">注册</a></span>
+</header>
+<section class="kidLogo">
+<img th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/logo.png}" />
+</section>
+<a class="tel400" href="tel:4000056666" title=""><em></em><span>服务热线：400 - 005 - 6666</span></a>
+<nav>
+	<section class="navMain clearfix">
+        <span>课堂日志</span>
+        <ul>
+            <li><a href="index" title="首页">首页</a></li>
+            <li><a href="teacher" title="外教团队">外教团队</a></li>
+            <li><a href="teachmethod" title="教学方法">教学方法</a></li>
+            <li><a href="curriculum" title="课程体系">课程体系</a></li>
+            <li><a href="process" title="上课流程">上课流程</a></li>
+            <li><a href="classDiary" title="课堂日志">课堂日志</a></li>
+        </ul>
+        <em></em>
+    </section>
+</nav>
+<section class="logClassroom">
+	<ul id="classListArea">
+    	
+    </ul>
+</section>
+
+<section class="regEntrance">
+  <img class="kl" th:src="@{http://resource.vipkid.com.cn/parent_home/static/mobile/image/kl.png}" />
+  <p>注册获得免费体验课</p>
+  <a href="#" title=""><span>GO</span><em></em></a>
+  <span class="close"></span>
+</section>
+<footer>Copyright (C)2010-2014 Inc. All rights reserved. </footer>
+
+
+
+
+<section class="scrPop" id="listLeft" style="display:none">
+    <section class="scrMenu">
+        <section class="scrBack">
+        	<a class="scrTitle clearfix" href="http://parent.vipkid.com.cn/lessonManagement/dashboard"><em></em><span>个人中心</span></a>
+            <section class="scrRolling">
+                <section class="scrList">
+                	<ul>
+                    	<li><a href="http://parent.vipkid.com.cn/lessonManagement/dashboard" title="约课"><em class="one"></em><span>约课</span></a></li>
+                        <li class="active"><a href="http://parent.vipkid.com.cn/lessonManagement/dashboard" title="我的课表"><em class="two"></em><span>我的课表</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/learningOverview/takenClassList" title="已上课程"><em class="three"></em><span>已上课程</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/report/report" title="学习报告"><em class="four"></em><span>学习报告</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/services/orders" title="我的订单"><em class="five"></em><span>我的订单</span></a></li>
+                        <li><a href="http://parent.vipkid.com.cn/services/parentProfile" title="个人资料"><em class="six"></em><span>个人资料</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="scrDown" id="canvas"></section>
+</section>
+
+
+<script th:src="@{/static/mobile/js/iZepto.js}"></script>
+<script th:src="@{/static/mobile/js/main.js}"></script>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	function touchStart(event) {closeLeft();}
+	canvas.addEventListener("touchstart", touchStart, false);
+</script>
+</body>
+</html>

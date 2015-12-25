@@ -1,0 +1,52 @@
+@charset "utf-8"; 
+html{font-size: 62.5%; /*10 ÷ 16 × 100% = 62.5%*/}
+body{font-size: 1.4rem;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,figure,time,section{margin:0; padding:0}
+body,button,input,select,textarea{ outline:none; font-family:\5FAE\8F6F\96C5\9ED1;background: #f9f9f9;}
+h1,h2,h3,h4,h5,h6,strong{ font-weight:normal;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}
+ul,ol{list-style:none}
+fieldset,img{border:0}
+table{border-collapse:collapse; border-spacing:0}
+a{text-decoration:none; color:#333;}
+a:hover,a:active,a:visited{text-decoration:none; color:#333;}
+.clearfix:after,.sDiv:after{content:'\0020'; display:block; height:0; clear:both}
+.clearfix,.sDiv{*zoom:1}
+.fl{float:left;}
+.fr{ float:right;}
+.area{padding:0 4rem;}
+::-webkit-input-placeholder{color:#a1a1a1 }
+:-moz-placeholder{color:#a1a1a1}
+::-moz-placeholder{color:#a1a1a1}
+:-ms-input-placeholder{color:#a1a1a1}
+input[type="date"]:before {content: attr(placeholder);color:#a1a1a1;}
+/*主体开始*/
+header{height:4.5rem;background: #f5521e; position:relative;}
+.back{width:4rem; height:4.5rem;background: url(http://resource.vipkid.com.cn/parent_home/static/home/image/m.signup.png) no-repeat 1.3rem 1.3rem;background-size:3rem 10rem;-webkit-background-size:3rem 10rem; position: absolute;left:0.7rem;top:0; line-height: 999em; overflow: hidden; display: block;}
+.pageTitle{font-size:2.2rem;line-height: 4.5rem;color: #fff;font-family: \9ED1\4F53;text-align: center;font-weight: normal;}
+.hlogin{color: #fff;position: absolute;right:2rem;top: 0;line-height: 4.5rem;font-size: 1.5rem;}
+.sDiv{border-top:#dedede 1px solid;border-bottom:#dedede 1px solid;padding:0.9rem 2rem;margin:1.5rem 0 1rem;background:#fff; }
+.sInput,.sInputYzm{border:0 none;color: #333;font-size: 1.5rem;height: 2.4rem; padding:0.3rem 0; display: block;width:100%;background:#fff;}
+.sInputYzm{width:50%;float: left;}
+.yzmLink{background: #dadada;font-size: 1.4rem;width: 50%;float:right; height: 3rem;line-height: 3rem; color: #555;text-align: center;}
+.sTips{background: url(http://resource.vipkid.com.cn/parent_home/static/home/image/m.signup.png) no-repeat 0 -3.3rem;background-size: 3rem 10rem;-webkit-background-size:3rem 10rem;padding-left: 2rem;color: #f5521e;font-size: 1.2rem; line-height: 1.8rem;margin-left: 2rem;}
+.subRegBtn{background: #e8e8e8; color: #777;margin:1.5rem 2rem 0; display: block;text-align: center;border:0 none; font-size: 1.8rem; height: 4rem; line-height: 4rem;}
+a.subRegBtn:active{background: #f5521e;color: #fff;}
+.subRegBtn.on{background: #f5521e;color: #fff;}
+.subRegStatus{margin:1rem 30% 0;text-align: center;background: #dadada; height: 2.8rem;line-height: 2.8rem;color: #333;border-radius:0.5rem;font-size: 1.2rem;}
+.tipsPop{background: rgba(0,0,0,0.2);width: 100%; height: 100%;position: fixed; z-index: 999;top: 0;left: 0;}
+.tipsPopWaper{margin:4rem 2.5rem;background: #fff;border-radius:0.8rem;box-shadow: 0 4px 20px 1px rgba(0,0,0,0.2)}
+.tipsWords{padding:5rem 0 3.5rem;font-size: 1.7rem; color:#000;line-height: 2.2rem;text-align: center;}
+.tipsHandle{border-top:#c5c5c5 1px solid; overflow: hidden; }
+.tipsHandle a{width:50%;float: left; margin-left: -1px;text-align: center;font-size: 1.7rem; line-height: 4.4rem;height: 4.4rem;border-left:#c5c5c5 1px solid; }
+.tipsHandle a.gotoLogin{ color: #f5521e}
+.forgetDiv{padding:1rem 2rem;text-align: right;line-height: 2rem;}
+.forgetPwdLink{font-size: 1.4rem; color: #777;}
+
+.sRadio{position: absolute;left: -999rem;top: 0}
+.subWaper{border-top:#dedede 1px solid;border-bottom:#dedede 1px solid;padding:0 0 0 2rem;margin:1.5rem 0 1rem;background:#fff; }
+.subDiv{border-bottom: #dedede 1px solid;padding: 0.9rem 0; position: relative; height:3rem;}
+.subDiv.sTime{border-bottom: 0 none;}
+.subDiv.sTime .sInput{background: url(http://resource.vipkid.com.cn/parent_home/static/home/image/m.signup.png) no-repeat right -5.7rem;background-size: 3rem 10rem;-webkit-background-size:3rem 10rem;}
+.subDiv label{background: #e8e8e8; color: #777; width: 6rem; height: 3rem;float: left; margin-right: 1.6rem;font-size: 1.5rem;text-align: center; line-height: 3rem; cursor:pointer;}
+.subDiv label.on{background:#f5521e; color: #fff; }

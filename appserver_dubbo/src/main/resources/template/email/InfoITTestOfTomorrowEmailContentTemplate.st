@@ -1,0 +1,1 @@
+<p>Hi 亲，以下为明天的统计<strong>($contentText$)</strong></p>

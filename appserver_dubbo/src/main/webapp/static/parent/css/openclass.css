@@ -1,0 +1,86 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body,button,input,select,textarea {font:14px/1.75 "arial","heltivitar","Hiragino Sans GB","STHeiti","Microsoft YaHei"; color: #555; background: #f9f9f9;}
+h1,h2,h3,h4,h5,h6 {font-size:100%}
+address,cite,dfn,em,var {font-style:normal}
+code,kbd,pre,samp {font-family:courier new,courier,monospace}
+ol,ul{list-style:none}
+img{display: block;border: 0 none;}
+input:focus,select:focus{outline: 0 none;}
+a{ text-decoration: none; outline: 0 none; color:#313131;}
+a:hover{ text-decoration: none; color: #f60;}
+.clear:after,.openClassItem:after,.ocInfo:after,.ocHandle:after{content:'\0020';display:block;height:0;clear:both;}
+.clear,.openClassItem,.ocInfo,.ocHandle{*zoom: 1;}
+.fl{ float: left;}
+.fr{ float: right;}
+.tc{text-align: center;}
+.show{ display: block;}
+.hide{ display: none;}
+.w940{width:940px;margin:0 auto; }
+/*头图*/
+.focusArea{width:100%;background:#ff9470 url(http://resource.vipkid.com.cn/newhome/focusbg.jpg) no-repeat center top; height: 450px;margin-bottom:65px;}
+.focusWaper{width: 940px; height:450px; position: relative;padding-top: 50px;margin:0 auto;}
+/*切换*/
+.topTab{margin-bottom:20px;}
+.topTab a{margin-left: 25px;text-decoration: none;height:30px; line-height:30px;}
+.topTab a.cur{color: #f5521f;border-bottom:#f5521f 2px solid;}
+.topTab .fl a{ color:#333;font-size:14px;padding:0 10px; margin:0 5px 0 0;float:left; position:relative; }
+.topTab .fl a.cur{background:#f65d22; color:#fff;border:0 none;}
+.topTab .fl a:hover{color:#f5521f}
+.topTab .fl a.cur:hover{ color:#fff; opacity:0.8}
+.privilegedPop{position:absolute;top:-68px; left:-51px;padding:11px 8px 18px 12px; width:163px; height:40px;line-height:20px;font-size:12px; background:url(http://resource.vipkid.com.cn/parent_home/static/parent/image/openclass_tipsbg.png) no-repeat center top;color:#333;display:none;} 
+.privilegedPop.show{display:block;}
+.privilegedPop.free{line-height:40px}
+/*公开课列表*/
+.ocItem{border:#ebebeb 1px solid;background: #fff;margin-bottom: 35px; position: relative; height: 250px; }
+.ocImg{width: 350px;height: 250px; float: left;}
+.ocWords{width:542px; float: right;padding:15px 24px 0 20px;}
+.ocWords h3{font-size: 20px; color: #f5521f; line-height:24px; overflow:hidden;margin-bottom:10px;}
+.ocInfo span{float: left; background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/openclass.spirits.png) no-repeat;padding-left: 25px; color: #000;margin-right: 30px; }
+.ocInfo span.ocTime{background-position: -81px -24px;}
+.ocInfo span.ocTeacher{background-position: -81px -56px;}
+.ocInfo span.ocChild{background-position: -81px -85px;}
+.ocDesc{font-size: 12px;margin: 15px 0 3px; height: 105px; overflow: hidden;word-break:break-all;width:542px;}
+.ocHandle{border-top:#e4e4e4 1px dashed;margin:10px -24px 0 -20px;padding:8px 24px 0 20px;line-height: 30px;}
+.ocNumber{float: left; background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/openclass.spirits.png) no-repeat -83px 9px;padding-left: 25px; }
+.ocNumber em{color:#f5521f;}
+.ocHandle a{float:right;width: 100px; height: 30px;  text-align: center;color: #fff;}
+.ocHandle a:hover{color:#fff;opacity: 0.8;}
+.ocHandle a.ocIntoClass{background: #f5521f}
+.ocHandle a.ocIntoClass:hover{background: #df4b1d}
+.ocHandle a.ocPlayBack{background: #f5521f}
+.ocHandle a.ocPlayBack:hover{background: #df4b1d}
+.ocHandle a.ocHasReg{background:none; color: #333}
+.ocHandle a.ocHasReg:hover{background:none; color: #666}
+.ocStatus{background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/openclass.spirits.png) no-repeat;width: 64px; height: 58px; position: absolute;left: 20px;top: -6px;display: block; z-index: 1; line-height: 999em; overflow: hidden;}
+.ocStatus.ocStatus-1{background-position: left 0}
+.ocStatus.ocStatus-2{background-position: left -116px}
+.ocStatus.ocStatus-3{background-position: left -58px;}
+.ocStatus.ocStatus-4{background-position: left -174px;}
+.ocItemMedal{width:66px;height:71px; position:absolute;display:block;right:20px;top:0;}
+.ocItemMedal.free{background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/oc_stamp_free.png) no-repeat;}
+.ocItemMedal.privileged{background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/oc_stamp_privileged.png) no-repeat;}
+.ocPage{float: right;border:#e8e8e8 1px solid;border-right: 0 none;margin-bottom: 20px;}
+.ocPage a,.ocPage span{float: left;width:39px; height: 40px;border-right:#e8e8e8 1px solid;text-align: center; line-height: 40px; color: #777;}
+.ocPage a:hover{background: #ebebeb;}
+.ocPage a.cur,.ocPage a.cur:hover{background: #f5521f; color: #fff;}
+.ocPage span.tprev,.ocPage span.tnext{background-color:#d7d7d7;background-image:url(http://resource.vipkid.com.cn/parent_home/static/parent/image/openclass.spirits.png);background-repeat:no-repeat;background-position: -75px -106px;cursor:pointer;}
+.ocPage span.tnext{background-position: -72px -143px}
+.ocPage span.tprev:hover,.ocPage span.tnext:hover{background-color: #c0bebe}
+/*上课页*/
+.onlineBody{background: #63cadc url(http://resource.vipkid.com.cn/parent_home/static/parent/image/onlineclass_bg.png) no-repeat top center; position:relative;}
+.onlineTitle{background:url(http://resource.vipkid.com.cn/parent_home/static/parent/image/classtitlebg.png) no-repeat left top;height: 40px;display: inline-block;margin:30px auto;padding-left: 26px;min-width: 200px;}
+.onlineTitle p{background:url(http://resource.vipkid.com.cn/parent_home/static/parent/image/classtitlebg.png) no-repeat right -40px; height: 40px;display: inline-block;color: #fff;font-size: 20px;padding:0 50px 0 24px; line-height: 40px;}
+.ocWaper{width:100%;}
+.ocMain{width:920px;margin:0 auto;position: relative;}
+.ocTitleInfo{text-align: right; color:#333;margin-bottom: 10px;}
+.ocTitleInfo a,.ocTitleInfo span{color:#333;margin-left:20px;}
+.ocTitleInfo a.underline{text-decoration: underline;}
+.ocClassArea{position: relative; z-index: 2;width: 920px; height: 520px;background: #fff;overflow: hidden;}
+.ocLeftCloud{position: absolute;right: -73px; top:110px;width: 89px;height: 43px;background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/clound_1.png) no-repeat; display: block;}
+.ocRightCloud{position: absolute;left: -100px; bottom:190px;width: 68px;height: 33px;background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/clound_2.png) no-repeat;display: block;}
+
+.ocFooter{background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/onlineclass_footerbg.png) repeat-x left bottom;position: fixed;left: 0;bottom: 0;width: 100%; height: 117px;}
+.ocFooterCon{background: url(http://resource.vipkid.com.cn/parent_home/static/parent/image/onlineclass_footer.png) no-repeat center bottom;width: 100%; height: 117px;}
+
+
+

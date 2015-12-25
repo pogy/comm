@@ -1,0 +1,79 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>新手引导 - VIPKID美国小学在家上</title>
+    <link href="http://resource.vipkid.com.cn/static/images/learning_portal/logo.gif" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" th:href="@{/static/parent/css/header.css}" /> 
+    <link rel="stylesheet" th:href="@{/static/home/css/vipkid.guide.css}" />  
+    <link rel="stylesheet" th:href="@{/static/duobei/css/index-51b3b789.css}"/>
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?5e1b9d2c20eff9c9278a43f0870f4593";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+	<div class="sHd">
+		<div class="sHdCon">
+			<a href="/parent/guide_step3" class="sHdLogo"><img th:src="@{/static/home/image/vipkid_logo.png}" /></a>
+			<span class="sHdLink"><span class="mr20" id="parentMobile"></span><a href="/signout">退出</a></span>
+		</div>
+	</div>
+	<div class="welcomeWaper">
+		<p class="welcomeTitle">为了更好体验VIPKID为您提供的教学服务，请按照下方引导，完成相关信息设置</p>
+		<div class="welcomeStep">
+			<ul class="welcomeStepItem">
+				<li class="welcomeStepOne has"><i></i><span>填写孩子信息</span></li>
+				<li class="welcomeStepTwo has"><i></i><span>电脑设备测试</span></li>
+				<li class="welcomeStepThr has"><i></i><span>在线免费体验课</span></li>
+			</ul>
+			<span class="welcomeStepCircle left"></span>
+			<span class="welcomeStepCircle right"></span>
+			<div class="welcomeStepLine"></div>
+		</div>
+	
+
+		<div class="welcomeCon" id="step3">
+			<div class="freeTiyan">
+				<div class="tiyanItem cur">
+					<p class="tiyanTitle">预约体验课</p>
+	      			<p>稍后将有VIPKID客服专员与您联系确认时间</p>
+	      			<i class="tiyanItemTyk"></i>
+				</div>
+				<div class="tiyanItem" id="trailClassFlag">
+					<p class="tiyanTitle">线上1对1北美外教体验课</p>
+					<p id="trailClassTime"></p>
+	      			<i class="tiyanItemOto"></i>
+				</div>	
+<!-- 				<a class="prevLink" href="javascript:PreStep()">上一步</a> -->
+				<a class="skipLink" href="javascript:skipGuide()">进入个人主页&gt;&gt;</a>		
+			</div>
+			<span class="welcomePointer step3"></span>
+		</div> 
+	</div>	
+	
+	<!-- 水平自测引导 屏蔽层 -->
+<!-- 	<div >
+		<div id="levelTestGuide">
+			<header>欢迎来到VIPKID!</header>
+			<p>五分钟测出您的宝贝在美国能上几年级。</p>
+			<div>
+				<a class="" href="javascipt:startStudentExam()">测一下</a>
+				<a class="" href="javascipt:skipStudentExam()">以后再测</a>
+			</div>
+		</div>
+	</div>
+ -->
+
+	<div th:replace="common/footer::footer-simple"></div>
+	<script type="text/javascript" src="/static/lib/jquery/jquery.1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/lib/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/static/home/js/auth/guide.js"></script>
+</body>
+</html>

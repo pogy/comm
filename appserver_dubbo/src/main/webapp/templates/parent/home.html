@@ -1,0 +1,433 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  layout:decorator="/parent/layout">
+<head>
+    <title>个人主页 - VIPKID美国小学在家上</title> 
+</head>
+<body>
+	<section class="pMain" layout:fragment="content">
+		<div class="pArea">
+			<p class="pAreaTitle">学习进度</p>
+			<div class="pCon studyProArea">
+				<ul class="studyProcess clear">
+					<li class="first">当前等级<strong th:text="${currentLevel}">Level1</strong></li>
+					<li>距离下级还需<strong th:text="${nextLevelLessons}">44节课</strong></li>
+					<li class="third">
+						<span class="syCon">剩余课时<strong th:text="${restClassHour}">0</strong><i th:if="${restClassHour} > 0"></i></span>
+						<div class="syClass">
+							<p th:each="lp: ${restLearningProgress}" th:if="${lp.leftClassHour} > 0">
+								<span th:text="${lp.course.showName}" class="fl"></span><span th:text="${lp.leftClassHour}" class="fr colorO"></span>
+							</p>
+						</div>
+					</li>
+					<li>已完成课时
+						<strong><a th:if="${completedClassHour > 0}" th:href="@{/parent/lessons}" th:text="${completedClassHour}">0</a></strong>
+						<strong><span th:if="!${completedClassHour > 0}">0</span></strong>
+					</li>
+					<li>周目标完成<strong th:text="${completedTarget}"></strong></li>
+					<li>累计说英语<strong th:text="${completedHour}">0</strong></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pArea">
+			<div class="pCon">
+				<div class="scheduleBg">
+					<p class="scheduleTab">
+						<span class="cur">我的课表</span> <span><a th:href="@{/parent/preschedule}">预约课程</a></span>
+					</p>					
+				</div>
+				<div class="scheduleCon">
+					<table class="scheduleTable" border="0" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th class="st1"></th>
+								<th>周一<br /><span th:text="${week.monday}"></span>
+								</th>
+								<th>周二<br /><span th:text="${week.tuesday}"></span>
+								</th>
+								<th>周三<br /><span th:text="${week.wednesday}"></span>
+								</th>
+								<th>周四<br /><span th:text="${week.thursday}"></span>
+								</th>
+								<th>周五<br /><span th:text="${week.friday}"></span>
+								</th>
+								<th>周六<br /><span th:text="${week.saturday}"></span>
+								</th>
+								<th>周日<br /><span th:text="${week.sunday}"></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody th:object="${scheduleTable}">
+							<tr>
+								<th>早晨<br />9:00-11:59
+								</th>
+								<td>
+									<div th:each="r1c1 : ${scheduleTable.r1c1s}" th:class="${r1c1.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c1.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c1.id},teacherCommentId=-1,sign=2)}" th:id="${r1c1.id}" th:rel="${r1c1.className}"><span th:text="${r1c1.time}"></span><br/><span th:text="${r1c1.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c1.id})}"  th:id="${r1c1.id}" th:rel="${r1c1.className}" ><span class="indexCtime" th:utext="${r1c1.time}"></span><br/><span class="indexCname" th:utext="${r1c1.name}"></span><span class="fullTime" th:utext="${r1c1.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r1c2 : ${scheduleTable.r1c2s}" th:class="${r1c2.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c2.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c2.id},teacherCommentId=-1,sign=2)}" th:id="${r1c2.id}" th:rel="${r1c2.className}"><span th:text="${r1c2.time}"></span><br/><span th:text="${r1c2.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c2.id})}"  th:id="${r1c2.id}" th:rel="${r1c2.className}" ><span class="indexCtime" th:utext="${r1c2.time}"></span><br/><span class="indexCname" th:utext="${r1c2.name}"></span><span class="fullTime" th:utext="${r1c2.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r1c3 : ${scheduleTable.r1c3s}" th:class="${r1c3.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c3.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c3.id},teacherCommentId=-1,sign=2)}" th:id="${r1c3.id}" th:rel="${r1c3.className}"><span th:text="${r1c3.time}"></span><br/><span th:text="${r1c3.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c3.id})}"  th:id="${r1c3.id}" th:rel="${r1c3.className}" ><span class="indexCtime" th:utext="${r1c3.time}"></span><br/><span class="indexCname" th:utext="${r1c3.name}"></span><span class="fullTime" th:utext="${r1c3.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r1c4 : ${scheduleTable.r1c4s}" th:class="${r1c4.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c4.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c4.id},teacherCommentId=-1,sign=2)}" th:id="${r1c4.id}" th:rel="${r1c4.className}"><span th:text="${r1c4.time}"></span><br/><span th:text="${r1c4.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c4.id})}"  th:id="${r1c4.id}" th:rel="${r1c4.className}" ><span class="indexCtime" th:utext="${r1c4.time}"></span><br/><span class="indexCname" th:utext="${r1c4.name}"></span><span class="fullTime" th:utext="${r1c4.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r1c5 : ${scheduleTable.r1c5s}" th:class="${r1c5.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c5.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c5.id},teacherCommentId=-1,sign=2)}" th:id="${r1c5.id}" th:rel="${r1c5.className}"><span th:text="${r1c5.time}"></span><br/><span th:text="${r1c5.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c5.id})}"  th:id="${r1c5.id}" th:rel="${r1c5.className}" ><span class="indexCtime" th:utext="${r1c5.time}"></span><br/><span class="indexCname" th:utext="${r1c5.name}"></span><span class="fullTime" th:utext="${r1c5.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r1c6 : ${scheduleTable.r1c6s}" th:class="${r1c6.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c6.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c6.id},teacherCommentId=-1,sign=2)}" th:id="${r1c6.id}" th:rel="${r1c6.className}"><span th:text="${r1c6.time}"></span><br/><span th:text="${r1c6.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c6.id})}"  th:id="${r1c6.id}" th:rel="${r1c6.className}" ><span class="indexCtime" th:utext="${r1c6.time}"></span><br/><span class="indexCname" th:utext="${r1c6.name}"></span><span class="fullTime" th:utext="${r1c6.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td class="st8">
+									<div th:each="r1c7 : ${scheduleTable.r1c7s}" th:class="${r1c7.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r1c7.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r1c7.id},teacherCommentId=-1,sign=2)}" th:id="${r1c7.id}" th:rel="${r1c7.className}" ><span th:text="${r1c7.time}"></span><br/><span th:text="${r1c7.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r1c7.id})}"  th:id="${r1c7.id}" th:rel="${r1c7.className}" ><span class="indexCtime" th:utext="${r1c7.time}"></span><br/><span class="indexCname" th:utext="${r1c7.name}"></span><span class="fullTime" th:utext="${r1c7.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>下午<br />12:00-16:59
+								</th>
+								<td>
+									<div th:each="r2c1 : ${scheduleTable.r2c1s}" th:class="${r2c1.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c1.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c1.id},teacherCommentId=-1,sign=2)}" th:id="${r2c1.id}" th:rel="${r2c1.className}"><span th:text="${r2c1.time}"></span><br/><span th:text="${r2c1.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c1.id})}"  th:id="${r2c1.id}" th:rel="${r2c1.className}" ><span class="indexCtime" th:utext="${r2c1.time}"></span><br/><span class="indexCname" th:utext="${r2c1.name}"></span><span class="fullTime" th:utext="${r2c1.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r2c2 : ${scheduleTable.r2c2s}" th:class="${r2c2.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c2.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c2.id},teacherCommentId=-1,sign=2)}" th:id="${r2c2.id}" th:rel="${r2c2.className}" ><span th:text="${r2c2.time}"></span><br/><span th:text="${r2c2.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c2.id})}"  th:id="${r2c2.id}" th:rel="${r2c2.className}" ><span class="indexCtime" th:utext="${r2c2.time}"></span><br/><span class="indexCname" th:utext="${r2c2.name}"></span><span class="fullTime" th:utext="${r2c2.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r2c3 : ${scheduleTable.r2c3s}" th:class="${r2c3.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c3.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c3.id},teacherCommentId=-1,sign=2)}" th:id="${r2c3.id}" th:rel="${r2c3.className}"><span th:text="${r2c3.time}"></span><br/><span th:text="${r2c3.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c3.id})}"  th:id="${r2c3.id}" th:rel="${r2c3.className}" ><span class="indexCtime" th:utext="${r2c3.time}"></span><br/><span class="indexCname" th:utext="${r2c3.name}"></span><span class="fullTime" th:utext="${r2c3.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r2c4 : ${scheduleTable.r2c4s}" th:class="${r2c4.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c4.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c4.id},teacherCommentId=-1,sign=2)}" th:id="${r2c4.id}" th:rel="${r2c4.className}" ><span th:text="${r2c4.time}"></span><br/><span th:text="${r2c4.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c4.id})}"  th:id="${r2c4.id}" th:rel="${r2c4.className}" ><span class="indexCtime" th:utext="${r2c4.time}"></span><br/><span class="indexCname" th:utext="${r2c4.name}"></span><span class="fullTime" th:utext="${r2c4.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r2c5 : ${scheduleTable.r2c5s}" th:class="${r2c5.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c5.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c5.id},teacherCommentId=-1,sign=2)}" th:id="${r2c5.id}" th:rel="${r2c5.className}"><span th:text="${r2c5.time}"></span><br/><span th:text="${r2c5.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c5.id})}"  th:id="${r2c5.id}" th:rel="${r2c5.className}" ><span class="indexCtime" th:utext="${r2c5.time}"></span><br/><span class="indexCname" th:utext="${r2c5.name}"></span><span class="fullTime" th:utext="${r2c5.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r2c6 : ${scheduleTable.r2c6s}" th:class="${r2c6.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c6.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c6.id},teacherCommentId=-1,sign=2)}" th:id="${r2c6.id}" th:rel="${r2c6.className}"><span th:text="${r2c6.time}"></span><br/><span th:text="${r2c6.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c6.id})}"  th:id="${r2c6.id}" th:rel="${r2c6.className}" ><span class="indexCtime" th:utext="${r2c6.time}"></span><br/><span class="indexCname" th:utext="${r2c6.name}"></span><span class="fullTime" th:utext="${r2c6.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td class="st8">
+									<div th:each="r2c7 : ${scheduleTable.r2c7s}" th:class="${r2c7.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r2c7.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r2c7.id},teacherCommentId=-1,sign=2)}" th:id="${r2c7.id}" th:rel="${r2c7.className}"><span th:text="${r2c7.time}"></span><br/><span th:text="${r2c7.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r2c7.id})}"  th:id="${r2c7.id}" th:rel="${r2c7.className}" ><span class="indexCtime" th:utext="${r2c7.time}"></span><br/><span class="indexCname" th:utext="${r2c7.name}"></span><span class="fullTime" th:utext="${r2c7.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr class="stlast">
+								<th>晚上<br />17:00-21:59
+								</th>
+								<td>
+									<div th:each="r3c1 : ${scheduleTable.r3c1s}" th:class="${r3c1.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c1.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c1.id},teacherCommentId=-1,sign=2)}" th:id="${r3c1.id}" th:rel="${r3c1.className}"><span th:text="${r3c1.time}"></span><br/><span th:text="${r3c1.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c1.id})}"  th:id="${r3c1.id}" th:rel="${r3c1.className}" ><span class="indexCtime" th:utext="${r3c1.time}"></span><br/><span class="indexCname" th:utext="${r3c1.name}"></span><span class="fullTime" th:utext="${r3c1.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r3c2 : ${scheduleTable.r3c2s}" th:class="${r3c2.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c2.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c2.id},teacherCommentId=-1,sign=2)}" th:id="${r3c2.id}" th:rel="${r3c2.className}"><span th:text="${r3c2.time}"></span><br/><span th:text="${r3c2.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c2.id})}"  th:id="${r3c2.id}" th:rel="${r3c2.className}" ><span class="indexCtime" th:utext="${r3c2.time}"></span><br/><span class="indexCname" th:utext="${r3c2.name}"></span><span class="fullTime" th:utext="${r3c2.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r3c3 : ${scheduleTable.r3c3s}" th:class="${r3c3.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c3.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c3.id},teacherCommentId=-1,sign=2)}" th:id="${r3c3.id}" th:rel="${r3c3.className}" ><span th:text="${r3c3.time}"></span><br/><span th:text="${r3c3.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c3.id})}"  th:id="${r3c3.id}" th:rel="${r3c3.className}" ><span class="indexCtime" th:utext="${r3c3.time}"></span><br/><span class="indexCname" th:utext="${r3c3.name}"></span><span class="fullTime" th:utext="${r3c3.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r3c4 : ${scheduleTable.r3c4s}" th:class="${r3c4.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c4.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c4.id},teacherCommentId=-1,sign=2)}" th:id="${r3c4.id}" th:rel="${r3c4.className}"><span th:text="${r3c4.time}"></span><br/><span th:text="${r3c4.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c4.id})}"  th:id="${r3c4.id}" th:rel="${r3c4.className}" ><span class="indexCtime" th:utext="${r3c4.time}"></span><br/><span class="indexCname" th:utext="${r3c4.name}"></span><span class="fullTime" th:utext="${r3c4.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r3c5 : ${scheduleTable.r3c5s}" th:class="${r3c5.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c5.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c5.id},teacherCommentId=-1,sign=2)}" th:id="${r3c5.id}" th:rel="${r3c5.className}"><span th:text="${r3c5.time}"></span><br/><span th:text="${r3c5.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c5.id})}"  th:id="${r3c5.id}" th:rel="${r3c5.className}" ><span class="indexCtime" th:utext="${r3c5.time}"></span><br/><span class="indexCname" th:utext="${r3c5.name}"></span><span class="fullTime" th:utext="${r3c5.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div th:each="r3c6 : ${scheduleTable.r3c6s}" th:class="${r3c6.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c6.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c6.id},teacherCommentId=-1,sign=2)}" th:id="${r3c6.id}" th:rel="${r3c6.className}"><span th:text="${r3c6.time}"></span><br/><span th:text="${r3c6.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c6.id})}"  th:id="${r3c6.id}" th:rel="${r3c6.className}" ><span class="indexCtime" th:utext="${r3c6.time}"></span><br/><span class="indexCname" th:utext="${r3c6.name}"></span><span class="fullTime" th:utext="${r3c6.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+								<td class="st8">
+									<div th:each="r3c7 : ${scheduleTable.r3c7s}" th:class="${r3c7.learned} ? 'stHas' : 'stShow'" th:classappend="mb5" th:switch="${r3c7.learned}" >
+										<div th:case="true">
+											<a  th:href="@{/parent/studiedlessondetail(onlineClassId=${r3c7.id},teacherCommentId=-1,sign=2)}" th:id="${r3c7.id}" th:rel="${r3c7.className}"><span th:text="${r3c7.time}"></span><br/><span th:text="${r3c7.name}"></span></a>
+										</div>
+										<div th:case="false">
+											<a  th:href="@{/parent/nostudiedlessondetail(onlineClassId=${r3c7.id})}"  th:id="${r3c7.id}" th:rel="${r3c7.className}" ><span class="indexCtime" th:utext="${r3c7.time}"></span><br/><span class="indexCname" th:utext="${r3c7.name}"></span><span class="fullTime" th:utext="${r3c7.fullTime}" style="display: none;"></span></a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="noClassTips" style="display:block;" th:if="${hasTrail} == false">
+						<div class="noClassConfirm">
+							我们会尽快跟您联系确认体验课程时间！
+						</div>
+					</div>
+					<div class="noClassTips" style="display:block;" th:if="${scheduleTable.hasLesson} == false and ${scheduleTable.whichWeek} != -1 and ${hasTrail} == true">
+						<div class="noClassCon">
+							保持语感，每周至少要上5节课哟~<br/><a th:href="@{/parent/preschedule}">快去约课吧！</a>
+						</div>
+					</div>
+					<div class="noClassTips" style="display:block;" th:if="${scheduleTable.hasLesson} == false and ${scheduleTable.whichWeek} == -1 and ${hasTrail} == true">
+						<div class="noClassCon">
+							一周没上课了，语感不能丢哟~<br/>
+						</div>
+					</div>
+					<div class="teacherInfo">
+						<p class="clear">
+							<span class="teacherTt">14:00 Teacher Ben </span> 
+							<span class="teacherTtHd">
+								<a href="javascript:;"  th:onclick="'javascript:cancelOnlineClass()'"  id="onlineClassCancle"></a>
+								<a href="http://learning.vipkid.com:8043/learning/classroom/778873" id="enterClassRoom" target="_blank"></a>
+								<a href="javascript:;" target="_blank" id="replayOnlineClass"></a>
+							</span>
+						</p>
+						<p id="cname"  class="teacherInfoName">Level1-Unit3-Lesson2 My Family</p>
+						<i class="teacherInfoIcon"></i>
+					</div>
+				</div>
+				<p class="weekpage">
+					<a href="javascript:;" th:onclick="'javascript:doLaskWeek()'" th:class="${whichWeek}==-1?'no':'cur'">上周</a><!--如果上周不可点，则把样式改为no-->
+					<a href="javascript:;" th:onclick="'javascript:doThisWeek()'" th:class="${whichWeek}==0?'no':'cur'">本周</a>
+					<a href="javascript:;" th:onclick="'javascript:doNextWeek()'" th:class="${whichWeek}==1?'no':'cur'">下周</a>
+				</p>
+			</div>
+		</div>
+		<div class="pArea" th:if="${latestOnlineClass!= null}">
+			<p class="pAreaTitle">
+				最近一次学习记录<a th:href="@{/parent/lessons}" class="pAreaMore">查看更多已上课程&gt;&gt;</a>
+			</p>
+			<div class="pCon recentStudyRecord" >
+				<div th:object="${latestOnlineClass}" th:if="${latestOnlineClass!= null and latestOnlineClass.onlineClassStatus!='BOOKED'}">
+					<dl>
+						<dt class="recClassName" th:if="${latestOnlineClass.unitName!=null and latestOnlineClass.unitName!=''}">课程: <a th:text="|${latestOnlineClass.level}- ${latestOnlineClass.unitName}- ${latestOnlineClass.lessonName}|" th:href="@{/parent/studiedlessondetail(onlineClassId=${latestOnlineClass.onlineClassId},teacherCommentId=${latestOnlineClass.teacherCommentId},sign=1)}"></a></dt>
+						<dt class="recClassName" th:if="${latestOnlineClass.unitName==null or latestOnlineClass.unitName==''}">课程: <a th:text="|${latestOnlineClass.level}- ${latestOnlineClass.lessonName}|" th:href="@{/parent/studiedlessondetail(onlineClassId=${latestOnlineClass.onlineClassId},teacherCommentId=${latestOnlineClass.teacherCommentId},sign=1)}"></a></dt>
+						<dd th:text="|状态: ${latestOnlineClass.finishType}|"></dd>
+					</dl>
+					<dl>
+						<dt class="recClassTime" th:text="|时间: ${#dates.format(latestOnlineClass.scheduledDateTime, 'yyyy-MM-dd HH:mm')}|"></dt>
+						<dd class="recClassResult">
+							<span th:if="${latestOnlineClass.medalId}!=0" class="recClassMedal" th:text="${latestOnlineClass.medalName}"></span>
+							<p class="recClassStar"><span th:class="${'rcs'+latestOnlineClass.stars}"></span></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="recClassTeacher">老师: <a th:text="| ${latestOnlineClass.teacherName}|" th:href="@{/parent/teacherdetail(teacherId=${latestOnlineClass.teacherId})}" target="_blank"></a></dt>
+						<dd class="recClassInfo">
+							<a th:href="@{/parent/studiedlessondetail(onlineClassId=${latestOnlineClass.onlineClassId},teacherCommentId=${latestOnlineClass.teacherCommentId},sign=1)}">教学内容</a>
+							<a th:href="${learningUrl} + '/adventureLogs/replay/' + ${latestOnlineClass.onlineClassId} + '/home'" target="_blank">课堂回放</a>
+							
+							<a th:href="@{/parent/studiedlessondetail(onlineClassId=${latestOnlineClass.onlineClassId},teacherCommentId=${latestOnlineClass.teacherCommentId},sign=2)}">教师评语</a>
+							<a th:href="@{${latestOnlineClass.unitTestPath}}" target="_blank" th:if="${latestOnlineClass.unitTestPath!=null and latestOnlineClass.unitTestPath!=''}">作业下载</a>
+						</dd>
+					</dl>
+				</div>
+				<div th:object="${latestOnlineClass}" th:if="${latestOnlineClass!= null and latestOnlineClass.onlineClassStatus=='BOOKED'}  ">
+					<dl>
+						<dt class="recClassName" th:if="${latestOnlineClass.unitName!=null and latestOnlineClass.unitName!=''}">课程: <a th:text="|${latestOnlineClass.level}- ${latestOnlineClass.unitName}- ${latestOnlineClass.lessonName}|" th:href="@{/parent/studiedlessondetail(onlineClassId=${latestOnlineClass.onlineClassId},teacherCommentId=${latestOnlineClass.teacherCommentId},sign=1)}"></a></dt>
+						<dt class="recClassName" th:if="${latestOnlineClass.unitName==null or latestOnlineClass.unitName==''}">课程: <a th:text="|${latestOnlineClass.level}- ${latestOnlineClass.lessonName}|" th:href="@{/parent/studiedlessondetail(onlineClassId=${latestOnlineClass.onlineClassId},teacherCommentId=${latestOnlineClass.teacherCommentId},sign=1)}"></a></dt>
+
+					</dl>
+					<dl>
+						<dt class="recClassTime" th:text="|时间: ${#dates.format(latestOnlineClass.scheduledDateTime, 'yyyy-MM-dd HH:mm')}|"></dt>
+					</dl>
+					<dl>
+						<dt class="recClassTeacher">老师: <a  th:text="|${latestOnlineClass.teacherName}|" th:href="@{/parent/teacherdetail(teacherId=${latestOnlineClass.teacherId})}" target="_blank"></a></dt>
+						<dd class="recClassInfo">
+							<span class="fr">
+								课程结果生成中.....
+							</span>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="pArea" th:if="${teachersViews2 != null and teachersViews2.size() > 0}">
+			<p class="pAreaTitle">
+				我收藏的老师<a th:href="@{/parent/teachers(tabSign=1)}" class="pAreaMore">查看更多老师&gt;&gt;</a>
+			</p>
+			<div class="pCon">
+				<ul class="myCollectTeacher">
+					<li th:each="teachersView : ${teachersViews2}">
+						<a class="mcTeacherPhoto" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" >
+							<img th:src="@{'http://resource.vipkid.com.cn/'+${teachersView.avatar}}" alt="jane" />
+							<span class="mcPlayIcon" th:if="${teachersView.shortVideo}"></span>
+							<span class="teacheInventFull" th:if="${teachersView.hasAvailable}"></span>
+						</a>
+						<p class="mcTeacherName" th:text="${teachersView.name}"></p>
+						<a href="#" th:if="${teachersView.hasAvailable==false}" th:href="@{/parent/preschedule(teacherId=${teachersView.teacherId},seaType=1,teacherName=${teachersView.name},week=${teachersView.hasAvailableWeek})}" class="mcBookBtn">立即约课</a>
+						<a th:if="${teachersView.hasAvailable}" href="#" th:href="@{/parent/teacherdetail(teacherId=${teachersView.teacherId})}" target="_blank" class="mcBookBtn">详情</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="pArea">
+			<p class="pAreaTitle">新手指导——英语零基础也能与外教有效交流</p>			
+			<div class="newStudentVideo">
+				<video width="780" height="434"  id="newStudentVideoItem"> 
+					<source src="http://resource.vipkid.com.cn/video/level_test.webm" type="video/webm" /> 
+					<source src="http://resource.vipkid.com.cn/video/level_test.mp4" type="video/mp4" /> 
+					<object codebase=" http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
+					    width="780" height="434" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+					    <param name="quality" value="high" />
+					    <param name="allowFullScreen" value="true" />
+					    <param name="movie" value="http://resource.vipkid.com.cn/parent_portal/images/flvplayer.swf" />
+					    <param name="FlashVars" value="vcastr_file=http://resource.vipkid.com.cn/video/level_test.flv&amp;IsAutoPlay=0&amp;IsContinue=1" />
+					    <embed src="http://resource.vipkid.com.cn/parent_portal/images/flvplayer.swf" flashvars="vcastr_file=http://resource.vipkid.com.cn/video/level_test.flv&amp;IsAutoPlay=0&amp;IsContinue=1" width="780" height="434" pluginspage=" http://www.macromedia.com/go/getflashplayer" quality="high" allowfullscreen="true" type="application/x-shockwave-flash"></embed>
+					</object> 
+				</video> 
+				<div class="videoControlIcon">
+					<a href="javascript:void(0)"></a>
+					<span class="show"></span>
+				</div>
+			</div>
+		</div>
+		<input id="learningUrl" type="hidden" th:value="${learningUrl}"/>
+		
+		<!-- 水平自测引导 屏蔽层 -->
+		<div id="levelTestGuide_bg" class="levelTestGuide_bg" th:if="${showLevelExamGuide} == true" >
+			<div id="levelTestGuide" class="levelTestGuide">
+				<!-- <header style="font-size: 20px;">欢迎来到VIPKID!</header>-->
+				<p >五分钟测出您的宝贝在美国能上几年级。</p> 
+				<div id="levelTestGuide_opeation" class="levelTestGuide_opeation">
+					<a id="levelTestGuideOK" class=""  > </a>
+					
+				</div>
+					<a id="levelTestGuideCancel" class=""  >以后再测</a>
+			</div>
+		</div>
+		
+		
+	</section>
+	
+	<section layout:fragment="contentjs">
+		<script th:src="@{/static/parent/js/home.js}"></script>
+	</section>
+</body>
+</html>
