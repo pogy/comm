@@ -1,1 +1,0 @@
-[VIPKID] - Successful Password Reset

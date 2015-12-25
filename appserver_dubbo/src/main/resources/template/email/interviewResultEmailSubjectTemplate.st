@@ -1,1 +1,0 @@
-VIPKID-Your Interviewee Joined VIPKID This Week

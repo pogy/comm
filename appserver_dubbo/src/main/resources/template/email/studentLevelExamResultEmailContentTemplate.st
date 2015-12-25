@@ -1,4 +1,0 @@
-<p>$studentName$英语水平自测结果为$examResult$</p>
-
-<br>
-<p>Best Regards.<br> VIPKID</p>

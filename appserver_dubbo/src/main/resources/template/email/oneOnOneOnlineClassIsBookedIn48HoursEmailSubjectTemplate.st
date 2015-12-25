@@ -1,1 +1,0 @@
-VIPKID-48-Hour Notice: Lesson Booked

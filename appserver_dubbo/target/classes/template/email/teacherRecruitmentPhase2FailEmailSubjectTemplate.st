@@ -1,1 +1,0 @@
-VIPKID Interview results
